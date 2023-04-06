@@ -114,7 +114,7 @@ function fetchData() {
           let cell = document.createElement('td');
           let price;
           let date;
-          
+           
           if(header === '賣出價'&&Math.min(...cityItems.map(item => item.sell_price_min))=="0"&&cityItems.map(item => item.sell_price_min_date)=="0001-01-01T00:00:00"){
             price = "NO DATA";
           }else if(header === '買入價'&&Math.min(...cityItems.map(item => item.buy_price_min))=="0"&&cityItems.map(item => item.buy_price_min_date)=="0001-01-01T00:00:00"){
