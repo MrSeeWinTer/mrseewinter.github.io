@@ -6,41 +6,20 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
+    <nav class="navbar">
+      <div class="nav-text">交易現場</div>
+      <ul class="nav-links">
+        <li><a href="https://mrseewinter.github.io/" class="nav-link">市場</a></li>
+        <li><a href="https://mrseewinter.github.io/goldprice/" class="nav-link">金價</a></li>
+        <li><a href="google.com" class="nav-link">玩家</a></li>
+        <li><a href="#" class="nav-link">公會</a></li>
+        <li><a href="#" class="nav-link">關於網站</a></li>
+      </ul>
+    </nav>
     <h1>黃金24H金價</h1>
     <canvas id="chart_for_gold"></canvas>
-    <button id="activate-script">Activate Script</button>
 
-    <h1>物品價格</h1>
-    <div>
-      <label for="item-name">物品名稱:</label>
-      <select id="item-name">
-        <option value="BAG">布質背包</option>
-        <option value="CLOTH">布質</option>
-        <option value="LEATHER">皮革</option>
-        <option value="PLATE">鎧甲</option>
-      </select>
-      <label for="item-tier">物品品級:</label>
-      <select id="item-tier">
-        <option value="T1">T1</option>
-        <option value="T2">T2</option>
-        <option value="T3">T3</option>
-        <option value="T4">T4</option>
-        <option value="T5">T5</option>
-        <option value="T6">T6</option>
-        <option value="T7">T7</option>
-        <option value="T8">T8</option>
-      </select>
-      <label for="item-quality">物品品質:</label>
-      <select id="item-quality">
-        <option value="">普通</option>
-        <option value="@1">良好</option>
-        <option value="@2">優秀</option>
-        <option value="@3">卓越</option>
-        <option value="@4">完美</option>
-      </select>
-      <button id="fetch-data">獲取數據</button>
-    </div>
-    <canvas id="chart_for_item"></canvas>
+    
     <script src="script.js"></script>
   </body>
 </html>
