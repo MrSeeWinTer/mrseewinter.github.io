@@ -1,26 +1,13 @@
+import { itemTypeValues,optionsByItemType } from './itemTypeValues.js';
+
+
 const itemTypeSelect = document.getElementById("item-type");
 const itemNameSelect = document.getElementById("item-name");
 // Define the available options for each item type
-const optionsByItemType = {
-  RAW: ["木材", "礦石", "纖維","獸皮", "石材"],
-  MATERIAL: ["板材","金屬塊","布料","皮革","砌塊"],
-  ACCESSORIES: ["背包","披風",],
-};
 
-const itemTypeValues = {
-  "木材": "WOOD",
-  "礦石": "ORE",
-  "纖維": "FIBER",
-  "獸皮": "HIDE",
-  "石材": "ROCK",
-  "板材": "PLANKS",
-  "金屬塊": "METALBAR",
-  "布料": "CLOTH",
-  "皮革": "LEATHER",
-  "砌塊": "STONEBLOCK",
-  "背包": "BAG",
-  "披風": "CAPE"
-};
+
+  
+
 
 // When the item type select changes, update the options available in the item name select
 itemTypeSelect.addEventListener("change", function() {
@@ -63,19 +50,23 @@ function fetchData() {
 
 
     const { itemName, itemTier, itemEnchant, itemQuality } = getSelectedValues();
+    const enchant_name = itemEnchant!=0? itemTypeSelect.value == "RAW"||itemTypeSelect.value =="MATERIAL"? "_LEVEL"+itemEnchant+"@"+itemEnchant :"@"+itemEnchant:"";
 
     const logoDiv = document.getElementById('logo');
     const logoImg = document.createElement('img');
-    logoImg.src = `https://render.albiononline.com/v1/item/${itemTier}_${itemName}${itemEnchant}.png?quality=${itemQuality}`;
+    logoImg.src = `https://render.albiononline.com/v1/item/${itemTier}_${itemName}${enchant_name}.png?quality=${itemQuality}`;
     logoDiv.appendChild(logoImg);
 
+
+
     //Price
-    const url1 = `https://east.albion-online-data.com/api/v2/stats/Prices/${itemTier}_${itemName}${itemEnchant}.json?qualities=${itemQuality}`; 
+    const url1 = `https://east.albion-online-data.com/api/v2/stats/Prices/${itemTier}_${itemName}${enchant_name}.json?qualities=${itemQuality}`;
+
     //History
-    const url2 = `https://east.albion-online-data.com/api/v2/stats/History/${itemTier}_${itemName}${itemEnchant}.json?qualities=${itemQuality}&time-scale=1`;
+    const url2 = `https://east.albion-online-data.com/api/v2/stats/History/${itemTier}_${itemName}${enchant_name}.json?qualities=${itemQuality}&time-scale=1`;
 
 
-    //console.log(url);
+    console.log(url1);
     Promise.all([
       fetch(url1).then(response => response.json()),
       fetch(url2).then(response => response.json())

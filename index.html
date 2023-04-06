@@ -27,6 +27,28 @@
         <option value="RAW">原材料</option>
         <option value="MATERIAL">加工料</option>
         <option value="ACCESSORIES">配件</option>
+
+        <option value="HEAD_CLOTH">布質頭盔</option>
+        <option value="ARMOR_CLOTH">布質護甲</option>
+        <option value="SHOES_CLOTH">布質鞋子</option>
+
+        <option value="HEAD_LEATHER">皮革頭盔</option>
+        <option value="ARMOR_LEATHER">皮革護甲</option>
+        <option value="SHOES_LEATHER">皮革鞋子</option>
+
+        <option value="HEAD_LEATHER">金屬頭盔</option>
+        <option value="ARMOR_LEATHER">金屬護甲</option>
+        <option value="SHOES_LEATHER">金屬鞋子</option>
+
+        
+
+
+
+
+
+
+
+
       </select>
 
       <label for="item-name">物品名稱:</label>
@@ -49,10 +71,10 @@
       <label for="item-enchant">附魔:</label>
       <select id="item-enchant">
         <option value="">        附魔0</option>
-        <option value="_LEVEL1@1">附魔1</option>
-        <option value="_LEVEL2@2">附魔2</option>
-        <option value="_LEVEL3@3">附魔3</option>
-        <option value="_LEVEL4@4">附魔4</option>
+        <option value="1">附魔1</option>
+        <option value="2">附魔2</option>
+        <option value="3">附魔3</option>
+        <option value="4">附魔4</option>
       </select>
 
       <label for="item-quality">物品品質:</label>
@@ -70,6 +92,7 @@
     <!--<canvas id="chart_for_item"></canvas>-->
     <div id="prices"></div>
     <div id="table"></div>
-    <script src="script.js"></script>
+    <script type="module" src="itemTypeValues.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
