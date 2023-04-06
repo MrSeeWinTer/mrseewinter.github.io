@@ -1,144 +1,115 @@
+const itemTypeSelect = document.getElementById("item-type");
+const itemNameSelect = document.getElementById("item-name");
+// Define the available options for each item type
+const optionsByItemType = {
+  RAW: ["木材", "礦石", "纖維","獸皮", "石材"],
+  MATERIAL: ["板材","金屬塊","布料","皮革","砌塊"]
+};
 
-function activateScript() {
-const url = 'https://east.albion-online-data.com/api/v2/stats/Gold?count=24'; // Replace with the URL of your JSON file
+const itemTypeValues = {
+  "木材": "WOOD",
+  "礦石": "ORE",
+  "纖維": "FIBER",
+  "獸皮": "HIDE",
+  "石材": "ROCK",
+  "板材": "PLANKS",
+  "金屬塊": "METALBAR",
+  "布料": "CLOTH",
+  "皮革": "LEATHER",
+  "砌塊": "STONEBLOCK"
+};
+
+// When the item type select changes, update the options available in the item name select
+itemTypeSelect.addEventListener("change", function() {
+  const selectedItemType = itemTypeSelect.value;
+  const options = optionsByItemType[selectedItemType];
+  itemNameSelect.innerHTML = "";
+  options.forEach(function(option) {
+    const optionElement = document.createElement("option");
+    optionElement.value = itemTypeValues[option];
+    optionElement.text = option;
+    //console.log(itemTypeValues[option]);
+    itemNameSelect.add(optionElement);
+  });
+});
 
 
-
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    const chartData = {
-        labels: data.map(entry => {
-            const utcDate = new Date(entry.timestamp);
-            const offset = 8; // UTC+8 timezone offset
-            const localTimestamp = new Date(utcDate.getTime() + (offset * 60 * 60 * 1000));
-            return localTimestamp.toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false });}),
-        datasets: [{
-          label: 'Gold Price',
-          data: data.map(entry => entry.price), // An array of values for the Y axis
-          fill: false,
-          borderColor: 'rgb(75, 192, 192)',
-          tension: 0.1
-        }]
-      };
-      
-      const chartConfig1 = {
-        type: 'line',
-        data: chartData,
-        options: {
-          responsive: true,
-          plugins: {
-            title: {
-              display: true,
-              text: 'Price Chart'
-            }
-          },
-          scales: {
-            x: {
-              title: {
-                display: true,
-                text: 'Timestamp'
-              },
-              reverse: true
-            },
-            y: {
-              title: {
-                display: true,
-                text: 'Price'
-              }
-            }
-          }
-        }
-      };
-      
-      const chartElement = document.getElementById('chart_for_gold');
-      const chart = new Chart(chartElement, chartConfig1);
-  })
-  .catch(error => console.error(error));
-}
-
-document.getElementById('activate-script').addEventListener('click', activateScript);
 
 let chart; 
 function getSelectedValues() {
   const itemName = document.getElementById('item-name').value;
   const itemTier = document.getElementById('item-tier').value;
+  const itemEnchant = document.getElementById('item-enchant').value;
   const itemQuality = document.getElementById('item-quality').value;
-  return { itemName, itemTier, itemQuality };
+  return { itemName, itemTier, itemEnchant, itemQuality };
 }
 
 function fetchData() {
-  const { itemName, itemTier, itemQuality } = getSelectedValues();
+  const { itemName, itemTier, itemEnchant, itemQuality } = getSelectedValues();
 
-  const url = `https://east.albion-online-data.com/api/v2/stats/History/${itemTier}_${itemName}?locations=Fort%20Sterling&date=2023-04-01T00%3A00%3A00&time-scale=1`; // Replace with the URL of your API endpoint
+  const url = `https://east.albion-online-data.com/api/v2/stats/Prices/${itemTier}_${itemName}${itemEnchant}.json?qualities=${itemQuality}`; 
 
   fetch(url)
-          .then(response => response.json())
-          .then(data => {
-            
-            chart_bool = true;
-            const chartData = {
-              labels: data[0].data.map(entry => {
-                const utcDate = new Date(entry.timestamp);
-                const offset = 8+12; // UTC+8 timezone offset
-                const localTimestamp = new Date(utcDate.getTime() + (offset * 60 * 60 * 1000));
-                return localTimestamp.toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false });}),
-            datasets: [
-                {
-                  label: 'Item Count',
-                  data: data[0].data.map(entry => entry.item_count),
-                  fill: false,
-                  borderColor: 'rgb(75, 192, 192)',
-                  tension: 0.1,
-                  yAxisID: 'item-count'
-                },
-                {
-                  label: 'Average Price',
-                  data: data[0].data.map(entry => entry.avg_price),
-                  fill: false,
-                  borderColor: 'rgb(255, 99, 132)',
-                  tension: 0.1,
-                  yAxisID: 'average-price'
-                }
-              ]
-            };
+  .then(response => response.json())
+  .then(data => {
+    let table = document.createElement('table');
+    let headerRow = document.createElement('tr');
+    let headers = ['City', 'Sell Price', 'Sell Price Date','Buy Price','Buy Price Date'];
 
-            const chartConfig2 = {
-              type: 'line',
-              data: chartData,
-              options: {
-                scales: {
-                  y: [
-                    {
-                      type: 'linear',
-                      display: true,
-                      position: 'left',
-                      id: 'item-count',
-                      label: 'Item Count'
-                    },
-                    {
-                      type: 'linear',
-                      display: true,
-                      position: 'right',
-                      id: 'average-price',
-                      label: 'Average Price'
-                    }
-                  ]
-                }
-              }
-            };
+    headers.forEach(header => {
+      let th = document.createElement('th');
+      th.textContent = header;
+      headerRow.appendChild(th);
+    });
 
-            if (chart) {
-              chart.destroy();
-              const chartElement = document.getElementById('chart_for_item');
-              chart = new Chart(chartElement, chartConfig2);
-            } else {
-              const chartElement = document.getElementById('chart_for_item');
-              chart = new Chart(chartElement, chartConfig2);
-            }
-            
-          })
-          .catch(error => console.error(error));
+    table.appendChild(headerRow);
+
+    let cities = data.map(item => item.city).filter((value, index, self) => self.indexOf(value) === index);
+
+    cities.forEach(city => {
+      let row = document.createElement('tr');
+      row.setAttribute('data-city', city);
+      let cityNameCell = document.createElement('td');
+      cityNameCell.textContent = city;
+
+      row.appendChild(cityNameCell);
+
+      let cityItems = data.filter(item => item.city === city);
+
+      headers.slice(1).forEach(header => {
+        let cell = document.createElement('td');
+        let price;
+        let date;
+
+        if (header === 'Sell Price') {
+          price = Math.min(...cityItems.map(item => item.sell_price_min));
+        } else if (header === 'Sell Price Date') {
+          date = cityItems.map(item => item.sell_price_min_date);
+        } else if (header === 'Buy Price') {
+          price = Math.max(...cityItems.map(item => item.buy_price_max));
+        } else if (header === 'Buy Price Date') {
+          date = cityItems.map(item => item.buy_price_max_date);
+        }
+        //date = new Date(date).toLocaleString()
+        const utcDate = new Date(date);
+        const offset = 8; // UTC+8 timezone offset
+        const localTimestamp = new Date(utcDate.getTime() + (offset * 60 * 60 * 1000));
+        
+
+        cell.textContent = header.includes('Date') ? localTimestamp.toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false })        : price;
+
+        row.appendChild(cell);
+      });
+
+      table.appendChild(row);
+    });
+
+    document.body.appendChild(table);
+  })
+        .catch(error => {
+          const pricesDiv = document.getElementById("prices");
+          pricesDiv.textContent = "Error fetching data from API.";
+        });
       }
 
 
