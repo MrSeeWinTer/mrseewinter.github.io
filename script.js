@@ -69,16 +69,22 @@ function fetchData() {
     logoImg.src = `https://render.albiononline.com/v1/item/${itemTier}_${itemName}${itemEnchant}.png?quality=${itemQuality}`;
     logoDiv.appendChild(logoImg);
 
-    const url = `https://east.albion-online-data.com/api/v2/stats/Prices/${itemTier}_${itemName}${itemEnchant}.json?qualities=${itemQuality-1 }`; 
+    //Price
+    const url1 = `https://east.albion-online-data.com/api/v2/stats/Prices/${itemTier}_${itemName}${itemEnchant}.json?qualities=${itemQuality}`; 
+    //History
+    const url2 = `https://east.albion-online-data.com/api/v2/stats/History/${itemTier}_${itemName}${itemEnchant}.json?qualities=${itemQuality}&time-scale=1`;
 
-    fetch(url)
-    .then(response => response.json())
-    .then(data => {
+
+    //console.log(url);
+    Promise.all([
+      fetch(url1).then(response => response.json()),
+      fetch(url2).then(response => response.json())
+    ]).then(data => {
       const table = document.createElement('table');
       table.classList.add('my-table');
       
       let headerRow = document.createElement('tr');
-      let headers = ['City', 'Sell Price', 'Sell Price Date','Buy Price','Buy Price Date'];
+      let headers = ['地區', '賣出價', '賣出價最後更新時間','買入價','買入價最後更新時間','過去一小時成交量','過去一小時平均價格'];
 
       headers.forEach(header => {
         let th = document.createElement('th');
@@ -88,7 +94,7 @@ function fetchData() {
 
       table.appendChild(headerRow);
 
-      let cities = data.map(item => item.city).filter((value, index, self) => self.indexOf(value) === index);
+      let cities = data[0].map(item => item.city).filter((value, index, self) => self.indexOf(value) === index);
 
       cities.forEach(city => {
         let row = document.createElement('tr');
@@ -98,22 +104,37 @@ function fetchData() {
 
         row.appendChild(cityNameCell);
 
-        let cityItems = data.filter(item => item.city === city);
+        let cityItems = data[0].filter(item => item.city === city);
 
+        
+        let itemdata = data[1].find(item => item.location ===city)? data[1].find(item => item.location ===city) :"NO DATA";
+        //let itemhistory = itemdata.data;
+        //console.log(itemdata);
         headers.slice(1).forEach(header => {
           let cell = document.createElement('td');
           let price;
           let date;
-
-          if (header === 'Sell Price') {
+          
+          if(header === '賣出價'&&Math.min(...cityItems.map(item => item.sell_price_min))=="0"&&cityItems.map(item => item.sell_price_min_date)=="0001-01-01T00:00:00"){
+            price = "NO DATA";
+          }else if(header === '買入價'&&Math.min(...cityItems.map(item => item.buy_price_min))=="0"&&cityItems.map(item => item.buy_price_min_date)=="0001-01-01T00:00:00"){
+            price = "NO DATA";
+          }else if (header === '賣出價') {
             price = Math.min(...cityItems.map(item => item.sell_price_min));
-          } else if (header === 'Sell Price Date') {
+          } else if (header === '賣出價最後更新時間') {
             date = cityItems.map(item => item.sell_price_min_date);
-          } else if (header === 'Buy Price') {
+          } else if (header === '買入價') {
             price = Math.max(...cityItems.map(item => item.buy_price_max));
-          } else if (header === 'Buy Price Date') {
+          } else if (header === '買入價最後更新時間') {
             date = cityItems.map(item => item.buy_price_max_date);
-          }
+          } else if (header === '過去一小時成交量') {
+            price = itemdata=="NO DATA"? "NO DATA": itemdata.data[itemdata.data.length-1].item_count;
+            //price = itemdata.data[1].avg_price;
+          } else if (header === '過去一小時平均價格') {
+            price = itemdata=="NO DATA"? "NO DATA": itemdata.data[itemdata.data.length-1].avg_price;
+            //price = itemdata.data[1].avg_price;
+          } 
+
           //date = new Date(date).toLocaleString()
           const utcDate = new Date(date);
           const offset = 8; // UTC+8 timezone offset
@@ -121,7 +142,7 @@ function fetchData() {
           const time = localTimestamp.toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false });
 
 
-          cell.textContent = header.includes('Date') ?   (time!="1/1, 08:00")?time: "NO DATA" : price;
+          cell.textContent = header.includes('最後更新時間') ?   (time!="1/1, 08:00")?time: "NO DATA" : price;
 
           row.appendChild(cell);
         });
