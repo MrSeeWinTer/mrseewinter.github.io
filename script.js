@@ -108,9 +108,10 @@ function fetchData() {
         const utcDate = new Date(date);
         const offset = 8; // UTC+8 timezone offset
         const localTimestamp = new Date(utcDate.getTime() + (offset * 60 * 60 * 1000));
-        
+        const time = localTimestamp.toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false });
 
-        cell.textContent = header.includes('Date') ? localTimestamp.toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false })        : price;
+
+        cell.textContent = header.includes('Date') ?   (time!="1/1, 08:00")?time: "NO DATA" : price;
 
         row.appendChild(cell);
       });
