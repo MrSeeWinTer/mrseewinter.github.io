@@ -16,7 +16,7 @@
         <li><a href="#" class="nav-link">關於網站</a></li>
       </ul>
     </nav>
-    
+
     <h1 class="topic">物品價格</h1>
     <div class="selection">
 
@@ -25,6 +25,7 @@
         <option value="NULL"></option>
         <option value="RAW">原材料</option>
         <option value="MATERIAL">加工料</option>
+        <option value="ACCESSORIES">配件</option>
       </select>
 
       <label for="item-name">物品名稱:</label>
@@ -56,10 +57,10 @@
       <label for="item-quality">物品品質:</label>
       <select id="item-quality">
         <option value="">一般</option>
-        <option value="?qualities=1">良好</option>
-        <option value="?qualities=2">優秀</option>
-        <option value="?qualities=3">卓越</option>
-        <option value="?qualities=4">傑出</option>
+        <option value="1">良好</option>
+        <option value="2">優秀</option>
+        <option value="3">卓越</option>
+        <option value="4">傑出</option>
       </select>
       
       <button id="fetch-data">獲取數據</button>

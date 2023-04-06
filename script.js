@@ -3,7 +3,8 @@ const itemNameSelect = document.getElementById("item-name");
 // Define the available options for each item type
 const optionsByItemType = {
   RAW: ["木材", "礦石", "纖維","獸皮", "石材"],
-  MATERIAL: ["板材","金屬塊","布料","皮革","砌塊"]
+  MATERIAL: ["板材","金屬塊","布料","皮革","砌塊"],
+  ACCESSORIES: ["背包","披風",],
 };
 
 const itemTypeValues = {
@@ -16,7 +17,9 @@ const itemTypeValues = {
   "金屬塊": "METALBAR",
   "布料": "CLOTH",
   "皮革": "LEATHER",
-  "砌塊": "STONEBLOCK"
+  "砌塊": "STONEBLOCK",
+  "背包": "BAG",
+  "披風": "CAPE"
 };
 
 // When the item type select changes, update the options available in the item name select
@@ -63,10 +66,10 @@ function fetchData() {
 
     const logoDiv = document.getElementById('logo');
     const logoImg = document.createElement('img');
-    logoImg.src = `https://render.albiononline.com/v1/item/${itemTier}_${itemName}${itemEnchant}.png`;
+    logoImg.src = `https://render.albiononline.com/v1/item/${itemTier}_${itemName}${itemEnchant}.png?quality=${itemQuality+1}`;
     logoDiv.appendChild(logoImg);
 
-    const url = `https://east.albion-online-data.com/api/v2/stats/Prices/${itemTier}_${itemName}${itemEnchant}.json${itemQuality}`; 
+    const url = `https://east.albion-online-data.com/api/v2/stats/Prices/${itemTier}_${itemName}${itemEnchant}.json?qualities=${itemQuality}`; 
 
     fetch(url)
     .then(response => response.json())
