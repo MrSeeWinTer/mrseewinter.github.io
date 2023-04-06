@@ -44,11 +44,14 @@ function getSelectedValues() {
   return { itemName, itemTier, itemEnchant, itemQuality };
 }
 
+
+let cleantable = 0;
 function fetchData() {
   const existingTable = document.querySelector('table.my-table');
   if (existingTable) {
-    const table = document.getElementsByClassName('my-table')[0];
+    const table = document.getElementsByClassName('my-table')[cleantable];
     table.innerHTML = '';
+    cleantable++;
   } else {
     // The element does not have the class "my-class"
   }
