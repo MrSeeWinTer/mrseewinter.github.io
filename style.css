@@ -144,3 +144,12 @@ tr[data-city="Lymhurst"] {
 tr[data-city="Martlock"] {
     background-color: rgb(135, 205, 245);
 }
+
+tr[data-city="Caerleon"] {
+    background-color: gray;
+}
+
+tr[data-city="Black Market"] {
+    background-color: rgb(30, 30, 30);
+    color: rgb(220, 220, 220);
+}
