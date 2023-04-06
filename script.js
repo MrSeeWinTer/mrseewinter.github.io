@@ -45,14 +45,25 @@ function getSelectedValues() {
 }
 
 function fetchData() {
+  const existingTable = document.querySelector('table.my-table');
+  if (existingTable) {
+    const table = document.getElementsByClassName('my-table')[0];
+    table.innerHTML = '';
+  } else {
+    // The element does not have the class "my-class"
+  }
+
+
   const { itemName, itemTier, itemEnchant, itemQuality } = getSelectedValues();
 
-  const url = `https://east.albion-online-data.com/api/v2/stats/Prices/${itemTier}_${itemName}${itemEnchant}.json?qualities=${itemQuality}`; 
+  const url = `https://east.albion-online-data.com/api/v2/stats/Prices/${itemTier}_${itemName}${itemEnchant}.json${itemQuality}`; 
 
   fetch(url)
   .then(response => response.json())
   .then(data => {
-    let table = document.createElement('table');
+    const table = document.createElement('table');
+    table.classList.add('my-table');
+    
     let headerRow = document.createElement('tr');
     let headers = ['City', 'Sell Price', 'Sell Price Date','Buy Price','Buy Price Date'];
 
