@@ -98,6 +98,11 @@ canvas{
     margin: 5px 0;
 }
 
+img {
+    width: 100px;
+    height: 100px;
+}
+
 /* Table styles */
 
 table {
