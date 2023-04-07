@@ -1,12 +1,12 @@
 export const itemClassValues={
   "原材料": "RAW","加工料": "MATERIAL","配件":"ACCESSORIES",
-  "布質頭盔":"HEAD_CLOTH","布質頭盔":"ARMOR_CLOTH","布質頭盔":"SHOES_CLOTH",
-  "皮革頭盔":"HEAD_LEATHER","皮革護甲":"ARMOR_LEATHER","皮革鞋子":"SHOES_LEATHER",
-  "金屬頭盔":"HEAD_PLATE","金屬護甲":"ARMOR_PLATE","金屬鞋子":"SHOES_PLATE",
+  "布質風帽":"HEAD_CLOTH","布質長袍":"ARMOR_CLOTH","布質便鞋":"SHOES_CLOTH",
+  "皮革兜帽":"HEAD_LEATHER","皮革外套":"ARMOR_LEATHER","皮革鞋子":"SHOES_LEATHER",
+  "金屬頭盔":"HEAD_PLATE","金屬護甲":"ARMOR_PLATE","金屬靴子":"SHOES_PLATE",
 }
 export const optionsByItemClasss={
   STUFF: ["","原材料", "加工料"],
-  ITEM: ["","布質頭盔","布質護甲","布質鞋子","皮革頭盔","皮革護甲","皮革鞋子","金屬頭盔","金屬護甲","金屬鞋子","配件"],
+  ITEM: ["","布質風帽","布質長袍","布質便鞋","皮革兜帽","皮革外套","皮革鞋子","金屬頭盔","金屬護甲","金屬靴子","配件"],
 
 }
 
