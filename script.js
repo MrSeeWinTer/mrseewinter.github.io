@@ -9,6 +9,7 @@ itemTypeClasss.addEventListener("change", function() {
   const selectedItemClasss = itemTypeClasss.value;
   const option1= optionsByItemClasss[selectedItemClasss];
   itemTypeSelect.innerHTML = "";
+  itemNameSelect.innerHTML = "";
   option1.forEach(function(option) {
     const optionElement = document.createElement("option");
     optionElement.value = itemClassValues[option];

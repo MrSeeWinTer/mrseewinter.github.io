@@ -3,10 +3,16 @@ export const itemClassValues={
   "布質風帽":"HEAD_CLOTH","布質長袍":"ARMOR_CLOTH","布質便鞋":"SHOES_CLOTH",
   "皮革兜帽":"HEAD_LEATHER","皮革外套":"ARMOR_LEATHER","皮革鞋子":"SHOES_LEATHER",
   "金屬頭盔":"HEAD_PLATE","金屬護甲":"ARMOR_PLATE","金屬靴子":"SHOES_PLATE",
+  "斧頭":"MAIN_AXE","匕首":"MAIN_DAGGER","鎚子":"MAIN_HAMMER","戰爭手套":"TH_KNUCKLES","錘矛":"MAIN_MACE","鐵頭棍":"TH_QUARTERSTAFF","長矛":"SPEAR","劍":"MAIN_SWORD",
+  "祕術法杖":"MAIN_ARCANESTAFF","詛咒法杖":"MAIN_CURSEDSTAFF","火焰法杖":"MAIN_FIRESTAFF","寒冰法杖":"MAIN_FROSTSTAFF","神聖法杖":"MAIN_HOLYSTAFF","自然法杖":"MAIN_NATURESTAFF",
+  "弓":"TH_BOW","十字弓":"TH_CROSSBOW",
+  "典籍":"OFF_BOOK","號角":"OFF_HORN","寶珠":"OFF_ORB","盾牌":"OFF_SHIELD","火炬":"OFF_TORCH","圖騰":"OFF_TOTEM",
 }
 export const optionsByItemClasss={
   STUFF: ["","原材料", "加工料"],
   ITEM: ["","布質風帽","布質長袍","布質便鞋","皮革兜帽","皮革外套","皮革鞋子","金屬頭盔","金屬護甲","金屬靴子","配件"],
+  MAIN_WEAPON:["","斧頭","匕首","鎚子","戰爭手套","錘矛","鐵頭棍","長矛","劍","祕術法杖","詛咒法杖","火焰法杖","寒冰法杖","神聖法杖","自然法杖","弓","十字弓"],
+  OFF_WEAPON:["","典籍","號角","寶珠","盾牌","火炬","圖騰"],
 
 }
 
@@ -46,8 +52,31 @@ export const itemTypeValues = {
   "皇家靴子": "SHOES_PLATE_ROYAL","守墓者靴子":"SHOES_PLATE_KEEPER", "惡魔靴子": "SHOES_PLATE_HELL", 
   "審判者靴子":"SHOES_PLATE_MORGANA", "幽影編織者靴子":"SHOES_PLATE_FEY","英勇靴子":"SHOES_PLATE_AVALON",
 
-
+  "戰斧":"MAIN_AXE","大斧":"2H_AXE","斧槍":"2H_HALBERD","喚腐者":"2H_HALBERD_MORGANA",
+  "煉獄鐮刀":"2H_SCYTHE_HELL","熊爪":"2H_DUALAXE_KEEPER","破界者":"2H_AXE_AVALON",
   
+  "匕首":"","雙匕首":"2H_DAGGERPAIR","鉤爪":"2H_CLAWPAIR","血刃":"MAIN_RAPIER_MORGANA",
+  "惡魔之牙":"MAIN_DAGGER_HELL","賜死者":"2H_DUALSICKLE_UNDEAD","憤怒拳刃":"2H_DAGGER_KATAR_AVALON",
+
+  "鎚子":"","長鎚":"","巨鎚":"","墓鎚":"",
+  "鍛造鎚":"","守林者":"","正義之手":"",
+
+  "格鬥家手套":"","戰鬥腕甲":"","尖刺護手":"","巨熊拳套":"",
+  "地獄火之手":"","鴉擊皮帶手套":"","阿瓦隆之拳":"",
+
+  "錘矛":"","重型錘矛":"","晨星":"","基岩錘矛":"",
+  "夢魘錘矛":"","卡姆蘭錘矛":"","守誓者":"",
+
+  "鐵頭棍":"","鐵甲棍":"","雙刃棍":"","黑僧棍":"",
+  "靈魂之鐮":"","平衡棍":"","聖杯追尋者":"",
+
+  "長矛":"","長槍":"","長刀":"","蒼鷺長矛":"",
+  "獵魂者":"","三叉戟":"","破曉者":"",
+
+  "闊劍":"","闊刃大劍":"","雙劍":"","王者之劍":"",
+  "斷水劍":"","雙刀":"","擁王者":"",
+
+
 };
 
 export const optionsByItemType = {
@@ -66,5 +95,30 @@ export const optionsByItemType = {
   HEAD_PLATE: ["士兵頭盔","騎士頭盔","守衛者頭盔","皇家頭盔","守墓者頭盔","惡魔頭盔","審判者頭盔","幽影編織者頭盔","英勇頭盔"],
   ARMOR_PLATE:["士兵護甲","騎士護甲","守衛者護甲","皇家護甲","守墓者護甲","惡魔護甲","審判者護甲","幽影編織者護甲","英勇護甲"],
   SHOES_PLATE:["士兵靴子","騎士靴子","守衛者靴子","皇家靴子","守墓者靴子","惡魔靴子","審判者靴子","幽影編織者靴子","英勇靴子"],
+  
+  MAIN_AXE:["戰斧","大斧","斧槍","喚腐者","煉獄鐮刀","熊爪","破界者"],  
+  MAIN_DAGGER:["匕首","雙匕首","鉤爪","血刃","惡魔之牙","賜死者","憤怒拳刃"],
+  MAIN_HAMMER:["鎚子","長鎚","巨鎚","墓鎚","鍛造鎚","守林者","正義之手"],
+  TH_KNUCKLES:["格鬥家手套","戰鬥腕甲","尖刺護手","巨熊拳套","地獄火之手","鴉擊皮帶手套","阿瓦隆之拳"],
+  MAIN_MACE:["錘矛","重型錘矛","晨星","基岩錘矛","夢魘錘矛","卡姆蘭錘矛","守誓者"],
+  TH_QUARTERSTAFF:["鐵頭棍","鐵甲棍","雙刃棍","黑僧棍","靈魂之鐮","平衡棍","聖杯追尋者"],
+  SPEAR:["長矛","長槍","長刀","蒼鷺長矛","獵魂者","三叉戟","破曉者"],
+  MAIN_SWORD:["闊劍","闊刃大劍","雙劍","王者之劍","斷水劍","雙刀","擁王者"],
 
+  MAIN_ARCANESTAFF:["","","","","","",""],
+  MAIN_CURSEDSTAFF:["","","","","","",""],
+  MAIN_FIRESTAFF:["","","","","","",""],
+  MAIN_FROSTSTAFF:["","","","","","",""],
+  MAIN_HOLYSTAFF:["","","","","","",""],
+  MAIN_NATURESTAFF:["","","","","","",""],
+
+  TH_BOW:["","","","","","",""],
+  TH_CROSSBOW:["","","","","","",""],
+
+  OFF_BOOK:["","","","","","",""],
+  OFF_HORN:["","","","","","",""],
+  OFF_ORB:["","","","","","",""],
+  OFF_SHIELD:["","","","","","",""],
+  OFF_TORCH:["","","","","","",""],
+  OFF_TOTEM:["","","","","","",""],
 };
