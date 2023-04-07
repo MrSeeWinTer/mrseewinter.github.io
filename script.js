@@ -1,20 +1,31 @@
-import { itemTypeValues,optionsByItemType } from './itemTypeValues.js';
+import { itemTypeValues,optionsByItemType,itemClassValues,optionsByItemClasss } from './itemTypeValues.js';
 
-
+const itemTypeClasss = document.getElementById("item-class");
 const itemTypeSelect = document.getElementById("item-type");
 const itemNameSelect = document.getElementById("item-name");
 // Define the available options for each item type
 
-
+itemTypeClasss.addEventListener("change", function() {
+  const selectedItemClasss = itemTypeClasss.value;
+  const option1= optionsByItemClasss[selectedItemClasss];
+  itemTypeSelect.innerHTML = "";
+  option1.forEach(function(option) {
+    const optionElement = document.createElement("option");
+    optionElement.value = itemClassValues[option];
+    optionElement.text = option;
+    //console.log(itemTypeValues[option]);
+    itemTypeSelect.add(optionElement);
+  });
+});
   
 
 
 // When the item type select changes, update the options available in the item name select
 itemTypeSelect.addEventListener("change", function() {
   const selectedItemType = itemTypeSelect.value;
-  const options = optionsByItemType[selectedItemType];
+  const option2 = optionsByItemType[selectedItemType];
   itemNameSelect.innerHTML = "";
-  options.forEach(function(option) {
+  option2.forEach(function(option) {
     const optionElement = document.createElement("option");
     optionElement.value = itemTypeValues[option];
     optionElement.text = option;
