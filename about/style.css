@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    background-color: #6c757d;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+canvas{
+    background-color: #ffffff;
+}
+h1 {
+    margin: 10px 0;
+    text-align: center;
+  }
+  .navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.nav-text {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: white;
+    color: #333;
+  }
+
+
+  
+  /* Added styles for the player section */
+  .about-website {
+    background-color: #e2e2e2;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-me {
+    background-color: #e2e2e2;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .player-section a {
+  color: #3251ea;
+  text-decoration: underline;
+  }
+  
+  .about-me p {
+    text-align: center;
+  }
+
+  .player-section a:hover {
+  color: #000000;
+  }
