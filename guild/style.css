@@ -43,5 +43,78 @@ body {
     color: #333;
   }
 
+   /* Style the label */
+   .form-container{
+    
+    display: flex;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 100%;
+    margin: 10px;
+   }
 
+   label {
+    flex: 0 0 auto;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-right: 5px;
+    
+  }
+
+  /* Style the input */
+  input[type="text"] {
+    flex: 1 1 auto;
+    display: inline-block;
+    padding: 0.5rem;
+    border: 2px solid #000000;
+    
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    color: #333;
+    border-radius: 5px;
+  }
+
+
+
+  /* Style the button */
+  button {
+    padding: 5px 10px;
+    margin: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
   
+  button:hover {
+    background-color: white;
+    color: #333;
+  }
+
+  #guildData {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px ;
+    padding: 20px;
+  }
+
+  #guildData h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  #guildData p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  #guildData strong {
+    font-weight: bold;
+  }
