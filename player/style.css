@@ -8,13 +8,7 @@ body {
     margin: 0;
     padding: 0;
 }
-canvas{
-    background-color: #ffffff;
-}
-h1 {
-    margin: 10px 0;
-    text-align: center;
-  }
+
   .navbar {
     background-color: #333;
     color: white;
@@ -51,32 +45,3 @@ h1 {
 
 
   
-  /* Added styles for the player section */
-  .about-website {
-    background-color: #dedede;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-
-  .about-me {
-    background-color: #dedede;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-
-  .player-section a {
-  color: #3251ea;
-  text-decoration: underline;
-  }
-  
-  .about-me p {
-    text-align: center;
-  }
-
-  .player-section a:hover {
-  color: #000000;
-  }

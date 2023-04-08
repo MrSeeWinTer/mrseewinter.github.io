@@ -37,7 +37,6 @@ itemTypeSelect.addEventListener("change", function() {
 
 
 
-let chart; 
 function getSelectedValues() {
   const itemName = document.getElementById('item-name').value;
   const itemTier = document.getElementById('item-tier').value;
