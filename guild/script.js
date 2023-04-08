@@ -8,7 +8,11 @@ function fetchData() {
     
     console.log(usernameInput.value);
     
-    fetch(url1)
+    fetch(url2,{headers: {
+            "Access-Control-Allow-Headers" : "Content-Type",
+            "Access-Control-Allow-Origin": "https://www.example.com",
+            "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+        }},)
     .then(response => response.json())
     .then(data => {
         console.log(data);
