@@ -4,6 +4,8 @@ export const optionsByItemClasss={
   MAIN_WEAPON:["","斧頭","匕首","鎚子","戰爭手套","錘矛","鐵頭棍","長矛","劍","祕術法杖","詛咒法杖","火焰法杖","寒冰法杖","神聖法杖","自然法杖","弓","十字弓"],
   OFF_WEAPON:["","典籍","盾牌","火炬"],
   TOOL:["","十字鎬","鐮刀","剝皮刀","採石鎚","伐木斧","釣竿","破壞鎚"],
+  ARTEFACT:["","符石","精魂","聖物","阿瓦隆碎片"],
+  EVENT:["","春日祭典"],
 
 };
 
@@ -17,6 +19,11 @@ export const itemClassValues={
   "弓":"TH_BOW","十字弓":"TH_CROSSBOW",
   "典籍":"OFF_BOOK","盾牌":"OFF_SHIELD","火炬":"OFF_TORCH",
   "十字鎬":"TOOL_PICK","鐮刀":"TOOL_SICKLE","剝皮刀":"TOOL_KNIFE","採石鎚":"TOOL_HAMMER","伐木斧":"TOOL_AXE","釣竿":"TOOL_FISHINGROD","破壞鎚":"TOOL_SIEGEHAMMER",
+  "符石":"RUNE","精魂":"SOUL","聖物":"RELIC","阿瓦隆碎片":"SHARD_AVALONIAN",
+
+
+
+  "春日祭典":"EASTER",
 
 };
 
@@ -67,9 +74,14 @@ export const optionsByItemType = {
   TOOL_AXE:["伐木斧","阿瓦隆伐木斧","伐木匠工作帽","伐木匠工作服","伐木匠工作靴","伐木匠後背包"],
   TOOL_FISHINGROD:["釣竿","阿瓦隆釣竿","漁夫工作帽","漁夫工作服","漁夫工作靴","漁夫後背包"],
   TOOL_SIEGEHAMMER:["破壞鎚","阿瓦隆破壞鎚"],
+  
+  RUNE:["temp1","temp2","temp3","古代鎚首","十字弓遺失零件","符文原石","血鑄之刃","摩根娜斧槍首",
+  "巨熊守衛遺骸"],
+  SOUL:[],
+  RELIC:[],
+  SHARD_AVALONIAN:[],
 
-
-
+  EASTER:["驚喜蛋","巧克力","活力春日棉尾蛋","馴化春日棉尾","春日棉尾","Caerleon 棉尾兔蛋","馴化Caerleon 棉尾兔","Caerleon 棉尾兔"],
 };
 
 
@@ -183,5 +195,14 @@ export const itemTypeValues = {
 
   "破壞鎚":"2H_TOOL_SIEGEHAMMER","阿瓦隆破壞鎚":"2H_TOOL_SIEGEHAMMER_AVALON",
 
+  "temp1":"ARTEFACT_2H_ARCANESTAFF_HELL","temp2":"ARTEFACT_2H_ARCANESTAFF_HELL",
+  "temp3":"ARTEFACT_2H_ARCANESTAFF_HELL",
+
+  
+  "驚喜蛋":"CONSUMABLE_EVENT_EASTER_2020_EGG","巧克力":"CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE",
+  "活力春日棉尾蛋":"FARM_RABBIT_EASTER_BABY","馴化春日棉尾":"FARM_RABBIT_EASTER_GROWN",
+  "春日棉尾":"MOUNT_RABBIT_EASTER","Caerleon 棉尾兔蛋":"FARM_RABBIT_EASTER_BABY_DARK",
+  "馴化Caerleon 棉尾兔":"FARM_RABBIT_EASTER_GROWN_DARK","Caerleon 棉尾兔":"MOUNT_RABBIT_EASTER_DARK",
+  
 
 };
