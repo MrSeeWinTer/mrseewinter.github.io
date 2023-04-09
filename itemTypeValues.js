@@ -3,6 +3,7 @@ export const optionsByItemClasss={
   ITEM: ["","布質風帽","布質長袍","布質便鞋","皮革兜帽","皮革外套","皮革鞋子","金屬頭盔","金屬護甲","金屬靴子","配件"],
   MAIN_WEAPON:["","斧頭","匕首","鎚子","戰爭手套","錘矛","鐵頭棍","長矛","劍","祕術法杖","詛咒法杖","火焰法杖","寒冰法杖","神聖法杖","自然法杖","弓","十字弓"],
   OFF_WEAPON:["","典籍","盾牌","火炬"],
+  TOOL:["","十字鎬","鐮刀","剝皮刀","採石鎚","伐木斧","釣竿","破壞鎚"],
 
 };
 
@@ -15,13 +16,14 @@ export const itemClassValues={
   "祕術法杖":"MAIN_ARCANESTAFF","詛咒法杖":"MAIN_CURSEDSTAFF","火焰法杖":"MAIN_FIRESTAFF","寒冰法杖":"MAIN_FROSTSTAFF","神聖法杖":"MAIN_HOLYSTAFF","自然法杖":"MAIN_NATURESTAFF",
   "弓":"TH_BOW","十字弓":"TH_CROSSBOW",
   "典籍":"OFF_BOOK","盾牌":"OFF_SHIELD","火炬":"OFF_TORCH",
+  "十字鎬":"TOOL_PICK","鐮刀":"TOOL_SICKLE","剝皮刀":"TOOL_KNIFE","採石鎚":"TOOL_HAMMER","伐木斧":"TOOL_AXE","釣竿":"TOOL_FISHINGROD","破壞鎚":"TOOL_SIEGEHAMMER",
 
 };
 
 export const optionsByItemType = {
   RAW: ["木材", "礦石", "纖維","獸皮", "石材"],
   MATERIAL: ["板材","金屬塊","布料","皮革","砌塊"],
-  ACCESSORIES: ["背包","披風"],
+  ACCESSORIES: ["背包","洞察小背包","披風"],
 
   HEAD_CLOTH: ["學者風帽","牧師風帽","法師風帽","皇家風帽","德魯伊風帽","邪魔風帽","邪教徒風帽","精靈鱗片風帽","純潔風帽"],
   ARMOR_CLOTH:["學者長袍","牧師長袍","法師長袍","皇家長袍","德魯伊長袍","邪魔長袍","邪教徒長袍","精靈鱗片長袍","純潔長袍"],
@@ -58,6 +60,16 @@ export const optionsByItemType = {
   OFF_SHIELD:["盾牌","石棺之盾","懦弱盾牌","破面者","星域神盾"],
   OFF_TORCH:["火炬","喚霧者","睨視手杖","地窖燭光","神聖權杖"],
 
+  TOOL_PICK:["十字鎬","阿瓦隆十字鎬","採礦匠工作帽","採礦匠工作服","採礦匠工作靴","採礦匠後背包"],
+  TOOL_SICKLE:["鐮刀","阿瓦隆鐮刀","採收者工作帽","採收者工作服","採收者工作靴","採收者後背包"],
+  TOOL_KNIFE:["剝皮刀","阿瓦隆剝皮刀","採剝皮工作帽","採剝皮工作服","採剝皮工作靴","採剝皮後背包"],
+  TOOL_HAMMER:["採石鎚","阿瓦隆採石鎚","採石匠工作帽","採石匠工作服","採石匠工作靴","採石匠後背包"],
+  TOOL_AXE:["伐木斧","阿瓦隆伐木斧","伐木匠工作帽","伐木匠工作服","伐木匠工作靴","伐木匠後背包"],
+  TOOL_FISHINGROD:["釣竿","阿瓦隆釣竿","漁夫工作帽","漁夫工作服","漁夫工作靴","漁夫後背包"],
+  TOOL_SIEGEHAMMER:["破壞鎚","阿瓦隆破壞鎚"],
+
+
+
 };
 
 
@@ -65,7 +77,7 @@ export const optionsByItemType = {
 export const itemTypeValues = {
   "木材": "WOOD","礦石": "ORE","纖維": "FIBER","獸皮": "HIDE","石材": "ROCK",
   "板材": "PLANKS","金屬塊": "METALBAR","布料": "CLOTH","皮革": "LEATHER","砌塊": "STONEBLOCK",
-  "背包": "BAG","披風": "CAPE",
+  "背包": "BAG","洞察小背包":"BAG_INSIGHT","披風": "CAPE",
   
   "學者風帽": "HEAD_CLOTH_SET1", "牧師風帽":"HEAD_CLOTH_SET2", "法師風帽":"HEAD_CLOTH_SET3",
   "皇家風帽": "HEAD_CLOTH_ROYAL","德魯伊風帽":"HEAD_CLOTH_KEEPER", "邪魔風帽": "HEAD_CLOTH_HELL", 
@@ -150,4 +162,26 @@ export const itemTypeValues = {
   "盾牌":"OFF_SHIELD","石棺之盾":"OFF_TOWERSHIELD_UNDEAD","懦弱盾牌":"OFF_SHIELD_HELL","破面者":"OFF_SPIKEDSHIELD_MORGANA","星域神盾":"OFF_SHIELD_AVALON",
 
   "火炬":"OFF_TORCH","喚霧者":"OFF_HORN_KEEPER","睨視手杖":"OFF_TALISMAN_AVALON","地窖燭光":"OFF_LAMP_UNDEAD","神聖權杖":"OFF_JESTERCANE_HELL",
+
+  "十字鎬":"2H_TOOL_PICK","阿瓦隆十字鎬":"2H_TOOL_PICK_AVALON","採礦匠工作帽":"HEAD_GATHERER_ORE",
+  "採礦匠工作服":"ARMOR_GATHERER_ORE","採礦匠工作靴":"SHOES_GATHERER_ORE","採礦匠後背包":"BACKPACK_GATHERER_ORE",
+
+  "鐮刀":"2H_TOOL_SICKLE","阿瓦隆鐮刀":"2H_TOOL_SICKLE_AVALON","採收者工作帽":"HEAD_GATHERER_FIBER",
+  "採收者工作服":"ARMOR_GATHERER_FIBER","採收者工作靴":"SHOES_GATHERER_FIBER","採收者後背包":"BACKPACK_GATHERER_FIBER",
+
+  "剝皮刀":"2H_TOOL_KNIFE","阿瓦隆剝皮刀":"TOOL_KNIFE_AVALON","採剝皮工作帽":"HEAD_GATHERER_HIDE",
+  "採剝皮工作服":"ARMOR_GATHERER_HIDE","採剝皮工作靴":"SHOES_GATHERER_HIDE","採剝皮後背包":"BACKPACK_GATHERER_HIDE",
+
+  "採石鎚":"2H_TOOL_HAMMER","阿瓦隆採石鎚":"2H_TOOL_HAMMER_AVALON","採石匠工作帽":"HEAD_GATHERER_ROCK",
+  "採石匠工作服":"ARMOR_GATHERER_ROCK","採石匠工作靴":"SHOES_GATHERER_ROCK","採石匠後背包":"BACKPACK_GATHERER_ROCK",
+
+  "伐木斧":"2H_TOOL_AXE","阿瓦隆伐木斧":"2H_TOOL_AXE_AVALON","伐木匠工作帽":"HEAD_GATHERER_WOOD",
+  "伐木匠工作服":"ARMOR_GATHERER_WOOD","伐木匠工作靴":"SHOES_GATHERER_WOOD","伐木匠後背包":"BACKPACK_GATHERER_WOOD",
+
+  "釣竿":"2H_TOOL_FISHINGROD","阿瓦隆釣竿":"2H_TOOL_FISHINGROD_AVALON","漁夫工作帽":"HEAD_GATHERER_FISH",
+  "漁夫工作服":"ARMOR_GATHERER_FISH","漁夫工作靴":"SHOES_GATHERER_FISH","漁夫後背包":"BACKPACK_GATHERER_FISH",
+
+  "破壞鎚":"2H_TOOL_SIEGEHAMMER","阿瓦隆破壞鎚":"2H_TOOL_SIEGEHAMMER_AVALON",
+
+
 };
