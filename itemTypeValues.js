@@ -30,7 +30,8 @@ export const itemClassValues={
 export const optionsByItemType = {
   RAW: ["木材", "礦石", "纖維","獸皮", "石材"],
   MATERIAL: ["板材","金屬塊","布料","皮革","砌塊"],
-  ACCESSORIES: ["背包","洞察小背包","披風"],
+  ACCESSORIES: ["背包","洞察小背包","披風","Bridgewatch披風","Fort Sterling披風","Lymhurst披風","Martlock披風","Thetford披風","Caerleon披風",
+  "異端披風","不死族披風","摩根娜披風","看守者披風","惡魔披風"],
 
   HEAD_CLOTH: ["學者風帽","牧師風帽","法師風帽","皇家風帽","德魯伊風帽","邪魔風帽","邪教徒風帽","精靈鱗片風帽","純潔風帽"],
   ARMOR_CLOTH:["學者長袍","牧師長袍","法師長袍","皇家長袍","德魯伊長袍","邪魔長袍","邪教徒長袍","精靈鱗片長袍","純潔長袍"],
@@ -115,7 +116,10 @@ export const itemTypeValues = {
   "木材": "WOOD","礦石": "ORE","纖維": "FIBER","獸皮": "HIDE","石材": "ROCK",
   "板材": "PLANKS","金屬塊": "METALBAR","布料": "CLOTH","皮革": "LEATHER","砌塊": "STONEBLOCK",
   "背包": "BAG","洞察小背包":"BAG_INSIGHT","披風": "CAPE",
-  
+  "Bridgewatch披風":"CAPEITEM_FW_BRIDGEWATCH","Fort Sterling披風":"CAPEITEM_FW_FORTSTERLING","Lymhurst披風":"CAPEITEM_FW_LYMHURST",
+  "Martlock披風":"CAPEITEM_FW_MARTLOCK","Thetford披風":"CAPEITEM_FW_THETFORD","Caerleon披風":"CAPEITEM_FW_CAERLEON",
+  "異端披風":"CAPEITEM_HERETIC","不死族披風":"CAPEITEM_UNDEAD","摩根娜披風":"CAPEITEM_MORGANA","看守者披風":"CAPEITEM_KEEPER","惡魔披風":"CAPEITEM_DEMON",
+
   "學者風帽": "HEAD_CLOTH_SET1", "牧師風帽":"HEAD_CLOTH_SET2", "法師風帽":"HEAD_CLOTH_SET3",
   "皇家風帽": "HEAD_CLOTH_ROYAL","德魯伊風帽":"HEAD_CLOTH_KEEPER", "邪魔風帽": "HEAD_CLOTH_HELL", 
   "邪教徒風帽":"HEAD_CLOTH_MORGANA", "精靈鱗片風帽":"HEAD_CLOTH_FEY","純潔風帽":"HEAD_CLOTH_AVALON",
@@ -247,7 +251,7 @@ export const itemTypeValues = {
 
 
 
-  "temp1":"ARTEFACT_2H_ARCANESTAFF_HELL","temp2":"ARTEFACT_2H_ARCANESTAFF_HELL",
+  "temp1":"CAPEITEM_FW_BRIDGEWATCH","temp2":"ARTEFACT_2H_ARCANESTAFF_HELL",
   "temp3":"ARTEFACT_2H_ARCANESTAFF_HELL",
 
   
