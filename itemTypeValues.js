@@ -1,5 +1,5 @@
 export const optionsByItemClasss={
-  STUFF: ["","原生資源", "加工資源"],
+  STUFF: ["","原生資源", "加工資源","材料"],
   ITEM: ["","布質風帽","布質長袍","布質便鞋","皮革兜帽","皮革外套","皮革鞋子","金屬頭盔","金屬護甲","金屬靴子","配件"],
   MAIN_WEAPON:["","斧頭","匕首","鎚子","戰爭手套","錘矛","鐵頭棍","長矛","劍","祕術法杖","詛咒法杖","火焰法杖","寒冰法杖","神聖法杖","自然法杖","弓","十字弓"],
   OFF_WEAPON:["","典籍","盾牌","火炬"],
@@ -11,7 +11,7 @@ export const optionsByItemClasss={
 };
 
 export const itemClassValues={
-  "原生資源": "RAW","加工資源": "MATERIAL","配件":"ACCESSORIES",
+  "原生資源": "RAW","加工資源": "MATERIAL","材料":"FRAG","配件":"ACCESSORIES",
   "布質風帽":"HEAD_CLOTH","布質長袍":"ARMOR_CLOTH","布質便鞋":"SHOES_CLOTH",
   "皮革兜帽":"HEAD_LEATHER","皮革外套":"ARMOR_LEATHER","皮革鞋子":"SHOES_LEATHER",
   "金屬頭盔":"HEAD_PLATE","金屬護甲":"ARMOR_PLATE","金屬靴子":"SHOES_PLATE",
@@ -30,6 +30,7 @@ export const itemClassValues={
 export const optionsByItemType = {
   RAW: ["木材", "礦石", "纖維","獸皮", "石材"],
   MATERIAL: ["板材","金屬塊","布料","皮革","砌塊"],
+  FRAG: ["黯淡精華","祕術精華","符石","精魂","聖物","阿瓦隆碎片"],
   ACCESSORIES: ["背包","洞察小背包","披風","Bridgewatch披風","Fort Sterling披風","Lymhurst披風","Martlock披風","Thetford披風","Caerleon披風",
   "異端披風","不死族披風","摩根娜披風","看守者披風","惡魔披風"],
 
@@ -115,6 +116,7 @@ export const optionsByItemType = {
 export const itemTypeValues = {
   "木材": "WOOD","礦石": "ORE","纖維": "FIBER","獸皮": "HIDE","石材": "ROCK",
   "板材": "PLANKS","金屬塊": "METALBAR","布料": "CLOTH","皮革": "LEATHER","砌塊": "STONEBLOCK",
+  "黯淡精華":"ESSENCE","祕術精華":"ESSENCE_POTION","符石":"RUNE","精魂":"SOUL","聖物":"RELIC","阿瓦隆碎片":"SHARD_AVALONIAN",
   "背包": "BAG","洞察小背包":"BAG_INSIGHT","披風": "CAPE",
   "Bridgewatch披風":"CAPEITEM_FW_BRIDGEWATCH","Fort Sterling披風":"CAPEITEM_FW_FORTSTERLING","Lymhurst披風":"CAPEITEM_FW_LYMHURST",
   "Martlock披風":"CAPEITEM_FW_MARTLOCK","Thetford披風":"CAPEITEM_FW_THETFORD","Caerleon披風":"CAPEITEM_FW_CAERLEON",
