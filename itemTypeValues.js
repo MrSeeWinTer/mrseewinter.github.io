@@ -91,22 +91,38 @@ export const optionsByItemType = {
   "--抗性藥水--","T3_初級抗性藥水","T5_抗性藥水","T7_頂級抗性藥水","--巨大化藥水--","T3_初級巨大化藥水","T5_巨大化藥水","T7_頂級巨大化藥水",
   "--黏性藥水--","T3_初級黏性藥水","T5_黏性藥水","T7_頂級黏性藥水","--毒藥--","T4_初級毒藥","T6_毒藥","T8_頂級毒藥","--隱形藥水--","T8_隱形藥水"],
 
-
-
   RUNE:["temp1","temp2","temp3",
     "古代鎚首","十字弓遺失零件","符文原石","血鑄之刃","摩根娜斧槍首",
     "巨熊守衛遺骸","古代環鏈","古代襯墊","古代綁帶","古代盾牌骨架",
     "失落祕術水晶","失落詛咒水晶","野火寶珠","白霜寶珠","癲狂之環",
     "德魯伊羽毛","德魯伊防腐鳥喙","德魯伊綁帶","迷惑水晶",
-    "看守者","硬化柔刃","驚魂箭矢","摩根娜強化槍首","注魔皮革襯裡",
+    "看守者矛首","硬化柔刃","驚魂箭矢","摩根娜強化槍首","注魔皮革襯裡",
     "注魔面甲","注魔鞋底","符文號角","德魯伊碑文"],
+
   SOUL:[  
     "惡魔之刃","地獄弩箭","地獄鎚首","地獄鐮刃","煉獄錘矛首",
     "惡魔斷角","煉獄盾牌骨","惡魔金屬護甲","惡魔殘片","惡魔內襯",
-  
+    "奧祕寶珠","燃燒寶珠","煉獄卷軸","冰柱寶珠",
+    "詛咒顎骨","惡魔顎骨","煉獄布質襯裡","煉獄布質面甲","煉獄布質綁帶",
+    "惡魔箭鏃","煉獄叉槍首","破碎惡魔之牙","瘟疫象徵",
+    "地獄雙鐮刃","地獄手柄","潛魔皮革","潛魔襯墊","潛魔綁帶"],
+
+  RELIC:[
+    "詛咒碎刃","看守者斧首","刻紋原木","迷惑弩箭",'注魔錘矛首',
+    "變形暗鴉金屬護甲","血鑄尖刺","刻顱襯墊","防腐皮草","絡印綁帶",
+    "詛咒永凍水晶","驚魂之環","血鑄觸媒","癲狂觸媒","不潔之環",
+    "烙印石環","迷惑襯墊","迷惑護身符","迷惑綁帶",
+    "雕飾白骨","防腐原石","驚魂碎刃","詛咒戟刃","防腐原木",
+    "驚魂蠟燭","驚魂面甲","驚魂皮革","驚魂綁帶"],
+
+  SHARD_AVALONIAN:[
+    "尊榮金屬護甲","尊榮面甲","尊榮腿甲","阿瓦隆戰鬥回憶錄","先王遺物",
+    "萬金之手","破碎誓言","阿瓦隆破損護手","阿瓦隆詠唱旋輪","阿瓦隆碎裂傳世寶",
+    "聖潔腰帶","聖潔面具","聖潔綁帶","碎裂混沌寶珠","柔光之戒",
+    "冰晶碎片","沉眠之戒","救世珍寶","破損天界信物",
+    "先知飾帶","先知襯墊","先知扣環","染血古物","破損祖護手",
+    "陳舊手杖","無瑕手工弓身","無根永生幼苗","阿瓦隆破碎紀念物"
   ],
-  RELIC:[],
-  SHARD_AVALONIAN:[],
 
   EASTER:["驚喜蛋","巧克力","活力春日棉尾蛋","馴化春日棉尾","春日棉尾","Caerleon 棉尾兔蛋","馴化Caerleon 棉尾兔","Caerleon 棉尾兔"],
 };
@@ -250,11 +266,39 @@ export const itemTypeValues = {
   "T3_初級巨大化藥水":"T3_POTION_REVIVE","T5_巨大化藥水":"T5_POTION_REVIVE","T7_頂級巨大化藥水":"T7_POTION_REVIVE",
   "T3_初級黏性藥水":"T3_POTION_SLOWFIELD","T5_黏性藥水":"T5_POTION_SLOWFIELD","T7_頂級黏性藥水":"T7_POTION_SLOWFIELD",
   "T4_初級毒藥":"T4_POTION_COOLDOWN","T6_毒藥":"T6_POTION_COOLDOWN","T8_頂級毒藥":"T8_POTION_COOLDOWN","T8_隱形藥水":"T8_POTION_CLEANSE",
+  
+  "temp1":"ARTEFACT_TOKEN_FAVOR_1","temp2":"ARTEFACT_OFF_TALISMAN_AVALON",
+  "temp3":"ARTEFACT_HEAD_PLATE_UNDEAD",
+//ARTEFACT_2H_IRONGAUNTLETS_HELL ARTEFACT_OFF_SHIELD_HELL 
+  "古代鎚首":"ARTEFACT_2H_HAMMER_UNDEAD","十字弓遺失零件":"ARTEFACT_2H_REPEATINGCROSSBOW_UNDEAD","符文原石":"ARTEFACT_MAIN_ROCKMACE_KEEPER","血鑄之刃":"ARTEFACT_MAIN_SCIMITAR_MORGANA","摩根娜斧槍首":"ARTEFACT_2H_HALBERD_MORGANA",
+  "巨熊守衛遺骸":"ARTEFACT_2H_KNUCKLES_KEEPER","古代環鏈":"ARTEFACT_ARMOR_PLATE_UNDEAD","古代襯墊":"ARTEFACT_HEAD_PLATE_UNDEAD","古代綁帶":"ARTEFACT_SHOES_PLATE_UNDEAD","古代盾牌骨架":"ARTEFACT_OFF_TOWERSHIELD_UNDEAD",
+  "失落祕術水晶":"ARTEFACT_MAIN_ARCANESTAFF_UNDEAD","失落詛咒水晶":"ARTEFACT_MAIN_CURSEDSTAFF_UNDEAD","野火寶珠":"ARTEFACT_MAIN_FIRESTAFF_KEEPER","白霜寶珠":"ARTEFACT_MAIN_FROSTSTAFF_KEEPER","癲狂之環":"ARTEFACT_MAIN_HOLYSTAFF_MORGANA",
+  "德魯伊羽毛":"ARTEFACT_ARMOR_CLOTH_KEEPER","德魯伊防腐鳥喙":"ARTEFACT_HEAD_CLOTH_KEEPER","德魯伊綁帶":"ARTEFACT_SHOES_CLOTH_KEEPER","迷惑水晶":"ARTEFACT_OFF_ORB_MORGANA",
+  "看守者矛首":"ARTEFACT_MAIN_SPEAR_KEEPER","硬化柔刃":"ARTEFACT_MAIN_RAPIER_MORGANA","驚魂箭矢":"ARTEFACT_2H_LONGBOW_UNDEAD","摩根娜強化槍首":"ARTEFACT_2H_COMBATSTAFF_MORGANA","注魔皮革襯裡":"T4_ARTEFACT_ARMOR_LEATHER_MORGANA",
+  "注魔面甲":"ARTEFACT_HEAD_LEATHER_MORGANA","注魔鞋底":"T4_ARTEFACT_SHOES_LEATHER_MORGANA","符文號角":"ARTEFACT_OFF_HORN_KEEPER","德魯伊碑文":"ARTEFACT_MAIN_NATURESTAFF_KEEPER",
+
+  "惡魔之刃":"ARTEFACT_2H_CLEAVER_HELL","地獄弩箭":"ARTEFACT_2H_DUALCROSSBOW_HELL","地獄鎚首":"ARTEFACT_2H_DUALHAMMER_HELL","地獄鐮刃":"ARTEFACT_2H_SCYTHE_HELL","煉獄錘矛首":"ARTEFACT_MAIN_MACE_HELL",
+  "惡魔斷角":"ARTEFACT_2H_KNUCKLES_HELL","煉獄盾牌骨":"ARTEFACT_OFF_SHIELD_HELL","惡魔金屬護甲":"ARTEFACT_ARMOR_PLATE_HELL","惡魔殘片":"ARTEFACT_HEAD_PLATE_HELL","惡魔內襯":"ARTEFACT_SHOES_PLATE_HELL",
+  "奧祕寶珠":"ARTEFACT_2H_ARCANESTAFF_HELL","燃燒寶珠":"ARTEFACT_2H_FIRESTAFF_HELL","煉獄卷軸":"ARTEFACT_2H_HOLYSTAFF_HELL","冰柱寶珠":"ARTEFACT_2H_ICEGAUNTLETS_HELL","詛咒顎骨":"ARTEFACT_2H_SKULLORB_HELL",
+  "惡魔顎骨":"ARTEFACT_OFF_DEMONSKULL_HELL","煉獄布質襯裡":"ARTEFACT_ARMOR_CLOTH_HELL","煉獄布質面甲":"ARTEFACT_HEAD_CLOTH_HELL","煉獄布質綁帶":"ARTEFACT_SHOES_CLOTH_HELL",
+  "惡魔箭鏃":"ARTEFACT_2H_BOW_HELL","煉獄叉槍首":"ARTEFACT_2H_HARPOON_HELL","破碎惡魔之牙":"ARTEFACT_MAIN_DAGGER_HELL","瘟疫象徵":"ARTEFACT_2H_NATURESTAFF_HELL","地獄雙鐮刃":"ARTEFACT_2H_TWINSCYTHE_HELL",
+  "地獄手柄":"ARTEFACT_OFF_JESTERCANE_HELL","潛魔皮革":"ARTEFACT_ARMOR_LEATHER_HELL","潛魔襯墊":"ARTEFACT_HEAD_LEATHER_HELL","潛魔綁帶":"ARTEFACT_SHOES_LEATHER_HELL",
+
+  "詛咒碎刃":"ARTEFACT_2H_DUALSCIMITAR_UNDEAD","看守者斧首":"ARTEFACT_2H_DUALAXE_KEEPER","刻紋原木":"ARTEFACT_2H_RAM_KEEPER","迷惑弩箭":"ARTEFACT_2H_CROSSBOWLARGE_MORGANA","注魔錘矛首":"ARTEFACT_2H_MACE_MORGANA",
+  "變形暗鴉金屬護甲":"ARTEFACT_2H_KNUCKLES_MORGANA","血鑄尖刺":"ARTEFACT_OFF_SPIKEDSHIELD_MORGANA","刻顱襯墊":"ARTEFACT_HEAD_PLATE_KEEPER","防腐皮草":"ARTEFACT_ARMOR_PLATE_KEEPER","絡印綁帶":"ARTEFACT_SHOES_PLATE_KEEPER",
+  "詛咒永凍水晶":"ARTEFACT_2H_ICECRYSTAL_UNDEAD","驚魂之環":"ARTEFACT_2H_HOLYSTAFF_UNDEAD","血鑄觸媒":"ARTEFACT_2H_CURSEDSTAFF_MORGANA","癲狂觸媒":"ARTEFACT_2H_ENIGMATICORB_MORGANA","不潔之環":"ARTEFACT_2H_INFERNOSTAFF_MORGANA",
+  "烙印石環":"ARTEFACT_OFF_TOTEM_KEEPER","迷惑襯墊":"ARTEFACT_ARMOR_CLOTH_MORGANA","迷惑護身符":"ARTEFACT_HEAD_CLOTH_MORGANA","迷惑綁帶":"ARTEFACT_SHOES_CLOTH_MORGANA",
+  "雕飾白骨":"ARTEFACT_2H_BOW_KEEPER","防腐原石":"ARTEFACT_2H_ROCKSTAFF_KEEPER","驚魂碎刃":"ARTEFACT_2H_DUALSICKLE_UNDEAD","詛咒戟刃":"ARTEFACT_2H_TRIDENT_UNDEAD","防腐原木":"ARTEFACT_2H_NATURESTAFF_KEEPER",
+  "驚魂蠟燭":"ARTEFACT_OFF_LAMP_UNDEAD","驚魂面甲":"ARTEFACT_HEAD_LEATHER_UNDEAD","驚魂皮革":"ARTEFACT_ARMOR_LEATHER_UNDEAD","驚魂綁帶":"ARTEFACT_SHOES_LEATHER_UNDEAD",
 
 
+  "尊榮金屬護甲":"ARTEFACT_ARMOR_PLATE_AVALON","尊榮面甲":"ARTEFACT_HEAD_PLATE_AVALON","尊榮腿甲":"ARTEFACT_SHOES_PLATE_AVALON","阿瓦隆戰鬥回憶錄":"ARTEFACT_2H_AXE_AVALON","先王遺物":"ARTEFACT_2H_CLAYMORE_AVALON",
+  "萬金之手":"ARTEFACT_2H_HAMMER_AVALON","破碎誓言":"ARTEFACT_2H_DUALMACE_AVALON","阿瓦隆破損護手":"ARTEFACT_2H_KNUCKLES_AVALON","阿瓦隆詠唱旋輪":"ARTEFACT_2H_CROSSBOW_CANNON_AVALON","阿瓦隆碎裂傳世寶":"ARTEFACT_OFF_SHIELD_AVALON",
+  "聖潔腰帶":"ARTEFACT_ARMOR_LEATHER_AVALON","聖潔面具":"ARTEFACT_HEAD_LEATHER_AVALON","聖潔綁帶":"ARTEFACT_SHOES_LEATHER_AVALON","碎裂混沌寶珠":"ARTEFACT_MAIN_CURSEDSTAFF_AVALON","柔光之戒":"ARTEFACT_2H_FIRE_RINGPAIR_AVALON",
+  "冰晶碎片":"ARTEFACT_MAIN_FROSTSTAFF_AVALON","沉眠之戒":"ARTEFACT_2H_ARCANE_RINGPAIR_AVALON","救世珍寶":"ARTEFACT_MAIN_HOLYSTAFF_AVALON","破損天界信物":"ARTEFACT_OFF_CENSER_AVALON",
+  "先知飾帶":"ARTEFACT_HEAD_CLOTH_AVALON","先知襯墊":"ARTEFACT_ARMOR_CLOTH_AVALON","先知扣環":"ARTEFACT_SHOES_CLOTH_AVALON","染血古物":"ARTEFACT_2H_DAGGER_KATAR_AVALON","破損祖護手":"ARTEFACT_MAIN_SPEAR_LANCE_AVALON",
+  "陳舊手杖":"ARTEFACT_2H_QUARTERSTAFF_AVALON","無瑕手工弓身":"ARTEFACT_2H_BOW_AVALON","無根永生幼苗":"ARTEFACT_MAIN_NATURESTAFF_AVALON","阿瓦隆破碎紀念物":"ARTEFACT_OFF_TALISMAN_AVALON",
 
-  "temp1":"CAPEITEM_FW_BRIDGEWATCH","temp2":"ARTEFACT_2H_ARCANESTAFF_HELL",
-  "temp3":"ARTEFACT_2H_ARCANESTAFF_HELL",
 
   
   "驚喜蛋":"CONSUMABLE_EVENT_EASTER_2020_EGG","巧克力":"CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE",
