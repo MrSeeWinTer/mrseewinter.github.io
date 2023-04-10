@@ -5,6 +5,7 @@ export const optionsByItemClasss={
   OFF_WEAPON:["","典籍","盾牌","火炬"],
   TOOL:["","十字鎬","鐮刀","剝皮刀","採石鎚","伐木斧","釣竿","破壞鎚"],
   ARTEFACT:["","符石","精魂","聖物","阿瓦隆碎片"],
+  CONSUMABLE:["","熟食","藥水","釣餌","地圖","其他"],
   EVENT:["","春日祭典"],
 
 };
@@ -19,9 +20,8 @@ export const itemClassValues={
   "弓":"TH_BOW","十字弓":"TH_CROSSBOW",
   "典籍":"OFF_BOOK","盾牌":"OFF_SHIELD","火炬":"OFF_TORCH",
   "十字鎬":"TOOL_PICK","鐮刀":"TOOL_SICKLE","剝皮刀":"TOOL_KNIFE","採石鎚":"TOOL_HAMMER","伐木斧":"TOOL_AXE","釣竿":"TOOL_FISHINGROD","破壞鎚":"TOOL_SIEGEHAMMER",
+  "熟食":"MEAL","藥水":"POTION","釣餌":"BAIT","地圖":"","其他":"",
   "符石":"RUNE","精魂":"SOUL","聖物":"RELIC","阿瓦隆碎片":"SHARD_AVALONIAN",
-
-
 
   "春日祭典":"EASTER",
 
@@ -75,6 +75,17 @@ export const optionsByItemType = {
   TOOL_FISHINGROD:["釣竿","阿瓦隆釣竿","漁夫工作帽","漁夫工作服","漁夫工作靴","漁夫後背包"],
   TOOL_SIEGEHAMMER:["破壞鎚","阿瓦隆破壞鎚"],
   
+  MEAL:["T1_烤魚","T1_海藻沙拉","--湯--","T1_胡蘿蔔湯","T3_麥仁湯","T5_高麗菜湯","T1_綠沼蛤蜊湯","T3_暗水蛤蜊湯","T5_黑沼蛤蜊湯",
+  "--沙拉--","T2_青豆沙拉","T4_蕪菁沙拉","T6_馬鈴薯沙拉","T2_淺岸魷魚沙拉","T4_中水章魚沙拉","T6_深水海怪沙拉",
+  "--派--","T3_雞肉派","T5_鵝肉派","T7_豬肉派","T3_高地冷目魚派","T5_山脈盲眼魚派","T7_霜峰鋭眼魚派",
+  "--蛋--","T3_雞肉歐姆蛋","T5_鵝肉歐姆蛋","T7_豬肉歐姆蛋","T3_淺川螃蟹歐姆蛋","T5_荒溪螃蟹歐姆蛋","T7_麈洞螃蟹歐姆蛋",
+  "T3_阿瓦隆雞肉歐姆蛋","T5_阿瓦隆鵝肉歐姆蛋","T7_阿瓦隆豬肉歐姆蛋","--燉--","T4_燉山羊肉","T6_燉綿羊肉","T8_燉牛肉",
+  "T4_燉綠川鰻魚","T6_燉赤泉鰻魚","T8_燉死水鰻魚","T4_阿瓦隆燉山羊肉","T6_阿瓦隆燉綿羊肉","T8_阿瓦隆燉牛肉",
+  "--三文治--","T4_山羊肉三文治","T6_綿羊肉三文治","T8_牛肉三文治","T4_石溪鈍口螈三文治","T6_激流鈍口螈三文治","T8_落雷鈍口螈三文治",
+  "T4_阿瓦隆山羊肉三文治","T6_阿瓦隆綿羊肉三文治","T8_阿瓦隆牛肉三文治","--烤--","T3_烤雞","T5_烤鵝","T7_烤豬肉",
+  "T3_烤白霧鯛魚","T5_烤清霧鯛魚","T7_烤純霧鯛魚"],
+
+
   RUNE:["temp1","temp2","temp3",
     "古代鎚首","十字弓遺失零件","符文原石","血鑄之刃","摩根娜斧槍首",
     "巨熊守衛遺骸","古代環鏈","古代襯墊","古代綁帶","古代盾牌骨架",
@@ -203,6 +214,25 @@ export const itemTypeValues = {
   "漁夫工作服":"ARMOR_GATHERER_FISH","漁夫工作靴":"SHOES_GATHERER_FISH","漁夫後背包":"BACKPACK_GATHERER_FISH",
 
   "破壞鎚":"2H_TOOL_SIEGEHAMMER","阿瓦隆破壞鎚":"2H_TOOL_SIEGEHAMMER_AVALON",
+
+  "T1_烤魚":"T1_MEAL_GRILLEDFISH","T1_海藻沙拉":"T1_MEAL_SEAWEEDSALAD",
+  "T1_胡蘿蔔湯":"T1_MEAL_SOUP","T3_麥仁湯":"T3_MEAL_SOUP","T5_高麗菜湯":"T5_MEAL_SOUP","T1_綠沼蛤蜊湯":"T1_MEAL_SOUP_FISH","T3_暗水蛤蜊湯":"T3_MEAL_SOUP_FISH","T5_黑沼蛤蜊湯":"T5_MEAL_SOUP_FISH",
+
+  "T2_青豆沙拉":"T2_MEAL_SALAD","T4_蕪菁沙拉":"T4_MEAL_SALAD","T6_馬鈴薯沙拉":"T6_MEAL_SALAD","T2_淺岸魷魚沙拉":"T2_MEAL_SALAD_FISH","T4_中水章魚沙拉":"T4_MEAL_SALAD_FISH","T6_深水海怪沙拉":"T6_MEAL_SALAD_FISH",
+
+  "T3_雞肉派":"T3_MEAL_PIE","T5_鵝肉派":"T5_MEAL_PIE","T7_豬肉派":"T7_MEAL_PIE","T3_高地冷目魚派":"T3_MEAL_PIE_FISH","T5_山脈盲眼魚派":"T5_MEAL_PIE_FISH","T7_霜峰鋭眼魚派":"T7_MEAL_PIE_FISH",
+
+  "T3_雞肉歐姆蛋":"T3_MEAL_OMELETTE","T5_鵝肉歐姆蛋":"T5_MEAL_OMELETTE","T7_豬肉歐姆蛋":"T7_MEAL_OMELETTE","T3_淺川螃蟹歐姆蛋":"T3_MEAL_OMELETTE_FISH","T5_荒溪螃蟹歐姆蛋":"T5_MEAL_OMELETTE_FISH","T7_麈洞螃蟹歐姆蛋":"T7_MEAL_OMELETTE_FISH",
+  "T3_阿瓦隆雞肉歐姆蛋":"T3_MEAL_OMELETTE_AVALON","T5_阿瓦隆鵝肉歐姆蛋":"T5_MEAL_OMELETTE_AVALON","T7_阿瓦隆豬肉歐姆蛋":"T7_MEAL_OMELETTE_AVALON",
+  
+  "T4_燉山羊肉":"T4_MEAL_STEW","T6_燉綿羊肉":"T6_MEAL_STEW","T8_燉牛肉":"T8_MEAL_STEW","T4_燉綠川鰻魚":"T4_MEAL_STEW_FISH","T6_燉赤泉鰻魚":"T6_MEAL_STEW_FISH","T8_燉死水鰻魚":"T8_MEAL_STEW_FISH",
+  "T4_阿瓦隆燉山羊肉":"T4_MEAL_STEW_AVALON","T6_阿瓦隆燉綿羊肉":"T6_MEAL_STEW_AVALON","T8_阿瓦隆燉牛肉":"T8_MEAL_STEW_AVALON",
+
+  "T4_山羊肉三文治":"T4_MEAL_SANDWICH","T6_綿羊肉三文治":"T6_MEAL_SANDWICH","T8_牛肉三文治":"T8_MEAL_SANDWICH","T4_石溪鈍口螈三文治":"T4_MEAL_SANDWICH_FISH","T6_激流鈍口螈三文治":"T6_MEAL_SANDWICH_FISH","T8_落雷鈍口螈三文治":"T8_MEAL_SANDWICH_FISH",
+  "T4_阿瓦隆山羊肉三文治":"T4_MEAL_SANDWICH_AVALON","T6_阿瓦隆綿羊肉三文治":"T6_MEAL_SANDWICH_AVALON","T8_阿瓦隆牛肉三文治":"T8_MEAL_SANDWICH_AVALON",
+
+  "T3_烤雞":"T3_MEAL_ROAST","T5_烤鵝":"T5_MEAL_ROAST","T7_烤豬肉":"T7_MEAL_ROAST","T3_烤白霧鯛魚":"T3_MEAL_ROAST_FISH","T5_烤清霧鯛魚":"T5_MEAL_ROAST_FISH","T7_烤純霧鯛魚":"T7_MEAL_ROAST_FISH",
+
 
   "temp1":"ARTEFACT_2H_ARCANESTAFF_HELL","temp2":"ARTEFACT_2H_ARCANESTAFF_HELL",
   "temp3":"ARTEFACT_2H_ARCANESTAFF_HELL",

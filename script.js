@@ -65,19 +65,19 @@ function fetchData() {
 
     const logoDiv = document.getElementById('logo');
     const logoImg = document.createElement('img');
-    logoImg.src = `https://render.albiononline.com/v1/item/${itemTier}_${itemName}${enchant_name}.png?quality=${itemQuality}`;
+    logoImg.src = `https://render.albiononline.com/v1/item/${itemTier}${itemName}${enchant_name}.png?quality=${itemQuality}`;
     logoDiv.appendChild(logoImg);
 
 
 
     //Price
-    const url1 = `https://east.albion-online-data.com/api/v2/stats/Prices/${itemTier}_${itemName}${enchant_name}.json?qualities=${itemQuality}`;
+    const url1 = `https://east.albion-online-data.com/api/v2/stats/Prices/${itemTier}${itemName}${enchant_name}.json?qualities=${itemQuality}`;
 
     //History
-    const url2 = `https://east.albion-online-data.com/api/v2/stats/History/${itemTier}_${itemName}${enchant_name}.json?qualities=${itemQuality}&time-scale=1`;
+    const url2 = `https://east.albion-online-data.com/api/v2/stats/History/${itemTier}${itemName}${enchant_name}.json?qualities=${itemQuality}&time-scale=1`;
 
 
-    console.log(url1);
+    //console.log(url1);
     Promise.all([
       fetch(url1).then(response => response.json()),
       fetch(url2).then(response => response.json())
