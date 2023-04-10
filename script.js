@@ -60,8 +60,10 @@ function fetchData() {
     }
 
 
-    const { itemName, itemTier, itemEnchant, itemQuality } = getSelectedValues();
+    var { itemName, itemTier, itemEnchant, itemQuality } = getSelectedValues();
     const enchant_name = itemEnchant!=0? itemTypeSelect.value == "RAW"||itemTypeSelect.value =="MATERIAL"? "_LEVEL"+itemEnchant+"@"+itemEnchant :"@"+itemEnchant:"";
+    const T = "T";
+    if(itemTier==""&&!itemName.startsWith(T)){itemTier="T4_"}
 
     const logoDiv = document.getElementById('logo');
     const logoImg = document.createElement('img');
