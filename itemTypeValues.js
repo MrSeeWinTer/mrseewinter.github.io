@@ -6,6 +6,7 @@ export const optionsByItemClasss={
   TOOL:["","十字鎬","鐮刀","剝皮刀","採石鎚","伐木斧","釣竿","破壞鎚"],
   ARTEFACT:["","符石","精魂","聖物","阿瓦隆碎片"],
   CONSUMABLE:["","熟食","藥水","釣餌","地圖","其他"],
+  WORKER:["","通用","種植者","漁夫","獵場看守者","造箭師","附魔師","傭兵","探礦者","砌石匠","修補匠","鐵匠","伐木匠"],
   EVENT:["","春日祭典"],
 
 };
@@ -22,7 +23,8 @@ export const itemClassValues={
   "十字鎬":"TOOL_PICK","鐮刀":"TOOL_SICKLE","剝皮刀":"TOOL_KNIFE","採石鎚":"TOOL_HAMMER","伐木斧":"TOOL_AXE","釣竿":"TOOL_FISHINGROD","破壞鎚":"TOOL_SIEGEHAMMER",
   "熟食":"MEAL","藥水":"POTION","釣餌":"BAIT","地圖":"","其他":"",
   "符石":"RUNE","精魂":"SOUL","聖物":"RELIC","阿瓦隆碎片":"SHARD_AVALONIAN",
-
+  "通用":"GENERAL","種植者":"CROPPER","漁夫":"FISHERMAN","獵場看守者":"GAMEKEEPER","造箭師":"FLETCHER","附魔師":"IMBUER",
+  "傭兵":"MERCENARY","探礦者":"PROSPECTOR","砌石匠":"STONECUTTER","修補匠":"TINKER","鐵匠":"BLACKSMITH","伐木匠":"LUMBERJACK",
   "春日祭典":"EASTER",
 
 };
@@ -124,6 +126,19 @@ export const optionsByItemType = {
     "陳舊手杖","無瑕手工弓身","無根永生幼苗","阿瓦隆破碎紀念物"
   ],
 
+  GENERAL:["通用戰利品日誌(空白)","通用戰利品日誌(已滿)"],
+  CROPPER:["種植者契約","種植者日誌(空白)","種植者日誌(已滿)","種植者戰利品日誌(空白)","種植者戰利品日誌(已滿)"],
+  FISHERMAN:["漁夫契約","漁夫日誌(空白)","漁夫日誌(已滿)","漁夫戰利品日誌(空白)","漁夫戰利品日誌(已滿)"],
+  GAMEKEEPER:["獵場看守者契約","獵場看守者日誌(空白)","獵場看守者日誌(已滿)","獵場看守者戰利品日誌(空白)","獵場看守者戰利品日誌(已滿)"],
+  FLETCHER:["造箭師契約","造箭師日誌(空白)","造箭師日誌(已滿)"],
+  IMBUER:["附魔師契約","附魔師日誌(空白)","附魔師日誌(已滿)"],
+  MERCENARY:["傭兵契約","傭兵日誌(空白)","傭兵日誌(已滿)","傭兵戰利品日誌(空白)","傭兵戰利品日誌(已滿)"],
+  PROSPECTOR:["探礦者契約","探礦者日誌(空白)","探礦者日誌(已滿)","戰探礦者利品日誌(空白)","探礦者戰利品日誌(已滿)"],
+  STONECUTTER:["砌石匠契約","砌石匠日誌(空白)","砌石匠日誌(已滿)","砌石匠戰利品日誌(空白)","砌石匠戰利品日誌(已滿)"],
+  TINKER:["修補匠契約","修補匠日誌(空白)","修補匠日誌(已滿)"],
+  BLACKSMITH:["鐵匠契約","鐵匠日誌(空白)","鐵匠日誌(已滿)"],
+  LUMBERJACK:["伐木匠契約","伐木匠日誌(空白)","伐木匠日誌(已滿)","伐木匠戰利品日誌(空白)","伐木匠戰利品日誌(已滿)"],
+  
   EASTER:["驚喜蛋","巧克力","活力春日棉尾蛋","馴化春日棉尾","春日棉尾","Caerleon 棉尾兔蛋","馴化Caerleon 棉尾兔","Caerleon 棉尾兔"],
 };
 
@@ -228,7 +243,7 @@ export const itemTypeValues = {
   "鐮刀":"2H_TOOL_SICKLE","阿瓦隆鐮刀":"2H_TOOL_SICKLE_AVALON","採收者工作帽":"HEAD_GATHERER_FIBER",
   "採收者工作服":"ARMOR_GATHERER_FIBER","採收者工作靴":"SHOES_GATHERER_FIBER","採收者後背包":"BACKPACK_GATHERER_FIBER",
 
-  "剝皮刀":"2H_TOOL_KNIFE","阿瓦隆剝皮刀":"TOOL_KNIFE_AVALON","採剝皮工作帽":"HEAD_GATHERER_HIDE",
+  "剝皮刀":"2H_TOOL_KNIFE","阿瓦隆剝皮刀":"2H_TOOL_KNIFE_AVALON","採剝皮工作帽":"HEAD_GATHERER_HIDE",
   "採剝皮工作服":"ARMOR_GATHERER_HIDE","採剝皮工作靴":"SHOES_GATHERER_HIDE","採剝皮後背包":"BACKPACK_GATHERER_HIDE",
 
   "採石鎚":"2H_TOOL_HAMMER","阿瓦隆採石鎚":"2H_TOOL_HAMMER_AVALON","採石匠工作帽":"HEAD_GATHERER_ROCK",
@@ -272,7 +287,7 @@ export const itemTypeValues = {
   "失落祕術水晶":"ARTEFACT_MAIN_ARCANESTAFF_UNDEAD","失落詛咒水晶":"ARTEFACT_MAIN_CURSEDSTAFF_UNDEAD","野火寶珠":"ARTEFACT_MAIN_FIRESTAFF_KEEPER","白霜寶珠":"ARTEFACT_MAIN_FROSTSTAFF_KEEPER","癲狂之環":"ARTEFACT_MAIN_HOLYSTAFF_MORGANA",
   "德魯伊羽毛":"ARTEFACT_ARMOR_CLOTH_KEEPER","德魯伊防腐鳥喙":"ARTEFACT_HEAD_CLOTH_KEEPER","德魯伊綁帶":"ARTEFACT_SHOES_CLOTH_KEEPER","迷惑水晶":"ARTEFACT_OFF_ORB_MORGANA",
   "看守者矛首":"ARTEFACT_MAIN_SPEAR_KEEPER","硬化柔刃":"ARTEFACT_MAIN_RAPIER_MORGANA","驚魂箭矢":"ARTEFACT_2H_LONGBOW_UNDEAD","摩根娜強化槍首":"ARTEFACT_2H_COMBATSTAFF_MORGANA","注魔皮革襯裡":"T4_ARTEFACT_ARMOR_LEATHER_MORGANA",
-  "注魔面甲":"ARTEFACT_HEAD_LEATHER_MORGANA","注魔鞋底":"T4_ARTEFACT_SHOES_LEATHER_MORGANA","符文號角":"ARTEFACT_OFF_HORN_KEEPER","德魯伊碑文":"ARTEFACT_MAIN_NATURESTAFF_KEEPER",
+  "注魔面甲":"ARTEFACT_HEAD_LEATHER_MORGANA","注魔鞋底":"ARTEFACT_SHOES_LEATHER_MORGANA","符文號角":"ARTEFACT_OFF_HORN_KEEPER","德魯伊碑文":"ARTEFACT_MAIN_NATURESTAFF_KEEPER",
 
   "惡魔之刃":"ARTEFACT_2H_CLEAVER_HELL","地獄弩箭":"ARTEFACT_2H_DUALCROSSBOW_HELL","地獄鎚首":"ARTEFACT_2H_DUALHAMMER_HELL","地獄鐮刃":"ARTEFACT_2H_SCYTHE_HELL","煉獄錘矛首":"ARTEFACT_MAIN_MACE_HELL",
   "惡魔斷角":"ARTEFACT_2H_KNUCKLES_HELL","煉獄盾牌骨":"ARTEFACT_OFF_SHIELD_HELL","惡魔金屬護甲":"ARTEFACT_ARMOR_PLATE_HELL","惡魔殘片":"ARTEFACT_HEAD_PLATE_HELL","惡魔內襯":"ARTEFACT_SHOES_PLATE_HELL",
@@ -288,7 +303,6 @@ export const itemTypeValues = {
   "雕飾白骨":"ARTEFACT_2H_BOW_KEEPER","防腐原石":"ARTEFACT_2H_ROCKSTAFF_KEEPER","驚魂碎刃":"ARTEFACT_2H_DUALSICKLE_UNDEAD","詛咒戟刃":"ARTEFACT_2H_TRIDENT_UNDEAD","防腐原木":"ARTEFACT_2H_NATURESTAFF_KEEPER",
   "驚魂蠟燭":"ARTEFACT_OFF_LAMP_UNDEAD","驚魂面甲":"ARTEFACT_HEAD_LEATHER_UNDEAD","驚魂皮革":"ARTEFACT_ARMOR_LEATHER_UNDEAD","驚魂綁帶":"ARTEFACT_SHOES_LEATHER_UNDEAD",
 
-
   "尊榮金屬護甲":"ARTEFACT_ARMOR_PLATE_AVALON","尊榮面甲":"ARTEFACT_HEAD_PLATE_AVALON","尊榮腿甲":"ARTEFACT_SHOES_PLATE_AVALON","阿瓦隆戰鬥回憶錄":"ARTEFACT_2H_AXE_AVALON","先王遺物":"ARTEFACT_2H_CLAYMORE_AVALON",
   "萬金之手":"ARTEFACT_2H_HAMMER_AVALON","破碎誓言":"ARTEFACT_2H_DUALMACE_AVALON","阿瓦隆破損護手":"ARTEFACT_2H_KNUCKLES_AVALON","阿瓦隆詠唱旋輪":"ARTEFACT_2H_CROSSBOW_CANNON_AVALON","阿瓦隆碎裂傳世寶":"ARTEFACT_OFF_SHIELD_AVALON",
   "聖潔腰帶":"ARTEFACT_ARMOR_LEATHER_AVALON","聖潔面具":"ARTEFACT_HEAD_LEATHER_AVALON","聖潔綁帶":"ARTEFACT_SHOES_LEATHER_AVALON","碎裂混沌寶珠":"ARTEFACT_MAIN_CURSEDSTAFF_AVALON","柔光之戒":"ARTEFACT_2H_FIRE_RINGPAIR_AVALON",
@@ -296,8 +310,42 @@ export const itemTypeValues = {
   "先知飾帶":"ARTEFACT_HEAD_CLOTH_AVALON","先知襯墊":"ARTEFACT_ARMOR_CLOTH_AVALON","先知扣環":"ARTEFACT_SHOES_CLOTH_AVALON","染血古物":"ARTEFACT_2H_DAGGER_KATAR_AVALON","破損祖護手":"ARTEFACT_MAIN_SPEAR_LANCE_AVALON",
   "陳舊手杖":"ARTEFACT_2H_QUARTERSTAFF_AVALON","無瑕手工弓身":"ARTEFACT_2H_BOW_AVALON","無根永生幼苗":"ARTEFACT_MAIN_NATURESTAFF_AVALON","阿瓦隆破碎紀念物":"ARTEFACT_OFF_TALISMAN_AVALON",
 
+  "通用戰利品日誌(空白)":"JOURNAL_TROPHY_GENERAL_EMPTY","通用戰利品日誌(已滿)":"JOURNAL_TROPHY_GENERAL_FULL",
 
+  "種植者契約":"LABOURER_CONTRACT_FIBER","種植者日誌(空白)":"JOURNAL_FIBER_EMPTY","種植者日誌(已滿)":"JOURNAL_FIBER_FULL",
+  "種植者戰利品日誌(空白)":"JOURNAL_TROPHY_FIBER_EMPTY","種植者戰利品日誌(已滿)":"JOURNAL_TROPHY_FIBER_FULL",
+
+  "漁夫契約":"LABOURER_CONTRACT_FISHERMAN","漁夫日誌(空白)":"JOURNAL_FISHING_EMPTY","漁夫日誌(已滿)":"JOURNAL_FISHING_FULL",
+  "漁夫戰利品日誌(空白)":"JOURNAL_TROPHY_FISHING_EMPTY","漁夫戰利品日誌(已滿)":"JOURNAL_TROPHY_FISHING_FULL",
+
+  "獵場看守者契約":"LABOURER_CONTRACT_HIDE","獵場看守者日誌(空白)":"JOURNAL_HIDE_EMPTY","獵場看守者日誌(已滿)":"JOURNAL_HIDE_FULL",
+  "獵場看守者戰利品日誌(空白)":"JOURNAL_TROPHY_HIDE_EMPTY","獵場看守者戰利品日誌(已滿)":"JOURNAL_TROPHY_HIDE_FULL",
   
+  "造箭師契約":"LABOURER_CONTRACT_HUNTER","造箭師日誌(空白)":"JOURNAL_HUNTER_EMPTY","造箭師日誌(已滿)":"JOURNAL_HUNTER_FULL",
+  
+
+  "附魔師契約":"LABOURER_CONTRACT_MAGE","附魔師日誌(空白)":"JOURNAL_MAGE_EMPTY","附魔師日誌(已滿)":"JOURNAL_MAGE_FULL",
+  
+
+  "傭兵契約":"LABOURER_CONTRACT_MERCENARY","傭兵日誌(空白)":"JOURNAL_MERCENARY_EMPTY","傭兵日誌(已滿)":"JOURNAL_MERCENARY_FULLx",
+  "傭兵戰利品日誌(空白)":"JOURNAL_TROPHY_MERCENARY_EMPTY","傭兵戰利品日誌(已滿)":"JOURNAL_TROPHY_MERCENARY_FULL",
+
+  "探礦者契約":"LABOURER_CONTRACT_ORE","探礦者日誌(空白)":"JOURNAL_ORE_EMPTY","探礦者日誌(已滿)":"JOURNAL_ORE_FULL",
+  "戰探礦者利品日誌(空白)":"JOURNAL_TROPHY_ORE_EMPTY","探礦者戰利品日誌(已滿)":"JOURNAL_TROPHY_ORE_FULL",
+
+  "砌石匠契約":"LABOURER_CONTRACT_STONE","砌石匠日誌(空白)":"JOURNAL_STONE_EMPTY","砌石匠日誌(已滿)":"JOURNAL_STONE_FULL",
+  "砌石匠戰利品日誌(空白)":"JOURNAL_TROPHY_STONE_EMPTY","砌石匠戰利品日誌(已滿)":"JOURNAL_TROPHY_STONE_FULL",
+
+  "修補匠契約":"LABOURER_CONTRACT_TOOLMAKER","修補匠日誌(空白)":"JOURNAL_TOOLMAKER_EMPTY","修補匠日誌(已滿)":"JOURNAL_TOOLMAKER_FULL",
+  
+
+  "鐵匠契約":"LABOURER_CONTRACT_WARRIOR","鐵匠日誌(空白)":"JOURNAL_WARRIOR_EMPTY","鐵匠日誌(已滿)":"JOURNAL_WARRIOR_FULL",
+  
+
+  "伐木匠契約":"LABOURER_CONTRACT_WOOD","伐木匠日誌(空白)":"JOURNAL_WOOD_EMPTY","伐木匠日誌(已滿)":"JOURNAL_WOOD_FULL",
+  "伐木匠戰利品日誌(空白)":"JOURNAL_TROPHY_WOOD_EMPTY","伐木匠戰利品日誌(已滿)":"JOURNAL_TROPHY_WOOD_FULL",
+
+
   "驚喜蛋":"CONSUMABLE_EVENT_EASTER_2020_EGG","巧克力":"CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE",
   "活力春日棉尾蛋":"FARM_RABBIT_EASTER_BABY","馴化春日棉尾":"FARM_RABBIT_EASTER_GROWN",
   "春日棉尾":"MOUNT_RABBIT_EASTER","Caerleon 棉尾兔蛋":"FARM_RABBIT_EASTER_BABY_DARK",

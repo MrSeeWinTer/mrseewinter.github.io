@@ -70,7 +70,7 @@ function fetchData() {
     logoImg.src = `https://render.albiononline.com/v1/item/${itemTier}${itemName}${enchant_name}.png?quality=${itemQuality}`;
     logoDiv.appendChild(logoImg);
 
-
+    
 
     //Price
     const url1 = `https://east.albion-online-data.com/api/v2/stats/Prices/${itemTier}${itemName}${enchant_name}.json?qualities=${itemQuality}`;
@@ -78,7 +78,7 @@ function fetchData() {
     //History
     const url2 = `https://east.albion-online-data.com/api/v2/stats/History/${itemTier}${itemName}${enchant_name}.json?qualities=${itemQuality}&time-scale=1`;
 
-
+    
     //console.log(url1);
     Promise.all([
       fetch(url1).then(response => response.json()),
