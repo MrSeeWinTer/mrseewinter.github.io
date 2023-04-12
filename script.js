@@ -118,7 +118,11 @@ function fetchData() {
       const disH1 = document.createElement('H1');
       
       
-      disH1.textContent = data.localizedNames["ZH-TW"]+" "+data.localizedDescriptions["ZH-TW"];
+      try{
+        disH1.textContent = data.localizedNames["ZH-TW"]+" "+data.localizedDescriptions["ZH-TW"];
+      }catch{
+        disH1.textContent = data.localizedNames["ZH-TW"];
+      }
       //disH1.textContent = data.activeSlots[1][0].localizedNames["ZH-TW"]+" "+data.activeSlots[1][0].localizedDescriptions["ZH-TW"];
       
       //console.log(data.activeSlots[1][0].localizedNames["ZH-TW"]+" "+data.activeSlots[1][0].localizedDescriptions["ZH-TW"]);
