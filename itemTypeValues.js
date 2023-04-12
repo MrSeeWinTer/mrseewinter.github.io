@@ -93,6 +93,10 @@ export const optionsByItemType = {
   "--抗性藥水--","T3_初級抗性藥水","T5_抗性藥水","T7_頂級抗性藥水","--巨大化藥水--","T3_初級巨大化藥水","T5_巨大化藥水","T7_頂級巨大化藥水",
   "--黏性藥水--","T3_初級黏性藥水","T5_黏性藥水","T7_頂級黏性藥水","--毒藥--","T4_初級毒藥","T6_毒藥","T8_頂級毒藥","--隱形藥水--","T8_隱形藥水"],
 
+  BAIT:[
+
+  ],
+
   RUNE:[
     "古代鎚首","十字弓遺失零件","符文原石","血鑄之刃","摩根娜斧槍首",
     "巨熊守衛遺骸","古代環鏈","古代襯墊","古代綁帶","古代盾牌骨架",
@@ -186,7 +190,7 @@ export const itemTypeValues = {
   "戰斧":"MAIN_AXE","大斧":"2H_AXE","斧槍":"2H_HALBERD","喚腐者":"2H_HALBERD_MORGANA",
   "煉獄鐮刀":"2H_SCYTHE_HELL","熊爪":"2H_DUALAXE_KEEPER","破界者":"2H_AXE_AVALON",
   
-  "匕首":"","雙匕首":"2H_DAGGERPAIR","鉤爪":"2H_CLAWPAIR","血刃":"MAIN_RAPIER_MORGANA",
+  "匕首":"MAIN_DAGGER","雙匕首":"2H_DAGGERPAIR","鉤爪":"2H_CLAWPAIR","血刃":"MAIN_RAPIER_MORGANA",
   "惡魔之牙":"MAIN_DAGGER_HELL","賜死者":"2H_DUALSICKLE_UNDEAD","憤怒拳刃":"2H_DAGGER_KATAR_AVALON",
 
   "鎚子":"MAIN_HAMMER","長鎚":"2H_POLEHAMMER","巨鎚":"2H_HAMMER","墓鎚":"2H_HAMMER_UNDEAD",

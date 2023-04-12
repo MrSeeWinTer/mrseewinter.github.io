@@ -62,10 +62,69 @@ function fetchData() {
 
     var { itemName, itemTier, itemEnchant, itemQuality } = getSelectedValues();
     const enchant_name = itemEnchant!=0? itemTypeSelect.value == "RAW"||itemTypeSelect.value =="MATERIAL"? "_LEVEL"+itemEnchant+"@"+itemEnchant :"@"+itemEnchant:"";
-    
+    //const enchant_name_for_png = itemEnchant != 0? "_LEVEL"+itemEnchant+"@"+itemEnchant : "";
     if(itemTier==""&&!itemName.startsWith("T")){itemTier="T4_"}
 
-    const logoDiv = document.getElementById('logo');
+    console.log(enchant_name+";"+itemQuality);
+    
+    const logoDiv = document.getElementById('logo');    
+    const disDiv = document.getElementById('descriptions');  
+    disDiv.innerHTML = '';  
+    //CraftResourceList
+    //const CraftResourceList = document.createElement('img');
+
+    const url3 = `https://gameinfo.albiononline.com/api/gameinfo/items/${itemTier}${itemName}/data`;
+    //console.log(url3);
+    fetch(url3)
+    .then(response => response.json())
+    .then(data => {
+      let ResourceList="";
+      try{
+        ResourceList = data.craftingRequirements.craftResourceList;
+      }
+      catch{
+        ResourceList =  data.enchantments.enchantments[0].craftingRequirements.craftResourceList;
+      } 
+      
+      
+      console.log(ResourceList);
+      for (let i = 0; i < ResourceList.length; i++) {
+        
+        const resource = ResourceList[i];
+        //console.log(`Unique name: ${resource.uniqueName}, Count: ${resource.count}`);
+
+        const logoCount = document.createElement('span');
+        if(i==0) logoCount.textContent+= "= ";
+        if(i!=ResourceList.length&&i!=0) logoCount.textContent+= "+";
+        logoCount.textContent  += resource.count;
+        
+        const logoImg = document.createElement('img');
+        logoImg.src = `https://render.albiononline.com/v1/item/${resource.uniqueName}${enchant_name}.png`;
+        
+        logoDiv.appendChild(logoCount);
+        logoDiv.appendChild(logoImg); 
+      }
+
+
+
+
+      const disH1 = document.createElement('H1');
+      
+      
+      disH1.textContent = data.localizedNames["ZH-TW"]+" "+data.localizedDescriptions["ZH-TW"];
+      //disH1.textContent = data.activeSlots[1][0].localizedNames["ZH-TW"]+" "+data.activeSlots[1][0].localizedDescriptions["ZH-TW"];
+      
+      //console.log(data.activeSlots[1][0].localizedNames["ZH-TW"]+" "+data.activeSlots[1][0].localizedDescriptions["ZH-TW"]);
+      disDiv.appendChild(disH1); 
+
+    })
+    .catch(error =>{
+      console.log(error);
+    });
+    
+
+
+
     const logoImg = document.createElement('img');
     logoImg.src = `https://render.albiononline.com/v1/item/${itemTier}${itemName}${enchant_name}.png?quality=${itemQuality}`;
     logoDiv.appendChild(logoImg);
@@ -79,6 +138,8 @@ function fetchData() {
     const url2 = `https://east.albion-online-data.com/api/v2/stats/History/${itemTier}${itemName}${enchant_name}.json?qualities=${itemQuality}&time-scale=1`;
 
     
+
+
     //console.log(url1);
     Promise.all([
       fetch(url1).then(response => response.json()),

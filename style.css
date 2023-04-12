@@ -51,6 +51,16 @@ canvas{
     color: #333;
   }
   
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo span{
+    margin: 5px;
+    font-size: 30px;
+  }
 /* Form styles */
   
   h1 {
@@ -58,6 +68,13 @@ canvas{
     text-align: center;
   }
   
+  span {
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+  }
+
   form {
     display: flex;
     flex-wrap: wrap;
