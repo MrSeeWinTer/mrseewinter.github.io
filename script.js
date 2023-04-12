@@ -74,7 +74,7 @@ function fetchData() {
     //const CraftResourceList = document.createElement('img');
 
     const url3 = `https://gameinfo.albiononline.com/api/gameinfo/items/${itemTier}${itemName}/data`;
-    console.log(url3);
+    //console.log(url3);
     fetch(url3)
     .then(response => response.json())
     .then(data => {
@@ -87,7 +87,7 @@ function fetchData() {
           ResourceList =  data.enchantments.enchantments[0].craftingRequirements.craftResourceList;
         }
         catch{
-          
+
         }
         
       } 
