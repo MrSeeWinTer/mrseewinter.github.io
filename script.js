@@ -65,7 +65,7 @@ function fetchData() {
     //const enchant_name_for_png = itemEnchant != 0? "_LEVEL"+itemEnchant+"@"+itemEnchant : "";
     if(itemTier==""&&!itemName.startsWith("T")){itemTier="T4_"}
 
-    console.log(enchant_name+";"+itemQuality);
+    //console.log(enchant_name+";"+itemQuality);
     
     const logoDiv = document.getElementById('logo');    
     const disDiv = document.getElementById('descriptions');  
@@ -74,7 +74,7 @@ function fetchData() {
     //const CraftResourceList = document.createElement('img');
 
     const url3 = `https://gameinfo.albiononline.com/api/gameinfo/items/${itemTier}${itemName}/data`;
-    //console.log(url3);
+    console.log(url3);
     fetch(url3)
     .then(response => response.json())
     .then(data => {
@@ -83,11 +83,18 @@ function fetchData() {
         ResourceList = data.craftingRequirements.craftResourceList;
       }
       catch{
-        ResourceList =  data.enchantments.enchantments[0].craftingRequirements.craftResourceList;
+        try{
+          ResourceList =  data.enchantments.enchantments[0].craftingRequirements.craftResourceList;
+        }
+        catch{
+          
+        }
+        
       } 
       
       
-      console.log(ResourceList);
+      
+      //console.log(ResourceList);
       for (let i = 0; i < ResourceList.length; i++) {
         
         const resource = ResourceList[i];
