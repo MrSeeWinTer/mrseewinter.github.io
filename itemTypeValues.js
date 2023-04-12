@@ -6,6 +6,7 @@ export const optionsByItemClasss={
   TOOL:["","十字鎬","鐮刀","剝皮刀","採石鎚","伐木斧","釣竿","破壞鎚"],
   ARTEFACT:["","符石","精魂","聖物","阿瓦隆碎片"],
   CONSUMABLE:["","熟食","藥水","釣餌","地圖","其他"],
+  FARM:["","幼崽動物","成長動物","農耕種子","農耕產品"],
   WORKER:["","通用","種植者","漁夫","獵場看守者","造箭師","附魔師","傭兵","探礦者","砌石匠","修補匠","鐵匠","伐木匠"],
   EVENT:["","春日祭典"],
 
@@ -23,6 +24,7 @@ export const itemClassValues={
   "十字鎬":"TOOL_PICK","鐮刀":"TOOL_SICKLE","剝皮刀":"TOOL_KNIFE","採石鎚":"TOOL_HAMMER","伐木斧":"TOOL_AXE","釣竿":"TOOL_FISHINGROD","破壞鎚":"TOOL_SIEGEHAMMER",
   "熟食":"MEAL","藥水":"POTION","釣餌":"BAIT","地圖":"","其他":"",
   "符石":"RUNE","精魂":"SOUL","聖物":"RELIC","阿瓦隆碎片":"SHARD_AVALONIAN",
+  "幼崽動物":"BABY","成長動物":"GROWN","農耕種子":"SEED","農耕產品":"GROWTH",
   "通用":"GENERAL","種植者":"CROPPER","漁夫":"FISHERMAN","獵場看守者":"GAMEKEEPER","造箭師":"FLETCHER","附魔師":"IMBUER",
   "傭兵":"MERCENARY","探礦者":"PROSPECTOR","砌石匠":"STONECUTTER","修補匠":"TINKER","鐵匠":"BLACKSMITH","伐木匠":"LUMBERJACK",
   "春日祭典":"EASTER",
@@ -96,6 +98,28 @@ export const optionsByItemType = {
   BAIT:[
 
   ],
+  
+  BABY:[
+    "T3_小雞","T4_小山羊","T5_小鵝","T6_小綿羊","T7_小豬","T8_小乳牛","小馬","小公牛","T4_小鹿","T5_Caerleon小灰狼","T5_小野豬","T5_小冬熊","T5_小迅爪",
+    "T5_小沼澤蠑螈","T5_小恐鳥","T5_小大角公羊","T6_小恐狼","T6_小鹿","T6_小駝鹿","T7_小恐豬","T7_小沼澤龍","T8_小幽狼","T8_菁英小灰狼",
+    "T8_菁英小野豬","T8_小恐熊","T8_菁英小冬熊","T8_小猛獁象","T8_菁英小沼澤蠑螈","T8_菁英小恐鳥","T8_菁英小大角公羊","T8_活力春日棉尾蛋","T8_Caerleon 棉尾兔蛋"
+  ],
+
+  GROWN:[
+    "T3_雞","T4_山羊","T5_鵝","T6_綿羊","T7_豬","T8_乳牛","馬","公牛","T4_鹿","T5_Caerleon灰狼","T5_野豬","T5_冬熊","T5_迅爪",
+    "T5_沼澤蠑螈","T5_恐鳥","T5_大角公羊","T6_恐狼","T6_鹿","T6_駝鹿","T7_恐豬","T7_沼澤龍","T8_幽狼","T8_菁英灰狼",
+    "T8_菁英野豬","T8_恐熊","T8_菁英冬熊","T8_猛獁象","T8_菁英沼澤蠑螈","T8_菁英恐鳥","T8_菁英大角公羊","T8_馴化春日棉尾","T8_馴化Caerleon 棉尾兔"
+  ],
+
+  SEED:[
+    "--農場--","T1_胡蘿蔔種子","T2_豆類種子","T3_小麥種子","T4_蕪菁種子","T5_高麗菜種子","T6_馬鈴薯種子","T7_玉米種子","T8_南瓜種子",
+    "--藥草--","T2_祕術菌茹種子","3_明葉接骨草種子","T4_鈍齒牛蒡種子","T5_龍川續斷種子","T6_迷幻毛地黄種子","T7_火吻毛蕊花種子","T8_食屍鬼鋸草種子",
+  ],
+
+  GROWTH:[
+    "--農場--","T1_胡蘿蔔","T2_豆類","T3_小麥","T4_蕪菁","T5_高麗菜","T6_馬鈴薯","T7_玉米","T8_南瓜","T3_雞蛋","T4_山羊奶","T5_鵝蛋","T6_綿羊奶","T8_牛奶",
+    "--藥草--","T2_祕術菌茹","3_明葉接骨草","T4_鈍齒牛蒡","T5_龍川續斷","T6_迷幻毛地黄","T7_火吻毛蕊花","T8_食屍鬼鋸草",
+  ],
 
   RUNE:[
     "古代鎚首","十字弓遺失零件","符文原石","血鑄之刃","摩根娜斧槍首",
@@ -143,7 +167,7 @@ export const optionsByItemType = {
   BLACKSMITH:["鐵匠契約","鐵匠日誌(空白)","鐵匠日誌(已滿)"],
   LUMBERJACK:["伐木匠契約","伐木匠日誌(空白)","伐木匠日誌(已滿)","伐木匠戰利品日誌(空白)","伐木匠戰利品日誌(已滿)"],
   
-  EASTER:["驚喜蛋","巧克力","活力春日棉尾蛋","馴化春日棉尾","春日棉尾","Caerleon 棉尾兔蛋","馴化Caerleon 棉尾兔","Caerleon 棉尾兔"],
+  EASTER:["驚喜蛋","巧克力","T8_活力春日棉尾蛋","T8_馴化春日棉尾","T8_春日棉尾","T8_Caerleon 棉尾兔蛋","T8_馴化Caerleon 棉尾兔","T8_Caerleon 棉尾兔"],
 };
 
 
@@ -327,10 +351,8 @@ export const itemTypeValues = {
   
   "造箭師契約":"LABOURER_CONTRACT_HUNTER","造箭師日誌(空白)":"JOURNAL_HUNTER_EMPTY","造箭師日誌(已滿)":"JOURNAL_HUNTER_FULL",
   
-
   "附魔師契約":"LABOURER_CONTRACT_MAGE","附魔師日誌(空白)":"JOURNAL_MAGE_EMPTY","附魔師日誌(已滿)":"JOURNAL_MAGE_FULL",
   
-
   "傭兵契約":"LABOURER_CONTRACT_MERCENARY","傭兵日誌(空白)":"JOURNAL_MERCENARY_EMPTY","傭兵日誌(已滿)":"JOURNAL_MERCENARY_FULLx",
   "傭兵戰利品日誌(空白)":"JOURNAL_TROPHY_MERCENARY_EMPTY","傭兵戰利品日誌(已滿)":"JOURNAL_TROPHY_MERCENARY_FULL",
 
@@ -342,18 +364,40 @@ export const itemTypeValues = {
 
   "修補匠契約":"LABOURER_CONTRACT_TOOLMAKER","修補匠日誌(空白)":"JOURNAL_TOOLMAKER_EMPTY","修補匠日誌(已滿)":"JOURNAL_TOOLMAKER_FULL",
   
-
   "鐵匠契約":"LABOURER_CONTRACT_WARRIOR","鐵匠日誌(空白)":"JOURNAL_WARRIOR_EMPTY","鐵匠日誌(已滿)":"JOURNAL_WARRIOR_FULL",
   
-
   "伐木匠契約":"LABOURER_CONTRACT_WOOD","伐木匠日誌(空白)":"JOURNAL_WOOD_EMPTY","伐木匠日誌(已滿)":"JOURNAL_WOOD_FULL",
   "伐木匠戰利品日誌(空白)":"JOURNAL_TROPHY_WOOD_EMPTY","伐木匠戰利品日誌(已滿)":"JOURNAL_TROPHY_WOOD_FULL",
 
+  "T3_小雞":"T3_FARM_CHICKEN_BABY","T4_小山羊":"T4_FARM_GOAT_BABY","T5_小鵝":"T5_FARM_GOOSE_BABY","T6_小綿羊":"T6_FARM_SHEEP_BABY","T7_小豬":"T7_FARM_PIG_BABY",
+  "T8_小乳牛":"T8_FARM_COW_BABY","小馬":"FARM_HORSE_BABY","小公牛":"FARM_OX_BABY","T4_小鹿":"T4_FARM_GIANTSTAG_BABY","T5_Caerleon小灰狼":"T5_FARM_GREYWOLF_FW_CAERLEON_BABY ",
+  "T5_小野豬":"T5_FARM_DIREBOAR_FW_LYMHURST_BABY","T5_小冬熊":"T5_FARM_DIREBEAR_FW_FORTSTERLING_BABY","T5_小迅爪":"T5_FARM_COUGAR_BABY","T5_小沼澤蠑螈":"T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY ","T5_小恐鳥":"T5_FARM_MOABIRD_FW_BRIDGEWATCH_BABY",
+  "T5_小大角公羊":"T5_FARM_RAM_FW_MARTLOCK_BABY","T6_小恐狼":"T6_FARM_DIREWOLF_BABY","T6_小鹿":"T6_FARM_GIANTSTAG_BABY","T6_小駝鹿":"T6_FARM_GIANTSTAG_MOOSE_BABY","T7_小恐豬":"T7_FARM_DIREBOAR_BABY",
+  "T7_小沼澤龍":"T7_FARM_SWAMPDRAGON_BABY","T8_小幽狼":"T8_FARM_DIREWOLF_BABY","T8_菁英小灰狼":"T8_FARM_GREYWOLF_FW_CAERLEON_BABY","T8_菁英小野豬":"T8_FARM_DIREBOAR_FW_LYMHURST_BABY","T8_小恐熊":"T8_FARM_DIREBEAR_BABY",
+  "T8_菁英小冬熊":"T8_FARM_DIREBEAR_FW_FORTSTERLING_BABY","T8_小猛獁象":"T8_FARM_MAMMOTH_BABY","T8_菁英小沼澤蠑螈":"T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY","T8_菁英小恐鳥":"T8_FARM_MOABIRD_FW_BRIDGEWATCH_BABY","T8_菁英小大角公羊":"T8_FARM_RAM_FW_MARTLOCK_BABY",
+
+  "T3_雞":"T3_FARM_CHICKEN_GROWN","T4_山羊":"T4_FARM_GOAT_GROWN","T5_鵝":"T5_FARM_GOOSE_GROWN","T6_綿羊":"T6_FARM_SHEEP_GROWN","T7_豬":"T7_FARM_PIG_GROWN",
+  "T8_乳牛":"T8_FARM_COW_GROWN","馬":"FARM_HORSE_GROWN","公牛":"FARM_OX_GROWN","T4_鹿":"T4_FARM_GIANTSTAG_GROWN","T5_Caerleon灰狼":"T5_FARM_GREYWOLF_FW_CAERLEON_GROWN ",
+  "T5_野豬":"T5_FARM_DIREBOAR_FW_LYMHURST_GROWN","T5_冬熊":"T5_FARM_DIREBEAR_FW_FORTSTERLING_GROWN","T5_迅爪":"T5_FARM_COUGAR_GROWN","T5_沼澤蠑螈":"T5_FARM_SWAMPDRAGON_FW_THETFORD_GROWN ","T5_恐鳥":"T5_FARM_MOABIRD_FW_BRIDGEWATCH_GROWN",
+  "T5_大角公羊":"T5_FARM_RAM_FW_MARTLOCK_GROWN","T6_恐狼":"T6_FARM_DIREWOLF_GROWN","T6_鹿":"T6_FARM_GIANTSTAG_GROWN","T6_駝鹿":"T6_FARM_GIANTSTAG_MOOSE_GROWN","T7_恐豬":"T7_FARM_DIREBOAR_GROWN",
+  "T7_沼澤龍":"T7_FARM_SWAMPDRAGON_GROWN","T8_幽狼":"T8_FARM_DIREWOLF_GROWN","T8_菁英灰狼":"T8_FARM_GREYWOLF_FW_CAERLEON_GROWN","T8_菁英野豬":"T8_FARM_DIREBOAR_FW_LYMHURST_GROWN","T8_恐熊":"T8_FARM_DIREBEAR_GROWN",
+  "T8_菁英冬熊":"T8_FARM_DIREBEAR_FW_FORTSTERLING_GROWN","T8_猛獁象":"T8_FARM_MAMMOTH_GROWN","T8_菁英沼澤蠑螈":"T8_FARM_SWAMPDRAGON_FW_THETFORD_GROWN","T8_菁英恐鳥":"T8_FARM_MOABIRD_FW_BRIDGEWATCH_GROWN","T8_菁英大角公羊":"T8_FARM_RAM_FW_MARTLOCK_GROWN",
+
+  "T1_胡蘿蔔種子":"T1_FARM_CARROT_SEED","T2_豆類種子":"T2_FARM_BEAN_SEED","T3_小麥種子":"T3_FARM_WHEAT_SEED","T4_蕪菁種子":"T4_FARM_TURNIP_SEED",
+  "T5_高麗菜種子":"T5_FARM_CABBAGE_SEED","T6_馬鈴薯種子":"T6_FARM_POTATO_SEED","T7_玉米種子":"T7_FARM_CORN_SEED","T8_南瓜種子":"T8_FARM_PUMPKIN_SEED",
+  "T2_祕術菌茹種子":"T2_FARM_AGARIC_SEED","T3_明葉接骨草種子":"T3_FARM_COMFREY_SEED","T4_鈍齒牛蒡種子":"T4_FARM_BURDOCK_SEED",
+  "T5_龍川續斷種子":"T5_FARM_TEASEL_SEED","T6_迷幻毛地黄種子":"T6_FARM_FOXGLOVE_SEED","T7_火吻毛蕊花種子":"T7_FARM_MULLEIN_SEED","T8_食屍鬼鋸草種子":"T8_FARM_YARROW_SEED",
+
+  "T1_胡蘿蔔":"T1_CARROT","T2_豆類":"T2_BEAN","T3_小麥":"T3_WHEAT","T4_蕪菁":"T4_TURNIP",
+  "T5_高麗菜":"T5_ABBAGE","T6_馬鈴薯":"T6_POTATO","T7_玉米":"T7_CORN","T8_南瓜":"T8_PUMPKIN",
+  "T2_祕術菌茹":"T2_AGARIC","T3_明葉接骨草":"T3_COMFREY","T4_鈍齒牛蒡":"T4_BURDOCK",
+  "T5_龍川續斷":"T5_TEASEL","T6_迷幻毛地黄":"T6_FOXGLOVE","T7_火吻毛蕊花":"T7_MULLEIN","T8_食屍鬼鋸草":"T8_YARROW",
+  "T3_雞蛋":"T3_EGG","T4_山羊奶":"T4_MILK","T5_鵝蛋":"T5_EGG","T6_綿羊奶":"T6_MILK","T8_牛奶":"T8_MILK",
 
   "驚喜蛋":"CONSUMABLE_EVENT_EASTER_2020_EGG","巧克力":"CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE",
-  "活力春日棉尾蛋":"FARM_RABBIT_EASTER_BABY","馴化春日棉尾":"FARM_RABBIT_EASTER_GROWN",
-  "春日棉尾":"MOUNT_RABBIT_EASTER","Caerleon 棉尾兔蛋":"FARM_RABBIT_EASTER_BABY_DARK",
-  "馴化Caerleon 棉尾兔":"FARM_RABBIT_EASTER_GROWN_DARK","Caerleon 棉尾兔":"MOUNT_RABBIT_EASTER_DARK",
+  "T8_活力春日棉尾蛋":"T8_FARM_RABBIT_EASTER_BABY","T8_馴化春日棉尾":"T8_FARM_RABBIT_EASTER_GROWN",
+  "T8_春日棉尾":"T8_MOUNT_RABBIT_EASTER","T8_Caerleon 棉尾兔蛋":"T8_FARM_RABBIT_EASTER_BABY_DARK",
+  "T8_馴化Caerleon 棉尾兔":"T8_FARM_RABBIT_EASTER_GROWN_DARK","T8_Caerleon 棉尾兔":"T8_MOUNT_RABBIT_EASTER_DARK",
   
 
 };
