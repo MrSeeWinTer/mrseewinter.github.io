@@ -390,7 +390,7 @@ export const itemTypeValues = {
   "T5_龍川續斷種子":"T5_FARM_TEASEL_SEED","T6_迷幻毛地黄種子":"T6_FARM_FOXGLOVE_SEED","T7_火吻毛蕊花種子":"T7_FARM_MULLEIN_SEED","T8_食屍鬼鋸草種子":"T8_FARM_YARROW_SEED",
 
   "T1_胡蘿蔔":"T1_CARROT","T2_豆類":"T2_BEAN","T3_小麥":"T3_WHEAT","T4_蕪菁":"T4_TURNIP",
-  "T5_高麗菜":"T5_ABBAGE","T6_馬鈴薯":"T6_POTATO","T7_玉米":"T7_CORN","T8_南瓜":"T8_PUMPKIN",
+  "T5_高麗菜":"T5_CABBAGE","T6_馬鈴薯":"T6_POTATO","T7_玉米":"T7_CORN","T8_南瓜":"T8_PUMPKIN",
   "T2_祕術菌茹":"T2_AGARIC","T3_明葉接骨草":"T3_COMFREY","T4_鈍齒牛蒡":"T4_BURDOCK",
   "T5_龍川續斷":"T5_TEASEL","T6_迷幻毛地黄":"T6_FOXGLOVE","T7_火吻毛蕊花":"T7_MULLEIN","T8_食屍鬼鋸草":"T8_YARROW",
   "T3_雞蛋":"T3_EGG","T4_山羊奶":"T4_MILK","T5_鵝蛋":"T5_EGG","T6_綿羊奶":"T6_MILK","T8_牛奶":"T8_MILK",
