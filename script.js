@@ -247,7 +247,7 @@ function fetchData() {
 
       
       const last24Hours = Array.from({ length: 24 }, (_, i) => {
-        const offset = 8; // UTC+8 timezone offset
+        const offset = 0; // UTC+8 timezone offset
         const localTimestamp = new Date(Date.now() - (i * 60 * 60 * 1000) + (offset * 60 * 60 * 1000));
         localTimestamp.setMinutes(0);
         localTimestamp.setSeconds(0);
@@ -307,7 +307,7 @@ function fetchData() {
           }
         ]
       };
-      
+
       last24Hours.forEach((timestamp, index) => {
         data[1].forEach((entry) => {
           const location = entry.location;
