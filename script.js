@@ -148,10 +148,10 @@ function fetchData() {
     //History
     const url2 = `https://east.albion-online-data.com/api/v2/stats/History/${itemTier}${itemName}${enchant_name}.json?qualities=${itemQuality}&time-scale=1`;
 
-    
+  
 
+    console.log(url2);
 
-    //console.log(url1);
     Promise.all([
       fetch(url1).then(response => response.json()),
       fetch(url2).then(response => response.json())
@@ -160,7 +160,7 @@ function fetchData() {
       table.classList.add('my-table');
       
       let headerRow = document.createElement('tr');
-      let headers = ['地區', '賣出單/直接買入價', '賣出價最後更新時間','買入單/直接賣出價','買入價最後更新時間','過去一小時成交量','過去一小時平均價格'];
+      let headers = ['地區', '賣出單/直接買入價', '賣出價最後更新時間','買入單/直接賣出價','買入價最後更新時間','過去有記錄一小時成交量','過去有記錄一小時平均價格'];
 
       headers.forEach(header => {
         let th = document.createElement('th');
@@ -203,10 +203,10 @@ function fetchData() {
             price = Math.max(...cityItems.map(item => item.buy_price_max));
           } else if (header === '買入價最後更新時間') {
             date = cityItems.map(item => item.buy_price_max_date);
-          } else if (header === '過去一小時成交量') {
+          } else if (header === '過去有記錄一小時成交量') {
             price = itemdata=="NO DATA"? "NO DATA": itemdata.data[itemdata.data.length-1].item_count;
             //price = itemdata.data[1].avg_price;
-          } else if (header === '過去一小時平均價格') {
+          } else if (header === '過去有記錄一小時平均價格') {
             price = itemdata=="NO DATA"? "NO DATA": itemdata.data[itemdata.data.length-1].avg_price;
             //price = itemdata.data[1].avg_price;
           } 
@@ -228,10 +228,180 @@ function fetchData() {
       
       const tablediv = document.getElementById('table');
       tablediv.appendChild(table);
+
+      //---------------------------------------------------------------------------------------------------------------------
+
+      var chart_check= document.getElementById('pricechart');
+      if (chart_check!=null){
+        chart_check.remove();
+      }
+
+
+      const historycanvas = document.createElement("canvas");
+      historycanvas.setAttribute('id', 'pricechart');
+      document.body.appendChild(historycanvas);
+
+      const chartElement = document.getElementById('pricechart');
+      
+
+
+      
+      const last24Hours = Array.from({ length: 24 }, (_, i) => {
+        const offset = 8; // UTC+8 timezone offset
+        const localTimestamp = new Date(Date.now() - (i * 60 * 60 * 1000) + (offset * 60 * 60 * 1000));
+        localTimestamp.setMinutes(0);
+        localTimestamp.setSeconds(0);
+        return localTimestamp.toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false });
+      });
+      const chartData = {
+        labels: last24Hours.reverse(),
+        datasets: [ 
+          {
+            label: 'Fort Sterling',
+            data: [],
+            fill: false,
+            borderColor: 'rgb(225, 225, 225)',
+            tension: 0.1
+          },
+          {
+            label: 'Bridgewatch',
+            data: [],
+            fill: false,
+            borderColor: 'rgb(255, 226, 160)',
+            tension: 0.1
+          },
+          {
+            label: 'Thetford',
+            data: [],
+            fill: false,
+            borderColor: 'rgb(200, 130, 200)',
+            tension: 0.1
+          },
+          {
+            label: 'Lymhurst',
+            data: [],
+            fill: false,
+            borderColor: 'rgb(130, 237, 130)',
+            tension: 0.1
+          },
+          {
+            label: 'Martlock',
+            data: [],
+            fill: false,
+            borderColor: 'rgb(135, 205, 245)',
+            tension: 0.1
+          },
+          {
+            label: 'Caerleon',
+            data: [],
+            fill: false,
+            borderColor: 'rgb(128, 128, 128)',
+            tension: 0.1
+          },
+          {
+            label: 'Black Market',
+            data: [],
+            fill: false,
+            borderColor: 'rgb(30, 30, 30)',
+            tension: 0.1
+          }
+        ]
+      };
+      
+      last24Hours.forEach((timestamp, index) => {
+        data[1].forEach((entry) => {
+          const location = entry.location;
+          const dataset = chartData.datasets.find((dataset) => dataset.label === location);
+      
+          if (dataset && entry.data) {
+            const dataForTimestamp = entry.data.find((data) => {
+              const dataTimestamp = new Date(data.timestamp).toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false });
+              return dataTimestamp === timestamp;
+            });
+      
+            if (dataForTimestamp) {
+              dataset.data[index] = dataForTimestamp.avg_price;
+            }
+          }
+        });
+      });
+
+      const chartConfig1 = {
+        type: 'line',
+        data: chartData,
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: 'History Price Chart'
+            }
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Timestamp'
+              },
+              //reverse: true
+            },
+            y: {
+              title: {
+                display: true,
+                text: 'Price'
+              }
+            }
+          }
+        }
+      };
+      
+      //const chartElement = document.getElementById('pricechart');
+      
+      const chart = new Chart(chartElement, chartConfig1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      //End
+      const pricesDiv = document.getElementById("prices");
+      pricesDiv.innerHTML = "";
     })
         .catch(error => {
           const pricesDiv = document.getElementById("prices");
-          pricesDiv.textContent = "Error fetching data from API.";
+          //pricesDiv.textContent = "Error fetching data from API.";
+          pricesDiv.textContent =pricesDiv;
         });
 
 

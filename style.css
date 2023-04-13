@@ -143,7 +143,7 @@ td:first-child {
 }
 
 tr[data-city="Fort Sterling"] {
-    background-color: #f9f9f9cc;
+    background-color: rgb(225, 225, 225);
 }
 
 tr[data-city="Bridgewatch"] {
@@ -163,7 +163,7 @@ tr[data-city="Martlock"] {
 }
 
 tr[data-city="Caerleon"] {
-    background-color: gray;
+    background-color: rgb(128, 128, 128);
 }
 
 tr[data-city="Black Market"] {
