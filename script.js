@@ -160,7 +160,7 @@ function fetchData() {
       table.classList.add('my-table');
       
       let headerRow = document.createElement('tr');
-      let headers = ['地區', '賣出價', '賣出價最後更新時間','買入價','買入價最後更新時間','過去一小時成交量','過去一小時平均價格'];
+      let headers = ['地區', '賣出單/直接買入價', '賣出價最後更新時間','買入單/直接賣出價','買入價最後更新時間','過去一小時成交量','過去一小時平均價格'];
 
       headers.forEach(header => {
         let th = document.createElement('th');
@@ -191,15 +191,15 @@ function fetchData() {
           let price;
           let date;
            
-          if(header === '賣出價'&&Math.min(...cityItems.map(item => item.sell_price_min))=="0"&&cityItems.map(item => item.sell_price_min_date)=="0001-01-01T00:00:00"){
+          if(header === '賣出單/直接買入價'&&Math.min(...cityItems.map(item => item.sell_price_min))=="0"&&cityItems.map(item => item.sell_price_min_date)=="0001-01-01T00:00:00"){
             price = "NO DATA";
           }else if(header === '買入價'&&Math.min(...cityItems.map(item => item.buy_price_min))=="0"&&cityItems.map(item => item.buy_price_min_date)=="0001-01-01T00:00:00"){
             price = "NO DATA";
-          }else if (header === '賣出價') {
+          }else if (header === '賣出單/直接買入價') {
             price = Math.min(...cityItems.map(item => item.sell_price_min));
           } else if (header === '賣出價最後更新時間') {
             date = cityItems.map(item => item.sell_price_min_date);
-          } else if (header === '買入價') {
+          } else if (header === '買入單/直接賣出價') {
             price = Math.max(...cityItems.map(item => item.buy_price_max));
           } else if (header === '買入價最後更新時間') {
             date = cityItems.map(item => item.buy_price_max_date);
