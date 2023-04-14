@@ -64,10 +64,10 @@ canvas{
 /* Form styles */
   
   h1 {
-    margin: 10px 0;
+    margin: 5px 0;
     text-align: center;
   }
-  
+
   span {
     font-weight: bold;
     margin: 0 auto;
@@ -112,7 +112,7 @@ canvas{
   
 .selection{
     text-align: center;
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 img {
@@ -120,6 +120,9 @@ img {
     height: 100px;
 }
 
+p{
+  margin: 10px;
+}
 /* Table styles */
 
 table {

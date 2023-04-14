@@ -48,6 +48,8 @@ function getSelectedValues() {
 
 
 function fetchData() {
+
+
     const existingTable = document.getElementById('table');
     if (existingTable) {
       const table = document.getElementById('table');
@@ -73,6 +75,7 @@ function fetchData() {
     //CraftResourceList
     //const CraftResourceList = document.createElement('img');
 
+    
     const url3 = `https://gameinfo.albiononline.com/api/gameinfo/items/${itemTier}${itemName}/data`;
     //console.log(url3);
     fetch(url3)
@@ -150,12 +153,21 @@ function fetchData() {
 
   
 
-    console.log(url2);
+    //console.log(url2);
 
     Promise.all([
       fetch(url1).then(response => response.json()),
       fetch(url2).then(response => response.json())
     ]).then(data => {
+      var price_checkbox = document.getElementById("price_checkbox");
+      var history_checkbox = document.getElementById("history_checkbox");
+      var item_price = document.getElementById("item_price");
+      var item_history = document.getElementById("item_history");
+
+      if(price_checkbox.checked){
+      
+      item_price.textContent = "物品價格";
+
       const table = document.createElement('table');
       table.classList.add('my-table');
       
@@ -228,13 +240,18 @@ function fetchData() {
       
       const tablediv = document.getElementById('table');
       tablediv.appendChild(table);
-
+      }else{
+        item_price.textContent = "";
+      }
       //---------------------------------------------------------------------------------------------------------------------
+
 
       var chart_check= document.getElementById('pricechart');
       if (chart_check!=null){
         chart_check.remove();
       }
+      if(history_checkbox.checked){
+      item_history.textContent = "物品歷史";
 
 
       const historycanvas = document.createElement("canvas");
@@ -359,7 +376,9 @@ function fetchData() {
       
       const chart = new Chart(chartElement, chartConfig1);
 
-
+      }else{
+        item_history.textContent = "";
+      }
 
 
 

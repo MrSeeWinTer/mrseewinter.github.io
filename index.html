@@ -27,7 +27,7 @@
       </ul>
     </nav>
 
-    <h1 class="topic">物品價格</h1>
+
     <div class="selection">
 
       <label for="item-class">物品範疇:</label>
@@ -89,13 +89,28 @@
       </select>
       
       <button id="fetch-data">獲取數據</button>
-      <div id="logo" class="logo"></div>
-      <div id="descriptions"></div>
+
+
+      <p>
+      <label>
+        <input type="checkbox" id="price_checkbox" value="0" checked>
+        物品價格
+      </label>
+      <label>
+        <input type="checkbox" id="history_checkbox" value="1">
+        物品歷史
+      </label>
+    </p>
+
+    <div id="logo" class="logo"></div>
+    <div id="descriptions"></div>
+
     </div>
+    <h1 class="topic" id="item_price"></h1>
     <!--<canvas id="chart_for_item"></canvas>-->
     <div id="prices"></div>
     <div id="table"></div>
-    <h1>物品歷史</h1>
+    <h1 id="item_history"></h1>
     
     <script type="module" src="itemTypeValues.js"></script>
     <script type="module" src="script.js"></script>
