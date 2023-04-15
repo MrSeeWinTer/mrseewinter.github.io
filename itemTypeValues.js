@@ -5,7 +5,7 @@ export const optionsByItemClasss={
   OFF_WEAPON:["","典籍","盾牌","火炬"],
   TOOL:["","十字鎬","鐮刀","剝皮刀","採石鎚","伐木斧","釣竿","破壞鎚"],
   ARTEFACT:["","符石","精魂","聖物","阿瓦隆碎片"],
-  CONSUMABLE:["","熟食","藥水","釣餌","地圖","其他"],
+  CONSUMABLE:["","熟食","藥水","釣餌","地圖-煉獄之門","地圖-地下城地圖(單人)","地圖-地下城地圖(團隊)","地圖-地下城地圖(大型團隊)","其他"],
   FARM:["","農耕種子","農耕產品","幼崽動物","成長動物","坐騎"],
   WORKER:["","通用","種植者","漁夫","獵場看守者","造箭師","附魔師","傭兵","探礦者","砌石匠","修補匠","鐵匠","伐木匠"],
   EVENT:["","春日祭典"],
@@ -22,7 +22,9 @@ export const itemClassValues={
   "弓":"TH_BOW","十字弓":"TH_CROSSBOW",
   "典籍":"OFF_BOOK","盾牌":"OFF_SHIELD","火炬":"OFF_TORCH",
   "十字鎬":"TOOL_PICK","鐮刀":"TOOL_SICKLE","剝皮刀":"TOOL_KNIFE","採石鎚":"TOOL_HAMMER","伐木斧":"TOOL_AXE","釣竿":"TOOL_FISHINGROD","破壞鎚":"TOOL_SIEGEHAMMER",
-  "熟食":"MEAL","藥水":"POTION","釣餌":"BAIT","地圖":"","其他":"",
+  "熟食":"MEAL","藥水":"POTION","釣餌":"BAIT",
+  "地圖-煉獄之門":"MAP_HELLGATE","地圖-地下城地圖(單人)":"MAP_DUNGEON_SOLO","地圖-地下城地圖(團隊)":"MAP_DUNGEON_GROUP","地圖-地下城地圖(大型團隊)":"MAP_DUNGEON_ELITE",
+  "其他":"",
   "符石":"RUNE","精魂":"SOUL","聖物":"RELIC","阿瓦隆碎片":"SHARD_AVALONIAN",
   "幼崽動物":"BABY","成長動物":"GROWN","農耕種子":"SEED","農耕產品":"GROWTH","坐騎":"MOUNT",
   "通用":"GENERAL","種植者":"CROPPER","漁夫":"FISHERMAN","獵場看守者":"GAMEKEEPER","造箭師":"FLETCHER","附魔師":"IMBUER",
@@ -174,6 +176,29 @@ export const optionsByItemType = {
   BLACKSMITH:["鐵匠契約","鐵匠日誌(空白)","鐵匠日誌(已滿)"],
   LUMBERJACK:["伐木匠契約","伐木匠日誌(空白)","伐木匠日誌(已滿)","伐木匠戰利品日誌(空白)","伐木匠戰利品日誌(已滿)"],
   
+  MAP_HELLGATE:["T5_煉獄之門儀式(2v2 - 非致命)","T5_煉獄之門儀式(5v5 - 非致命)","T5_煉獄之門儀式(10v10 - 非致命)",
+       "T6_煉獄之門儀式(2v2 - 致命)","T7_煉獄之門儀式(5v5 - 致命)","T8_煉獄之門儀式(10v10 - 致命)",
+  ],
+
+  MAP_DUNGEON_SOLO:["T4.0_地下城地圖(單人)","T4.1_地下城地圖(單人)","T4.2_地下城地圖(單人)","T4.3_地下城地圖(單人)",
+       "T5.0_地下城地圖(單人)","T5.1_地下城地圖(單人)","T5.2_地下城地圖(單人)","T5.3_地下城地圖(單人)",
+       "T6.0_地下城地圖(單人)","T6.1_地下城地圖(單人)","T6.2_地下城地圖(單人)","T6.3_地下城地圖(單人)",
+       "T7.0_地下城地圖(單人)","T7.1_地下城地圖(單人)","T7.2_地下城地圖(單人)","T7.3_地下城地圖(單人)",
+       "T8.0_地下城地圖(單人)","T8.1_地下城地圖(單人)","T8.2_地下城地圖(單人)","T8.3_地下城地圖(單人)",
+  ],
+
+  MAP_DUNGEON_GROUP:["T4.0_地下城地圖(團隊)","T4.1_地下城地圖(團隊)","T4.2_地下城地圖(團隊)","T4.3_地下城地圖(團隊)",
+  "T5.0_地下城地圖(團隊)","T5.1_地下城地圖(團隊)","T5.2_地下城地圖(團隊)","T5.3_地下城地圖(團隊)",
+  "T6.0_地下城地圖(團隊)","T6.1_地下城地圖(團隊)","T6.2_地下城地圖(團隊)","T6.3_地下城地圖(團隊)",
+  "T7.0_地下城地圖(團隊)","T7.1_地下城地圖(團隊)","T7.2_地下城地圖(團隊)","T7.3_地下城地圖(團隊)",
+  "T8.0_地下城地圖(團隊)","T8.1_地下城地圖(團隊)","T8.2_地下城地圖(團隊)","T8.3_地下城地圖(團隊)",
+],
+
+  MAP_DUNGEON_ELITE:[
+  "T6.0_地下城地圖(大型團隊)","T6.1_地下城地圖(大型團隊)","T6.2_地下城地圖(大型團隊)","T6.3_地下城地圖(大型團隊)",
+  "T7.0_地下城地圖(大型團隊)","T7.1_地下城地圖(大型團隊)","T7.2_地下城地圖(大型團隊)","T7.3_地下城地圖(大型團隊)",
+  "T8.0_地下城地圖(大型團隊)","T8.1_地下城地圖(大型團隊)","T8.2_地下城地圖(大型團隊)","T8.3_地下城地圖(大型團隊)",],
+
   EASTER:["驚喜蛋","巧克力","T8_活力春日棉尾蛋","T8_馴化春日棉尾","T8_春日棉尾","T8_Caerleon 棉尾兔蛋","T8_馴化Caerleon 棉尾兔","T8_Caerleon 棉尾兔"],
 };
 
@@ -410,6 +435,25 @@ export const itemTypeValues = {
   "T5_龍川續斷":"T5_TEASEL","T6_迷幻毛地黄":"T6_FOXGLOVE","T7_火吻毛蕊花":"T7_MULLEIN","T8_食屍鬼鋸草":"T8_YARROW",
   "T3_雞蛋":"T3_EGG","T4_山羊奶":"T4_MILK","T5_鵝蛋":"T5_EGG","T6_綿羊奶":"T6_MILK","T8_牛奶":"T8_MILK",
 
+  "T5_煉獄之門儀式(2v2 - 非致命)":"T5_HELLGATE_2V2_NON_LETHAL_1_MAP","T5_煉獄之門儀式(5v5 - 非致命)":"T5_HELLGATE_5V5_NON_LETHAL_1_MAP","T5_煉獄之門儀式(10v10 - 非致命)":"T5_HELLGATE_10V10_NON_LETHAL_1_MAP",
+  "T6_煉獄之門儀式(2v2 - 致命)":"T6_HELLGATE_2V2_LETHAL_1_MAP","T7_煉獄之門儀式(5v5 - 致命)":"T7_HELLGATE_5V5_LETHAL_1_MAP","T8_煉獄之門儀式(10v10 - 致命)":"T8_HELLGATE_10V10_LETHAL_1_MAP",
+
+  "T4.0_地下城地圖(單人)":"T4_RANDOM_DUNGEON_SOLO_TOKEN_1","T4.1_地下城地圖(單人)":"T4_RANDOM_DUNGEON_SOLO_TOKEN_2@1","T4.2_地下城地圖(單人)":"T4_RANDOM_DUNGEON_SOLO_TOKEN_3@2","T4.3_地下城地圖(單人)":"T4_RANDOM_DUNGEON_SOLO_TOKEN_4@3",
+  "T5.0_地下城地圖(單人)":"T5_RANDOM_DUNGEON_SOLO_TOKEN_1","T5.1_地下城地圖(單人)":"T5_RANDOM_DUNGEON_SOLO_TOKEN_2@1","T5.2_地下城地圖(單人)":"T5_RANDOM_DUNGEON_SOLO_TOKEN_3@2","T5.3_地下城地圖(單人)":"T5_RANDOM_DUNGEON_SOLO_TOKEN_4@3",
+  "T6.0_地下城地圖(單人)":"T6_RANDOM_DUNGEON_SOLO_TOKEN_1","T6.1_地下城地圖(單人)":"T6_RANDOM_DUNGEON_SOLO_TOKEN_2@1","T6.2_地下城地圖(單人)":"T6_RANDOM_DUNGEON_SOLO_TOKEN_3@2","T6.3_地下城地圖(單人)":"T6_RANDOM_DUNGEON_SOLO_TOKEN_4@3",
+  "T7.0_地下城地圖(單人)":"T7_RANDOM_DUNGEON_SOLO_TOKEN_1","T7.1_地下城地圖(單人)":"T7_RANDOM_DUNGEON_SOLO_TOKEN_2@1","T7.2_地下城地圖(單人)":"T7_RANDOM_DUNGEON_SOLO_TOKEN_3@2","T7.3_地下城地圖(單人)":"T7_RANDOM_DUNGEON_SOLO_TOKEN_4@3",
+  "T8.0_地下城地圖(單人)":"T8_RANDOM_DUNGEON_SOLO_TOKEN_1","T8.1_地下城地圖(單人)":"T8_RANDOM_DUNGEON_SOLO_TOKEN_2@1","T8.2_地下城地圖(單人)":"T8_RANDOM_DUNGEON_SOLO_TOKEN_3@2","T8.3_地下城地圖(單人)":"T8_RANDOM_DUNGEON_SOLO_TOKEN_4@3",
+
+  "T4.0_地下城地圖(團隊)":"T4_RANDOM_DUNGEON_TOKEN_1","T4.1_地下城地圖(團隊)":"T4_RANDOM_DUNGEON_TOKEN_2@1","T4.2_地下城地圖(團隊)":"T4_RANDOM_DUNGEON_TOKEN_3@2","T4.3_地下城地圖(團隊)":"T4_RANDOM_DUNGEON_TOKEN_4@3",
+  "T5.0_地下城地圖(團隊)":"T5_RANDOM_DUNGEON_TOKEN_1","T5.1_地下城地圖(團隊)":"T5_RANDOM_DUNGEON_TOKEN_2@1","T5.2_地下城地圖(團隊)":"T5_RANDOM_DUNGEON_TOKEN_3@2","T5.3_地下城地圖(團隊)":"T5_RANDOM_DUNGEON_TOKEN_4@3",
+  "T6.0_地下城地圖(團隊)":"T6_RANDOM_DUNGEON_TOKEN_1","T6.1_地下城地圖(團隊)":"T6_RANDOM_DUNGEON_TOKEN_2@1","T6.2_地下城地圖(團隊)":"T6_RANDOM_DUNGEON_TOKEN_3@2","T6.3_地下城地圖(團隊)":"T6_RANDOM_DUNGEON_TOKEN_4@3",
+  "T7.0_地下城地圖(團隊)":"T7_RANDOM_DUNGEON_TOKEN_1","T7.1_地下城地圖(團隊)":"T7_RANDOM_DUNGEON_TOKEN_2@1","T7.2_地下城地圖(團隊)":"T7_RANDOM_DUNGEON_TOKEN_3@2","T7.3_地下城地圖(團隊)":"T7_RANDOM_DUNGEON_TOKEN_4@3",
+  "T8.0_地下城地圖(團隊)":"T8_RANDOM_DUNGEON_TOKEN_1","T8.1_地下城地圖(團隊)":"T8_RANDOM_DUNGEON_TOKEN_2@1","T8.2_地下城地圖(團隊)":"T8_RANDOM_DUNGEON_TOKEN_3@2","T8.3_地下城地圖(團隊)":"T8_RANDOM_DUNGEON_TOKEN_4@3",
+  
+  "T6.0_地下城地圖(大型團隊)":"T6_RANDOM_DUNGEON_ELITE_TOKEN_1","T6.1_地下城地圖(大型團隊)":"T6_RANDOM_DUNGEON_ELITE_TOKEN_2@1","T6.2_地下城地圖(大型團隊)":"T6_RANDOM_DUNGEON_ELITE_TOKEN_3@2","T6.3_地下城地圖(大型團隊)":"T6_RANDOM_DUNGEON_ELITE_TOKEN_4@3",
+  "T7.0_地下城地圖(大型團隊)":"T7_RANDOM_DUNGEON_ELITE_TOKEN_1","T7.1_地下城地圖(大型團隊)":"T7_RANDOM_DUNGEON_ELITE_TOKEN_2@1","T7.2_地下城地圖(大型團隊)":"T7_RANDOM_DUNGEON_ELITE_TOKEN_3@2","T7.3_地下城地圖(大型團隊)":"T7_RANDOM_DUNGEON_ELITE_TOKEN_4@3",
+  "T8.0_地下城地圖(大型團隊)":"T8_RANDOM_DUNGEON_ELITE_TOKEN_1","T8.1_地下城地圖(大型團隊)":"T8_RANDOM_DUNGEON_ELITE_TOKEN_2@1","T8.2_地下城地圖(大型團隊)":"T8_RANDOM_DUNGEON_ELITE_TOKEN_3@2","T8.3_地下城地圖(大型團隊)":"T8_RANDOM_DUNGEON_ELITE_TOKEN_4@3",
+  
   "驚喜蛋":"CONSUMABLE_EVENT_EASTER_2020_EGG","巧克力":"CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE",
   "T8_活力春日棉尾蛋":"T8_FARM_RABBIT_EASTER_BABY","T8_馴化春日棉尾":"T8_FARM_RABBIT_EASTER_GROWN",
   "T8_春日棉尾":"T8_MOUNT_RABBIT_EASTER","T8_Caerleon 棉尾兔蛋":"T8_FARM_RABBIT_EASTER_BABY_DARK",
