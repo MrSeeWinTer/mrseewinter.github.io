@@ -5,7 +5,7 @@ export const optionsByItemClasss={
   OFF_WEAPON:["","典籍","盾牌","火炬"],
   TOOL:["","十字鎬","鐮刀","剝皮刀","採石鎚","伐木斧","釣竿","破壞鎚"],
   ARTEFACT:["","符石","精魂","聖物","阿瓦隆碎片"],
-  CONSUMABLE:["","熟食","藥水","釣餌","地圖-煉獄之門","地圖-地下城地圖(單人)","地圖-地下城地圖(團隊)","地圖-地下城地圖(大型團隊)","其他"],
+  CONSUMABLE:["","熟食","藥水","釣餌","魚","地圖-煉獄之門","地圖-地下城地圖(單人)","地圖-地下城地圖(團隊)","地圖-地下城地圖(大型團隊)","其他"],
   FARM:["","農耕種子","農耕產品","幼崽動物","成長動物","坐騎"],
   WORKER:["","通用","種植者","漁夫","獵場看守者","造箭師","附魔師","傭兵","探礦者","砌石匠","修補匠","鐵匠","伐木匠"],
   EVENT:["","春日祭典"],
@@ -24,7 +24,7 @@ export const itemClassValues={
   "十字鎬":"TOOL_PICK","鐮刀":"TOOL_SICKLE","剝皮刀":"TOOL_KNIFE","採石鎚":"TOOL_HAMMER","伐木斧":"TOOL_AXE","釣竿":"TOOL_FISHINGROD","破壞鎚":"TOOL_SIEGEHAMMER",
   "熟食":"MEAL","藥水":"POTION","釣餌":"BAIT",
   "地圖-煉獄之門":"MAP_HELLGATE","地圖-地下城地圖(單人)":"MAP_DUNGEON_SOLO","地圖-地下城地圖(團隊)":"MAP_DUNGEON_GROUP","地圖-地下城地圖(大型團隊)":"MAP_DUNGEON_ELITE",
-  "其他":"",
+  "魚":"FISH","其他":"",
   "符石":"RUNE","精魂":"SOUL","聖物":"RELIC","阿瓦隆碎片":"SHARD_AVALONIAN",
   "幼崽動物":"BABY","成長動物":"GROWN","農耕種子":"SEED","農耕產品":"GROWTH","坐騎":"MOUNT",
   "通用":"GENERAL","種植者":"CROPPER","漁夫":"FISHERMAN","獵場看守者":"GAMEKEEPER","造箭師":"FLETCHER","附魔師":"IMBUER",
@@ -82,7 +82,7 @@ export const optionsByItemType = {
   TOOL_AXE:["伐木斧","阿瓦隆伐木斧","伐木匠工作帽","伐木匠工作服","伐木匠工作靴","伐木匠後背包"],
   TOOL_FISHINGROD:["釣竿","阿瓦隆釣竿","漁夫工作帽","漁夫工作服","漁夫工作靴","漁夫後背包"],
   TOOL_SIEGEHAMMER:["破壞鎚","阿瓦隆破壞鎚"],
-  
+   
   MEAL:["--湯--","T1_胡蘿蔔湯","T3_麥仁湯","T5_高麗菜湯","T1_綠沼蛤蜊湯","T3_暗水蛤蜊湯","T5_黑沼蛤蜊湯",
   "--沙拉--","T1_海藻沙拉","T2_青豆沙拉","T4_蕪菁沙拉","T6_馬鈴薯沙拉","T2_淺岸魷魚沙拉","T4_中水章魚沙拉","T6_深水海怪沙拉",
   "--派--","T3_雞肉派","T5_鵝肉派","T7_豬肉派","T3_高地冷目魚派","T5_山脈盲眼魚派","T7_霜峰鋭眼魚派",
@@ -198,6 +198,18 @@ export const optionsByItemType = {
   "T6.0_地下城地圖(大型團隊)","T6.1_地下城地圖(大型團隊)","T6.2_地下城地圖(大型團隊)","T6.3_地下城地圖(大型團隊)",
   "T7.0_地下城地圖(大型團隊)","T7.1_地下城地圖(大型團隊)","T7.2_地下城地圖(大型團隊)","T7.3_地下城地圖(大型團隊)",
   "T8.0_地下城地圖(大型團隊)","T8.1_地下城地圖(大型團隊)","T8.2_地下城地圖(大型團隊)","T8.3_地下城地圖(大型團隊)",],
+
+  FISH:[
+  "--淡水魚--","T1_普通紅眼魚","T2_條紋鯉魚","T3_阿爾比恩鱸魚","T4_藍鱗狗魚","T5_點紋鱒魚","T6_明鱗梭鱸","T7_垂吻鯰魚","T8_河鱘",
+  "--鹹水魚--","T1_普通鯡魚","T2_條紋鯖魚","T3_平岸鰈魚","T4_藍鱗鱈魚","T5_點紋狼魚","T6_健鰭鮭魚","T7_藍鰭鮪魚","T8_鋼鱗劍魚",
+  "--稀有森林魚--","T3_綠川鰻魚","T5_赤泉鰻魚","T7_死水鰻魚",
+  "--稀有草原魚--","T3_淺川螃蟹","T5_荒溪螃蟹","T7_麈洞螃蟹",
+  "--稀有山脈魚--","T3_高地冷目魚","T5_山脈盲眼魚派","T7_霜峰鋭眼魚",
+  "--稀有高地魚--","T3_石溪鈍口螈","T5_激流鈍口螈","T7_落雷鈍口螈",
+  "--稀有沼澤魚--","T3_綠沼蛤蜊","T5_暗水蛤蜊","T7_黑沼蛤蜊",
+  "--稀有鹹水魚--","T3_淺岸魷魚","T5_中水章魚","T7_深水海怪",
+  "--稀有阿瓦隆魚--","T3_白霧鯛魚","T5_清霧鯛魚","T7_純霧鯛魚",
+  "--其他--","T1_海藻","T1_切碎的魚","T1_基礎魚醬","T1_高級魚醬","T1_獨門魚醬"],
 
   EASTER:["驚喜蛋","巧克力","T8_活力春日棉尾蛋","T8_馴化春日棉尾","T8_春日棉尾","T8_Caerleon 棉尾兔蛋","T8_馴化Caerleon 棉尾兔","T8_Caerleon 棉尾兔"],
 };
@@ -454,6 +466,19 @@ export const itemTypeValues = {
   "T7.0_地下城地圖(大型團隊)":"T7_RANDOM_DUNGEON_ELITE_TOKEN_1","T7.1_地下城地圖(大型團隊)":"T7_RANDOM_DUNGEON_ELITE_TOKEN_2@1","T7.2_地下城地圖(大型團隊)":"T7_RANDOM_DUNGEON_ELITE_TOKEN_3@2","T7.3_地下城地圖(大型團隊)":"T7_RANDOM_DUNGEON_ELITE_TOKEN_4@3",
   "T8.0_地下城地圖(大型團隊)":"T8_RANDOM_DUNGEON_ELITE_TOKEN_1","T8.1_地下城地圖(大型團隊)":"T8_RANDOM_DUNGEON_ELITE_TOKEN_2@1","T8.2_地下城地圖(大型團隊)":"T8_RANDOM_DUNGEON_ELITE_TOKEN_3@2","T8.3_地下城地圖(大型團隊)":"T8_RANDOM_DUNGEON_ELITE_TOKEN_4@3",
   
+  "T1_普通紅眼魚":"T1_FISH_FRESHWATER_ALL_COMMON","T2_條紋鯉魚":"T2_FISH_FRESHWATER_ALL_COMMON","T3_阿爾比恩鱸魚":"T3_FISH_FRESHWATER_ALL_COMMON","T4_藍鱗狗魚":"T4_FISH_FRESHWATER_ALL_COMMON",
+  "T5_點紋鱒魚":"T5_FISH_FRESHWATER_ALL_COMMON","T6_明鱗梭鱸":"T6_FISH_FRESHWATER_ALL_COMMON","T7_垂吻鯰魚":"T7_FISH_FRESHWATER_ALL_COMMON","T8_河鱘":"T8_FISH_FRESHWATER_ALL_COMMON",
+  "T1_普通鯡魚":"T1_FISH_SALTWATER_ALL_COMMON","T2_條紋鯖魚":"T2_FISH_SALTWATER_ALL_COMMON","T3_平岸鰈魚":"T3_FISH_SALTWATER_ALL_COMMON","T4_藍鱗鱈魚":"T4_FISH_SALTWATER_ALL_COMMON",
+  "T5_點紋狼魚":"T5_FISH_SALTWATER_ALL_COMMON","T6_健鰭鮭魚":"T6_FISH_SALTWATER_ALL_COMMON","T7_藍鰭鮪魚":"T7_FISH_SALTWATER_ALL_COMMON","T8_鋼鱗劍魚":"T8_FISH_SALTWATER_ALL_COMMON",
+  "T3_綠川鰻魚":"T3_FISH_FRESHWATER_FOREST_RARE","T5_赤泉鰻魚":"T5_FISH_FRESHWATER_FOREST_RARE","T7_死水鰻魚":"T7_FISH_FRESHWATER_FOREST_RARE",
+  "T3_淺川螃蟹":"T3_FISH_FRESHWATER_MOUNTAIN_RARE","T5_荒溪螃蟹":"T5_FISH_FRESHWATER_MOUNTAIN_RARE","T7_麈洞螃蟹":"T7_FISH_FRESHWATER_MOUNTAIN_RARE",
+  "T3_高地冷目魚":"T3_FISH_FRESHWATER_HIGHLANDS_RARE","T5_山脈盲眼魚派":"T5_FISH_FRESHWATER_HIGHLANDS_RARE","T7_霜峰鋭眼魚":"T7_FISH_FRESHWATER_HIGHLANDS_RARE",
+  "T3_石溪鈍口螈":"T3_FISH_FRESHWATER_STEPPE_RARE","T5_激流鈍口螈":"T5_FISH_FRESHWATER_STEPPE_RARE","T7_落雷鈍口螈":"T7_FISH_FRESHWATER_STEPPE_RARE",
+  "T3_綠沼蛤蜊":"T3_FISH_FRESHWATER_SWAMP_RARE","T5_暗水蛤蜊":"T5_FISH_FRESHWATER_SWAMP_RARE","T7_黑沼蛤蜊":"T7_FISH_FRESHWATER_SWAMP_RARE",
+  "T3_淺岸魷魚":"T3_FISH_SALTWATER_ALL_RARE","T5_中水章魚":"T5_FISH_SALTWATER_ALL_RARE","T7_深水海怪":"T7_FISH_SALTWATER_ALL_RARE",
+  "T3_白霧鯛魚":"T3_FISH_FRESHWATER_AVALON_RARE","T5_清霧鯛魚":"T5_FISH_FRESHWATER_AVALON_RARE","T7_純霧鯛魚":"T7_FISH_FRESHWATER_AVALON_RARE",
+  "T1_海藻":"T1_SEAWEED","T1_切碎的魚":"T1_FISHCHOPS","T1_基礎魚醬":"T1_FISHSAUCE_LEVEL1","T1_高級魚醬":"T1_FISHSAUCE_LEVEL2","T1_獨門魚醬":"T1_FISHSAUCE_LEVEL3",
+
   "驚喜蛋":"CONSUMABLE_EVENT_EASTER_2020_EGG","巧克力":"CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE",
   "T8_活力春日棉尾蛋":"T8_FARM_RABBIT_EASTER_BABY","T8_馴化春日棉尾":"T8_FARM_RABBIT_EASTER_GROWN",
   "T8_春日棉尾":"T8_MOUNT_RABBIT_EASTER","T8_Caerleon 棉尾兔蛋":"T8_FARM_RABBIT_EASTER_BABY_DARK",
