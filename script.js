@@ -161,6 +161,9 @@ function fetchData() {
     ]).then(data => {
       var price_checkbox = document.getElementById("price_checkbox");
       var history_checkbox = document.getElementById("history_checkbox");
+      var history_48Hours = document.getElementById("history_48Hours");
+      
+
       var item_price = document.getElementById("item_price");
       var item_history = document.getElementById("item_history");
 
@@ -262,8 +265,7 @@ function fetchData() {
       
 
 
-      
-      const last24Hours = Array.from({ length: 24 }, (_, i) => {
+      const last24Hours = Array.from({ length: history_48Hours.checked? 48: 24 }, (_, i) => {
         const offset = 0; // UTC+8 timezone offset
         const localTimestamp = new Date(Date.now() - (i * 60 * 60 * 1000) + (offset * 60 * 60 * 1000));
         localTimestamp.setMinutes(0);
@@ -274,70 +276,141 @@ function fetchData() {
         labels: last24Hours.reverse(),
         datasets: [ 
           {
-            label: 'Fort Sterling',
+            label: 'Fort Sterling - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(225, 225, 225)',
+            yAxisID: 'avg_price',
             tension: 0.1
           },
           {
-            label: 'Bridgewatch',
+            label: 'Bridgewatch - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(255, 226, 160)',
+            yAxisID: 'avg_price',
             tension: 0.1
           },
           {
-            label: 'Thetford',
+            label: 'Thetford - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(200, 130, 200)',
+            yAxisID: 'avg_price',
             tension: 0.1
           },
           {
-            label: 'Lymhurst',
+            label: 'Lymhurst - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(130, 237, 130)',
+            yAxisID: 'avg_price',
             tension: 0.1
           },
           {
-            label: 'Martlock',
+            label: 'Martlock - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(135, 205, 245)',
+            yAxisID: 'avg_price',
             tension: 0.1
           },
           {
-            label: 'Caerleon',
+            label: 'Caerleon - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(128, 128, 128)',
+            yAxisID: 'avg_price',
             tension: 0.1
           },
           {
-            label: 'Black Market',
+            label: 'Black Market - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(30, 30, 30)',
+            yAxisID: 'avg_price',
             tension: 0.1
-          }
+          },{
+            label: 'Fort Sterling - Item Count',
+            data: [],
+            fill: false,
+            backgroundColor: 'rgb(225, 225, 225)',
+            yAxisID: 'item_count',
+            tension: 0.1,
+            type: 'bar'
+          },
+          {
+            label: 'Bridgewatch - Item Count',
+            data: [],
+            fill: false,
+            backgroundColor: 'rgb(255, 226, 160)',
+            yAxisID: 'item_count',
+            tension: 0.1,
+            type: 'bar'
+          },
+          {
+            label: 'Thetford - Item Count',
+            data: [],
+            fill: false,
+            backgroundColor: 'rgb(200, 130, 200)',
+            yAxisID: 'item_count',
+            tension: 0.1,
+            type: 'bar'
+          },
+          {
+            label: 'Lymhurst - Item Count',
+            data: [],
+            fill: false,
+            backgroundColor: 'rgb(130, 237, 130)',
+            yAxisID: 'item_count',
+            tension: 0.1,
+            type: 'bar'
+          },
+          {
+            label: 'Martlock - Item Count',
+            data: [],
+            fill: false,
+            backgroundColor: 'rgb(135, 205, 245)',
+            yAxisID: 'item_count',
+            tension: 0.1,
+            type: 'bar'
+          },
+          {
+            label: 'Caerleon - Item Count',
+            data: [],
+            fill: false,
+            backgroundColor: 'rgb(128, 128, 128)',
+            yAxisID: 'item_count',
+            tension: 0.1,
+            type: 'bar'
+          },
+          {
+            label: 'Black Market - Item Count',
+            data: [],
+            fill: false,
+            backgroundColor: 'rgb(30, 30, 30)',
+            yAxisID: 'item_count',
+            tension: 0.1,
+            type: 'bar'
+          },
         ]
       };
 
       last24Hours.forEach((timestamp, index) => {
         data[1].forEach((entry) => {
           const location = entry.location;
-          const dataset = chartData.datasets.find((dataset) => dataset.label === location);
-      
-          if (dataset && entry.data) {
+          const avgPriceDataset = chartData.datasets.find((dataset) => dataset.label === location + ' - Avg Price');
+          const itemCountDataset = chartData.datasets.find((dataset) => dataset.label === location + ' - Item Count');
+        
+          if (avgPriceDataset && itemCountDataset && entry.data) {
             const dataForTimestamp = entry.data.find((data) => {
               const dataTimestamp = new Date(data.timestamp).toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false });
               return dataTimestamp === timestamp;
             });
-      
+        
             if (dataForTimestamp) {
-              dataset.data[index] = dataForTimestamp.avg_price;
+              avgPriceDataset.data[index] = dataForTimestamp.avg_price;
+              itemCountDataset.data[index] = dataForTimestamp.item_count;
             }
           }
         });
@@ -361,18 +434,10 @@ function fetchData() {
                 text: 'Timestamp'
               },
               //reverse: true
-            },
-            y: {
-              title: {
-                display: true,
-                text: 'Price'
-              }
             }
           }
         }
       };
-      
-      //const chartElement = document.getElementById('pricechart');
       
       const chart = new Chart(chartElement, chartConfig1);
 
