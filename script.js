@@ -266,14 +266,23 @@ function fetchData() {
 
 
       const last24Hours = Array.from({ length: history_48Hours.checked? 48: 24 }, (_, i) => {
+        const offset = -8; // UTC+8 timezone offset
+        const localTimestamp = new Date(Date.now() - (i * 60 * 60 * 1000) + (offset * 60 * 60 * 1000));
+        localTimestamp.setMinutes(0);
+        localTimestamp.setSeconds(0);
+        return localTimestamp.toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false });
+      });
+
+      const last24HoursLABELS = Array.from({ length: history_48Hours.checked? 48: 24 }, (_, i) => {
         const offset = 0; // UTC+8 timezone offset
         const localTimestamp = new Date(Date.now() - (i * 60 * 60 * 1000) + (offset * 60 * 60 * 1000));
         localTimestamp.setMinutes(0);
         localTimestamp.setSeconds(0);
         return localTimestamp.toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false });
       });
+
       const chartData = {
-        labels: last24Hours.reverse(),
+        labels: last24HoursLABELS,
         datasets: [ 
           {
             label: 'Fort Sterling - Avg Price',
@@ -404,7 +413,8 @@ function fetchData() {
         
           if (avgPriceDataset && itemCountDataset && entry.data) {
             const dataForTimestamp = entry.data.find((data) => {
-              const dataTimestamp = new Date(data.timestamp).toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false });
+              const offset = -8; // UTC+8 timezone offset
+              const dataTimestamp = new Date(data.timestamp ).toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false });
               return dataTimestamp === timestamp;
             });
         
@@ -433,7 +443,7 @@ function fetchData() {
                 display: true,
                 text: 'Timestamp'
               },
-              //reverse: true
+              reverse: true
             }
           }
         }
