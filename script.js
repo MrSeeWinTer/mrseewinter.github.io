@@ -120,7 +120,6 @@ function fetchData() {
 
       const disH1 = document.createElement('H1');
       
-      
       try{
         disH1.textContent = data.localizedNames["ZH-TW"]+" "+data.localizedDescriptions["ZH-TW"];
       }catch{
