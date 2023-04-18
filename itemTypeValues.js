@@ -8,12 +8,15 @@ export const optionsByItemClasss={
   CONSUMABLE:["","熟食","藥水","釣餌","魚","地圖-煉獄之門","地圖-地下城地圖(單人)","地圖-地下城地圖(團隊)","地圖-地下城地圖(大型團隊)","其他"],
   FARM:["","農耕種子","農耕產品","幼崽動物","成長動物","坐騎"],
   WORKER:["","通用","種植者","漁夫","獵場看守者","造箭師","附魔師","傭兵","探礦者","砌石匠","修補匠","鐵匠","伐木匠"],
+  FACTION:["","城市資源"],
+  SKILLBOOK:["","洞察之書","採集典籍"],
   EVENT:["","春日祭典"],
 
 };
 
 export const itemClassValues={
-  "原生資源": "RAW","加工資源": "MATERIAL","材料":"FRAG","配件":"ACCESSORIES",
+  "原生資源": "RAW","加工資源": "MATERIAL","材料":"FRAG",
+  "配件":"ACCESSORIES",
   "布質風帽":"HEAD_CLOTH","布質長袍":"ARMOR_CLOTH","布質便鞋":"SHOES_CLOTH",
   "皮革兜帽":"HEAD_LEATHER","皮革外套":"ARMOR_LEATHER","皮革鞋子":"SHOES_LEATHER",
   "金屬頭盔":"HEAD_PLATE","金屬護甲":"ARMOR_PLATE","金屬靴子":"SHOES_PLATE",
@@ -29,6 +32,8 @@ export const itemClassValues={
   "幼崽動物":"BABY","成長動物":"GROWN","農耕種子":"SEED","農耕產品":"GROWTH","坐騎":"MOUNT",
   "通用":"GENERAL","種植者":"CROPPER","漁夫":"FISHERMAN","獵場看守者":"GAMEKEEPER","造箭師":"FLETCHER","附魔師":"IMBUER",
   "傭兵":"MERCENARY","探礦者":"PROSPECTOR","砌石匠":"STONECUTTER","修補匠":"TINKER","鐵匠":"BLACKSMITH","伐木匠":"LUMBERJACK",
+  "城市資源":"HEART","洞察之書":"INSIGHT","採集典籍":"GATHER",
+  
   "春日祭典":"EASTER",
 
 };
@@ -74,10 +79,10 @@ export const optionsByItemType = {
   OFF_BOOK:["咒法之書","祕密之眼","怨靈","祭祀環","天界香爐"],
   OFF_SHIELD:["盾牌","石棺之盾","懦弱盾牌","破面者","星域神盾"],
   OFF_TORCH:["火炬","喚霧者","睨視手杖","地窖燭光","神聖權杖"],
-
+  
   TOOL_PICK:["十字鎬","阿瓦隆十字鎬","採礦匠工作帽","採礦匠工作服","採礦匠工作靴","採礦匠後背包"],
   TOOL_SICKLE:["鐮刀","阿瓦隆鐮刀","採收者工作帽","採收者工作服","採收者工作靴","採收者後背包"],
-  TOOL_KNIFE:["剝皮刀","阿瓦隆剝皮刀","採剝皮工作帽","採剝皮工作服","採剝皮工作靴","採剝皮後背包"],
+  TOOL_KNIFE:["剝皮刀","阿瓦隆剝皮刀","剝皮匠工作帽","剝皮匠工作服","剝皮匠工作靴","剝皮匠後背包"],
   TOOL_HAMMER:["採石鎚","阿瓦隆採石鎚","採石匠工作帽","採石匠工作服","採石匠工作靴","採石匠後背包"],
   TOOL_AXE:["伐木斧","阿瓦隆伐木斧","伐木匠工作帽","伐木匠工作服","伐木匠工作靴","伐木匠後背包"],
   TOOL_FISHINGROD:["釣竿","阿瓦隆釣竿","漁夫工作帽","漁夫工作服","漁夫工作靴","漁夫後背包"],
@@ -211,6 +216,11 @@ export const optionsByItemType = {
   "--稀有阿瓦隆魚--","T3_白霧鯛魚","T5_清霧鯛魚","T7_純霧鯛魚",
   "--其他--","T1_海藻","T1_切碎的魚","T1_基礎魚醬","T1_高級魚醬","T1_獨門魚醬"],
 
+  HEART:["T1_樹本之心","T1_岩石之心","T1_野獸之心","T1_山脈之心","T1_藤蔓之心","T1_暗影之心"],
+  INSIGHT:["T4_洞察之書"],
+  GATHER:["採礦匠典籍","採收者典籍","剝皮匠典籍","採石匠典籍","伐木匠典籍"],
+
+
   EASTER:["驚喜蛋","巧克力","T8_活力春日棉尾蛋","T8_馴化春日棉尾","T8_春日棉尾","T8_Caerleon 棉尾兔蛋","T8_馴化Caerleon 棉尾兔","T8_Caerleon 棉尾兔"],
 };
 
@@ -315,8 +325,8 @@ export const itemTypeValues = {
   "鐮刀":"2H_TOOL_SICKLE","阿瓦隆鐮刀":"2H_TOOL_SICKLE_AVALON","採收者工作帽":"HEAD_GATHERER_FIBER",
   "採收者工作服":"ARMOR_GATHERER_FIBER","採收者工作靴":"SHOES_GATHERER_FIBER","採收者後背包":"BACKPACK_GATHERER_FIBER",
 
-  "剝皮刀":"2H_TOOL_KNIFE","阿瓦隆剝皮刀":"2H_TOOL_KNIFE_AVALON","採剝皮工作帽":"HEAD_GATHERER_HIDE",
-  "採剝皮工作服":"ARMOR_GATHERER_HIDE","採剝皮工作靴":"SHOES_GATHERER_HIDE","採剝皮後背包":"BACKPACK_GATHERER_HIDE",
+  "剝皮刀":"2H_TOOL_KNIFE","阿瓦隆剝皮刀":"2H_TOOL_KNIFE_AVALON","剝皮匠工作帽":"HEAD_GATHERER_HIDE",
+  "剝皮匠工作服":"ARMOR_GATHERER_HIDE","剝皮匠工作靴":"SHOES_GATHERER_HIDE","剝皮匠後背包":"BACKPACK_GATHERER_HIDE",
 
   "採石鎚":"2H_TOOL_HAMMER","阿瓦隆採石鎚":"2H_TOOL_HAMMER_AVALON","採石匠工作帽":"HEAD_GATHERER_ROCK",
   "採石匠工作服":"ARMOR_GATHERER_ROCK","採石匠工作靴":"SHOES_GATHERER_ROCK","採石匠後背包":"BACKPACK_GATHERER_ROCK",
@@ -477,6 +487,14 @@ export const itemTypeValues = {
   "T3_淺岸魷魚":"T3_FISH_SALTWATER_ALL_RARE","T5_中水章魚":"T5_FISH_SALTWATER_ALL_RARE","T7_深水海怪":"T7_FISH_SALTWATER_ALL_RARE",
   "T3_白霧鯛魚":"T3_FISH_FRESHWATER_AVALON_RARE","T5_清霧鯛魚":"T5_FISH_FRESHWATER_AVALON_RARE","T7_純霧鯛魚":"T7_FISH_FRESHWATER_AVALON_RARE",
   "T1_海藻":"T1_SEAWEED","T1_切碎的魚":"T1_FISHCHOPS","T1_基礎魚醬":"T1_FISHSAUCE_LEVEL1","T1_高級魚醬":"T1_FISHSAUCE_LEVEL2","T1_獨門魚醬":"T1_FISHSAUCE_LEVEL3",
+
+  "T1_樹本之心":"T1_FACTION_FOREST_TOKEN_1","T1_岩石之心":"T1_FACTION_HIGHLAND_TOKEN_1","T1_野獸之心":"T1_FACTION_STEPPE_TOKEN_1",
+  "T1_山脈之心":"T1_FACTION_MOUNTAIN_TOKEN_1","T1_藤蔓之心":"T1_FACTION_SWAMP_TOKEN_1","T1_暗影之心":"T1_FACTION_CAERLEON_TOKEN_1",
+
+  "T4_洞察之書":"T4_SKILLBOOK_STANDARD",
+  "採礦匠典籍":"SKILLBOOK_GATHER_ORE","採收者典籍":"SKILLBOOK_GATHER_FIBER","剝皮匠典籍":"SKILLBOOK_GATHER_HIDE",
+  "採石匠典籍":"SKILLBOOK_GATHER_ROCK","伐木匠典籍":"SKILLBOOK_GATHER_WOOD",
+
 
   "驚喜蛋":"CONSUMABLE_EVENT_EASTER_2020_EGG","巧克力":"CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE",
   "T8_活力春日棉尾蛋":"T8_FARM_RABBIT_EASTER_BABY","T8_馴化春日棉尾":"T8_FARM_RABBIT_EASTER_GROWN",
