@@ -327,7 +327,7 @@ function fetchData() {
             label: 'Caerleon - Avg Price',
             data: [],
             fill: false,
-            borderColor: 'rgb(128, 128, 128)',
+            borderColor: 'rgb(140, 55, 55)',
             yAxisID: 'avg_price',
             tension: 0.1
           },
@@ -387,7 +387,7 @@ function fetchData() {
             label: 'Caerleon - Item Count',
             data: [],
             fill: false,
-            backgroundColor: 'rgb(128, 128, 128)',
+            backgroundColor: 'rgb(140, 55, 55)',
             yAxisID: 'item_count',
             tension: 0.1,
             type: 'bar'
