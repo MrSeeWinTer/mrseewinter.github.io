@@ -10,6 +10,7 @@ export const optionsByItemClasss={
   WORKER:["","通用","種植者","漁夫","獵場看守者","造箭師","附魔師","傭兵","探礦者","砌石匠","修補匠","鐵匠","伐木匠"],
   FACTION:["","城市資源"],
   SKILLBOOK:["","洞察之書","採集典籍"],
+  TREASURE:["","Bridgewatch奢侈品","Fort Sterling奢侈品","Lymhurst奢侈品","Martlock奢侈品","Thetford奢侈品","Caerleon奢侈品"],
   EVENT:["","春日祭典"],
 
 };
@@ -33,7 +34,10 @@ export const itemClassValues={
   "通用":"GENERAL","種植者":"CROPPER","漁夫":"FISHERMAN","獵場看守者":"GAMEKEEPER","造箭師":"FLETCHER","附魔師":"IMBUER",
   "傭兵":"MERCENARY","探礦者":"PROSPECTOR","砌石匠":"STONECUTTER","修補匠":"TINKER","鐵匠":"BLACKSMITH","伐木匠":"LUMBERJACK",
   "城市資源":"HEART","洞察之書":"INSIGHT","採集典籍":"GATHER",
-  
+  "Bridgewatch奢侈品":"B_TREASURE","Fort Sterling奢侈品":"F_TREASURE","Lymhurst奢侈品":"L_TREASURE",
+  "Martlock奢侈品":"M_TREASURE","Thetford奢侈品":"T_TREASURE","Caerleon奢侈品":"C_TREASURE",
+
+
   "春日祭典":"EASTER",
 
 };
@@ -119,7 +123,7 @@ export const optionsByItemType = {
   ],
 
   MOUNT:[
-    "騎乘馬","鐵甲馬","運輸公牛","T4_巨鹿坐騎","T5_灰狼坐騎","T5_野豬坐騎","T5_冬熊坐騎","T5_迅爪坐騎","T5_沼澤蠑螈坐騎","T5_恐鳥坐騎","T5_大角公羊坐騎",
+    "T2_騾子","騎乘馬","鐵甲馬","運輸公牛","T4_巨鹿坐騎","T5_灰狼坐騎","T5_野豬坐騎","T5_冬熊坐騎","T5_迅爪坐騎","T5_沼澤蠑螈坐騎","T5_恐鳥坐騎","T5_大角公羊坐騎",
     "T6_恐狼坐騎","T6_駝鹿坐騎","T7_恐豬坐騎","T7_沼澤龍坐騎","T8_菁英灰狼坐騎","T8_菁英野豬坐騎","T8_恐熊坐騎","T8_菁英冬熊坐騎","T8_猛獁象坐騎",
     "T8_菁英沼澤蠑螈坐騎","T8_菁英恐鳥坐騎","T8_菁英大角公羊坐騎","T8_春日棉尾","T8_Caerleon 棉尾兔"
   ],
@@ -220,6 +224,17 @@ export const optionsByItemType = {
   INSIGHT:["T4_洞察之書"],
   GATHER:["採礦匠典籍","採收者典籍","剝皮匠典籍","採石匠典籍","伐木匠典籍"],
 
+  B_TREASURE:["羽毛護符","捕夢網","木雕聖物"],
+
+  F_TREASURE:["簡陋石造面具","石造面具","石像"],
+  
+  L_TREASURE:["銀製杯子","銀製鏡子","銀製枝形燭臺"],
+
+  M_TREASURE:["腐化卷軸","小冊子","古代典籍"],
+
+  T_TREASURE:["裝飾用權杖","十字聖球","黃金皇冠"],
+
+  C_TREASURE:["儀式蠟燭","血聖杯","獻祭匕首"],
 
   EASTER:["驚喜蛋","巧克力","T8_活力春日棉尾蛋","T8_馴化春日棉尾","T8_春日棉尾","T8_Caerleon 棉尾兔蛋","T8_馴化Caerleon 棉尾兔","T8_Caerleon 棉尾兔"],
 };
@@ -439,7 +454,7 @@ export const itemTypeValues = {
   "T7_沼澤龍":"T7_FARM_SWAMPDRAGON_GROWN","T8_幽狼":"T8_FARM_DIREWOLF_GROWN","T8_菁英灰狼":"T8_FARM_GREYWOLF_FW_CAERLEON_GROWN","T8_菁英野豬":"T8_FARM_DIREBOAR_FW_LYMHURST_GROWN","T8_恐熊":"T8_FARM_DIREBEAR_GROWN",
   "T8_菁英冬熊":"T8_FARM_DIREBEAR_FW_FORTSTERLING_GROWN","T8_猛獁象":"T8_FARM_MAMMOTH_GROWN","T8_菁英沼澤蠑螈":"T8_FARM_SWAMPDRAGON_FW_THETFORD_GROWN","T8_菁英恐鳥":"T8_FARM_MOABIRD_FW_BRIDGEWATCH_GROWN","T8_菁英大角公羊":"T8_FARM_RAM_FW_MARTLOCK_GROWN",
 
-  "騎乘馬":"MOUNT_HORSE","鐵甲馬":"MOUNT_ARMORED_HORSE","運輸公牛":"MOUNT_OX","T4_巨鹿坐騎":"T4_MOUNT_GIANTSTAG","T5_灰狼坐騎":"T5_MOUNT_GREYWOLF_FW_CAERLEON","T5_野豬坐騎":"T5_MOUNT_DIREBOAR_FW_LYMHURST",
+  "T2_騾子":"T2_MOUNT_MULE","騎乘馬":"MOUNT_HORSE","鐵甲馬":"MOUNT_ARMORED_HORSE","運輸公牛":"MOUNT_OX","T4_巨鹿坐騎":"T4_MOUNT_GIANTSTAG","T5_灰狼坐騎":"T5_MOUNT_GREYWOLF_FW_CAERLEON","T5_野豬坐騎":"T5_MOUNT_DIREBOAR_FW_LYMHURST",
   "T5_冬熊坐騎":"T5_MOUNT_DIREBEAR_FW_FORTSTERLING","T5_迅爪坐騎":"T5_MOUNT_COUGAR_KEEPER","T5_沼澤蠑螈坐騎":"T5_MOUNT_SWAMPDRAGON_FW_THETFORD","T5_恐鳥坐騎":"T5_MOUNT_MOABIRD_FW_BRIDGEWATCH","T5_大角公羊坐騎":"T5_MOUNT_RAM_FW_MARTLOCK",
   "T6_恐狼坐騎":"T6_MOUNT_DIREWOLF","T6_駝鹿坐騎":"T6_MOUNT_GIANTSTAG_MOOSE","T7_恐豬坐騎":"T7_MOUNT_DIREBOAR","T7_沼澤龍坐騎":"T7_MOUNT_SWAMPDRAGON","T8_菁英灰狼坐騎":"T8_MOUNT_GREYWOLF_FW_CAERLEON_ELITE",
   "T8_菁英野豬坐騎":"T8_MOUNT_DIREBOAR_FW_LYMHURST_ELITE","T8_恐熊坐騎":"T8_MOUNT_DIREBEAR","T8_菁英冬熊坐騎":"T8_MOUNT_DIREBEAR_FW_FORTSTERLING_ELITE","T8_猛獁象坐騎":"T8_MOUNT_MAMMOTH_TRANSPORT",
@@ -494,6 +509,18 @@ export const itemTypeValues = {
   "T4_洞察之書":"T4_SKILLBOOK_STANDARD",
   "採礦匠典籍":"SKILLBOOK_GATHER_ORE","採收者典籍":"SKILLBOOK_GATHER_FIBER","剝皮匠典籍":"SKILLBOOK_GATHER_HIDE",
   "採石匠典籍":"SKILLBOOK_GATHER_ROCK","伐木匠典籍":"SKILLBOOK_GATHER_WOOD",
+
+  "羽毛護符":"TREASURE_TRIBAL_RARITY1","捕夢網":"TREASURE_TRIBAL_RARITY2","木雕聖物":"TREASURE_TRIBAL_RARITY3",
+
+  "簡陋石造面具":"TREASURE_DECORATIVE_RARITY1","石造面具":"TREASURE_DECORATIVE_RARITY2","石像":"TREASURE_DECORATIVE_RARITY3",
+  
+  "銀製杯子":"TREASURE_SILVERWARE_RARITY1","銀製鏡子":"TREASURE_SILVERWARE_RARITY2","銀製枝形燭臺":"TREASURE_SILVERWARE_RARITY3",
+
+  "腐化卷軸":"TREASURE_KNOWLEDGE_RARITY1","小冊子":"TREASURE_KNOWLEDGE_RARITY2","古代典籍":"TREASURE_KNOWLEDGE_RARITY3",
+
+  "裝飾用權杖":"TREASURE_CEREMONIAL_RARITY1","十字聖球":"TREASURE_CEREMONIAL_RARITY2","黃金皇冠":"TREASURE_CEREMONIAL_RARITY3",
+
+  "儀式蠟燭":"TREASURE_RITUAL_RARITY1","血聖杯":"TREASURE_RITUAL_RARITY2","獻祭匕首":"TREASURE_RITUAL_RARITY3",
 
 
   "驚喜蛋":"CONSUMABLE_EVENT_EASTER_2020_EGG","巧克力":"CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE",
