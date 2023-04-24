@@ -65,7 +65,7 @@ function fetchData() {
     var { itemName, itemTier, itemEnchant, itemQuality } = getSelectedValues();
     const enchant_name = itemEnchant!=0? itemTypeSelect.value == "RAW"||itemTypeSelect.value =="MATERIAL"? "_LEVEL"+itemEnchant+"@"+itemEnchant :"@"+itemEnchant:"";
     //const enchant_name_for_png = itemEnchant != 0? "_LEVEL"+itemEnchant+"@"+itemEnchant : "";
-    if(itemTier==""&&!itemName.startsWith("T")&&!itemName.startsWith("QUESTITEM")){itemTier="T4_"}
+    if(itemTier==""&&!itemName.startsWith("T")&&!itemName.startsWith("QUESTITEM")&&!itemName.startsWith("UNIQUE")){itemTier="T4_"}
 
     //console.log(enchant_name+";"+itemQuality);
     
