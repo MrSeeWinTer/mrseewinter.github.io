@@ -238,7 +238,7 @@ export const optionsByItemType = {
   "--稀有沼澤魚--","T3_綠沼蛤蜊","T5_暗水蛤蜊","T7_黑沼蛤蜊",
   "--稀有鹹水魚--","T3_淺岸魷魚","T5_中水章魚","T7_深水海怪",
   "--稀有阿瓦隆魚--","T3_白霧鯛魚","T5_清霧鯛魚","T7_純霧鯛魚",
-  "--其他--","T1_海藻","T1_切碎的魚","T1_基礎魚醬","T1_高級魚醬","T1_獨門魚醬"],
+  "--其他--","T1_海藻","T1_切碎的魚","T1_基礎魚醬","T1_高級魚醬","T1_獨門魚醬","T8_鯊魚"],
 
   HEART:["T1_樹本之心","T1_岩石之心","T1_野獸之心","T1_山脈之心","T1_藤蔓之心","T1_暗影之心"],
   INSIGHT:["T4_洞察之書"],
@@ -586,6 +586,8 @@ export const itemTypeValues = {
   "T3_淺岸魷魚":"T3_FISH_SALTWATER_ALL_RARE","T5_中水章魚":"T5_FISH_SALTWATER_ALL_RARE","T7_深水海怪":"T7_FISH_SALTWATER_ALL_RARE",
   "T3_白霧鯛魚":"T3_FISH_FRESHWATER_AVALON_RARE","T5_清霧鯛魚":"T5_FISH_FRESHWATER_AVALON_RARE","T7_純霧鯛魚":"T7_FISH_FRESHWATER_AVALON_RARE",
   "T1_海藻":"T1_SEAWEED","T1_切碎的魚":"T1_FISHCHOPS","T1_基礎魚醬":"T1_FISHSAUCE_LEVEL1","T1_高級魚醬":"T1_FISHSAUCE_LEVEL2","T1_獨門魚醬":"T1_FISHSAUCE_LEVEL3",
+  "T8_鯊魚":"T8_FISH_SALTWATER_ALL_BOSS_SHARK",
+
 
   "T1_樹本之心":"T1_FACTION_FOREST_TOKEN_1","T1_岩石之心":"T1_FACTION_HIGHLAND_TOKEN_1","T1_野獸之心":"T1_FACTION_STEPPE_TOKEN_1",
   "T1_山脈之心":"T1_FACTION_MOUNTAIN_TOKEN_1","T1_藤蔓之心":"T1_FACTION_SWAMP_TOKEN_1","T1_暗影之心":"T1_FACTION_CAERLEON_TOKEN_1",
