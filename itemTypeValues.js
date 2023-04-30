@@ -11,7 +11,7 @@ export const optionsByItemClasss={
   FACTION:["","城市資源"],
   SKILLBOOK:["","洞察之書","採集典籍"],
   TREASURE:["","任意奢侈品","Bridgewatch奢侈品","Fort Sterling奢侈品","Lymhurst奢侈品","Martlock奢侈品","Thetford奢侈品","Caerleon奢侈品"],
-  TOKEN:["","水晶聯賽徽章",
+  TOKEN:["","密封皇家徽章","水晶聯賽徽章",
     "--高級遠征代幣--","超渡亡靈","疑點重重的生意","採石場血案","瘋人濫伐",
     "地底遊魂","銷毀蘑菇","三姊妹","永恆之戰","一把銀幣","渡鴉爪間"],
   EVENT:["","春日祭典"],
@@ -39,7 +39,7 @@ export const itemClassValues={
   "城市資源":"HEART","洞察之書":"INSIGHT","採集典籍":"GATHER",
   "任意奢侈品":"A_TREASURE","Bridgewatch奢侈品":"B_TREASURE","Fort Sterling奢侈品":"F_TREASURE","Lymhurst奢侈品":"L_TREASURE",
   "Martlock奢侈品":"M_TREASURE","Thetford奢侈品":"T_TREASURE","Caerleon奢侈品":"C_TREASURE",
-  "水晶聯賽徽章":"CRYSTALLEAGUE",
+  "密封皇家徽章":"ROYAL","水晶聯賽徽章":"CRYSTALLEAGUE",
   "超渡亡靈":"RECRUITMENT","疑點重重的生意":"FISHYBUSINESS","採石場血案":"STONEWARS","瘋人濫伐":"LUMBERCAMP","地底遊魂":"SEWERSCRYPT",
   "銷毀蘑菇":"MUSHROOM","三姊妹":"TRHEESISTERS","永恆之戰":"ETERNALBATTLE","一把銀幣":"FISTFULOFSILVER","渡鴉爪間":"TORTURER",
   "春日祭典":"EASTER",
@@ -251,6 +251,8 @@ export const optionsByItemType = {
   M_TREASURE:["腐化卷軸","小冊子","古代典籍"],
   T_TREASURE:["裝飾用權杖","十字聖球","黃金皇冠"],
   C_TREASURE:["儀式蠟燭","血聖杯","獻祭匕首"],
+
+  ROYAL:["密封皇家徽章"],
 
   CRYSTALLEAGUE:[
     "水晶聯賽LV1",
@@ -599,6 +601,8 @@ export const itemTypeValues = {
   "腐化卷軸":"TREASURE_KNOWLEDGE_RARITY1","小冊子":"TREASURE_KNOWLEDGE_RARITY2","古代典籍":"TREASURE_KNOWLEDGE_RARITY3",
   "裝飾用權杖":"TREASURE_CEREMONIAL_RARITY1","十字聖球":"TREASURE_CEREMONIAL_RARITY2","黃金皇冠":"TREASURE_CEREMONIAL_RARITY3",
   "儀式蠟燭":"TREASURE_RITUAL_RARITY1","血聖杯":"TREASURE_RITUAL_RARITY2","獻祭匕首":"TREASURE_RITUAL_RARITY3",
+
+  "密封皇家徽章":"T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
 
   "水晶聯賽LV1":"T4_TOKEN_CRYSTALLEAGUE_LVL_01_TEMPLATE",
 
