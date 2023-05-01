@@ -61,6 +61,23 @@ canvas{
     margin: 5px;
     font-size: 30px;
   }
+
+  .navbar-bg {
+    background-image: url('image/01.gif');
+    background-repeat: no-repeat;
+    animation: move-background 10s linear infinite;
+    background-size: contain;
+    background-position: center;
+  }
+  
+  @keyframes move-background {
+    from {
+      background-position: 100% 0;
+    }
+    to {
+      background-position: 0 0;
+    }
+  }
 /* Form styles */
   
   h1 {
