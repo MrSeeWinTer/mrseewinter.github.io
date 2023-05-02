@@ -162,6 +162,10 @@ td:first-child {
     font-weight: bold;
 }
 
+tr[data-city="5003"] {
+  background-color: rgb(145, 75, 175);
+}
+
 tr[data-city="Fort Sterling"] {
     background-color: rgb(225, 225, 225);
 }

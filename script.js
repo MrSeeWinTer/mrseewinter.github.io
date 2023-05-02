@@ -186,6 +186,7 @@ function fetchData() {
 
       let cities = data[0].map(item => item.city).filter((value, index, self) => self.indexOf(value) === index);
 
+
       cities.forEach(city => {
         let row = document.createElement('tr');
         row.setAttribute('data-city', city);
@@ -245,6 +246,15 @@ function fetchData() {
       }else{
         item_price.textContent = "";
       }
+
+      // Select the table cell with the text "5003"
+      let cell = document.querySelector('tr[data-city="5003"]');
+
+      // Check if the cell was found
+      if (cell) {
+        // Set the text content of the cell to "Brecilien"
+        cell.querySelector('td:first-child').textContent = "Brecilien";
+      }
       //---------------------------------------------------------------------------------------------------------------------
 
 
@@ -284,7 +294,17 @@ function fetchData() {
         labels: last24HoursLABELS,
         datasets: [ 
           {
+            label: 'Brecilien - Avg Price',
+            name:'5003 - Avg Price',
+            data: [],
+            fill: false,
+            borderColor: 'rgb(145, 75, 175)',
+            yAxisID: 'avg_price',
+            tension: 0.1
+          },
+          {
             label: 'Fort Sterling - Avg Price',
+            name: 'Fort Sterling - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(225, 225, 225)',
@@ -293,6 +313,7 @@ function fetchData() {
           },
           {
             label: 'Bridgewatch - Avg Price',
+            name: 'Bridgewatch - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(255, 226, 160)',
@@ -301,6 +322,7 @@ function fetchData() {
           },
           {
             label: 'Thetford - Avg Price',
+            name: 'Thetford - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(200, 130, 200)',
@@ -309,6 +331,7 @@ function fetchData() {
           },
           {
             label: 'Lymhurst - Avg Price',
+            name: 'Lymhurst - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(130, 237, 130)',
@@ -317,6 +340,7 @@ function fetchData() {
           },
           {
             label: 'Martlock - Avg Price',
+            name: 'Martlock - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(135, 205, 245)',
@@ -325,6 +349,7 @@ function fetchData() {
           },
           {
             label: 'Caerleon - Avg Price',
+            name: 'Caerleon - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(140, 55, 55)',
@@ -333,13 +358,24 @@ function fetchData() {
           },
           {
             label: 'Black Market - Avg Price',
+            name: 'Black Market - Avg Price',
             data: [],
             fill: false,
             borderColor: 'rgb(30, 30, 30)',
             yAxisID: 'avg_price',
             tension: 0.1
           },{
+            label: 'Brecilien - Item Count',
+            name: '5003 - Item Count',
+            data: [],
+            fill: false,
+            backgroundColor: 'rgb(145, 75, 175)',
+            yAxisID: 'item_count',
+            tension: 0.1,
+            type: 'bar'
+          },{
             label: 'Fort Sterling - Item Count',
+            name: 'Fort Sterling - Item Count',
             data: [],
             fill: false,
             backgroundColor: 'rgb(225, 225, 225)',
@@ -349,6 +385,7 @@ function fetchData() {
           },
           {
             label: 'Bridgewatch - Item Count',
+            name: 'Bridgewatch - Item Count',
             data: [],
             fill: false,
             backgroundColor: 'rgb(255, 226, 160)',
@@ -358,6 +395,7 @@ function fetchData() {
           },
           {
             label: 'Thetford - Item Count',
+            name: 'Thetford - Item Count',
             data: [],
             fill: false,
             backgroundColor: 'rgb(200, 130, 200)',
@@ -367,6 +405,7 @@ function fetchData() {
           },
           {
             label: 'Lymhurst - Item Count',
+            name: 'Lymhurst - Item Count',
             data: [],
             fill: false,
             backgroundColor: 'rgb(130, 237, 130)',
@@ -376,6 +415,7 @@ function fetchData() {
           },
           {
             label: 'Martlock - Item Count',
+            name: 'Martlock - Item Count',
             data: [],
             fill: false,
             backgroundColor: 'rgb(135, 205, 245)',
@@ -385,6 +425,7 @@ function fetchData() {
           },
           {
             label: 'Caerleon - Item Count',
+            name: 'Caerleon - Item Count',
             data: [],
             fill: false,
             backgroundColor: 'rgb(140, 55, 55)',
@@ -394,6 +435,7 @@ function fetchData() {
           },
           {
             label: 'Black Market - Item Count',
+            name: 'Black Market - Item Count',
             data: [],
             fill: false,
             backgroundColor: 'rgb(30, 30, 30)',
@@ -407,8 +449,8 @@ function fetchData() {
       last24Hours.forEach((timestamp, index) => {
         data[1].forEach((entry) => {
           const location = entry.location;
-          const avgPriceDataset = chartData.datasets.find((dataset) => dataset.label === location + ' - Avg Price');
-          const itemCountDataset = chartData.datasets.find((dataset) => dataset.label === location + ' - Item Count');
+          const avgPriceDataset = chartData.datasets.find((dataset) => dataset.name === location + ' - Avg Price');
+          const itemCountDataset = chartData.datasets.find((dataset) => dataset.name === location + ' - Item Count');
         
           if (avgPriceDataset && itemCountDataset && entry.data) {
             const dataForTimestamp = entry.data.find((data) => {
