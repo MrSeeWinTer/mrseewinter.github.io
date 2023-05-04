@@ -3,14 +3,14 @@
 }
 
 body {
-  background-color: #6c757d;
+
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .navbar {
-  background-color: #333;
+  background-color: #333333bb;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -59,7 +59,7 @@ body {
   display: inline-block;
   font-size: 1.2rem;
   margin-right: 0.5rem;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
   margin-right: 5px;
   
@@ -97,24 +97,297 @@ button:hover {
   color: #333;
 }
 
-#playerData {
-  background-color: #f9f9f9;
+.playerstyle{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin: 20px ;
   padding: 20px;
+  list-style: none;
 }
 
-#playerData h2 {
+#playerList h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
-#playerData p {
+#playerList p {
   font-size: 1.2rem;
   margin: 10px 0;
 }
 
-#playerData strong {
+#playerList strong {
   font-weight: bold;
+}
+
+/* Avatars */
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* BarChart  */
+#pvp_text{
+  display: flex;
+  justify-content: center;
+  
+}
+
+#bar {
+  width: 100%;
+  height: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#bar::-webkit-progress-bar {
+  background-color: rgb(200, 0, 0);
+  border-radius: 10px;
+}
+
+#bar::-webkit-progress-value { 
+  background-color: rgb(0, 200, 0);
+  border-radius: 10px;
+}
+
+#bar::-moz-progress-bar {
+  background-color: #f00;
+  border-radius: 10px;
+}
+
+.middle {
+  transform: translateY(-95%);
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* PVE */
+#pve{
+  margin-bottom: 20px;
+}
+.pve_stat{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#pve_text{
+  display: flex;
+  justify-content: center;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgb(205, 205, 205);
+  margin-bottom: 5px;
+}
+
+.item {
+  height: 100%;
+}
+
+.royal {
+  background-color: rgb(0, 197, 174);
+  color: #000000;
+}
+
+.outlands {
+  background-color: rgb(0, 26, 220);
+  color: #000000;
+}
+
+.avalon {
+  background-color: rgb(255, 175, 54);
+  color: #000000;
+}
+
+.hellgate {
+  background-color: rgb(190, 0, 0);
+  color: #000000;
+}
+
+.corrupteddungeon {
+  background-color: rgb(255, 255, 0);
+  color: #000000;
+}
+
+.mists {
+  background-color: rgb(145, 75, 175);
+  color: #000000;
+}
+
+.total_word{
+  background-color: rgb(205, 205, 205);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+  
+}
+.royal_word {
+  background-color: rgb(0, 197, 174);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+  
+}
+
+.outlands_word {
+  background-color: rgb(0, 26, 220);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.avalon_word {
+  background-color: rgb(255, 175, 54);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.hellgate_word {
+  background-color: rgb(190, 0, 0);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.corrupteddungeon_word {
+  background-color: rgb(255, 255, 0);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.mists_word {
+  background-color: rgb(145, 75, 175);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* Gathering */
+
+.gather_stat{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#gather_text{
+  display: flex;
+  justify-content: center;
+}
+
+.gather_progress-bar {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgb(205, 205, 205);
+  margin-bottom: 5px;
+}
+
+.item {
+  height: 100%;
+}
+
+.fiber {
+  background-color: rgb(238, 184, 129);
+  color: #000000;
+}
+
+.hide {
+  background-color: rgb(229, 149, 20);
+  color: #000000;
+}
+
+.ore {
+  background-color: rgb(101, 105, 182);
+  color: #000000;
+}
+
+.rock {
+  background-color: rgb(30, 0, 149);
+  color: #000000;
+}
+
+.wood {
+  background-color: rgb(149, 99, 20);
+  color: #000000;
+}
+
+.fiber_word {
+  background-color: rgb(238, 184, 129);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.hide_word {
+  background-color: rgb(229, 149, 20);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.ore_word {
+  background-color: rgb(101, 105, 182);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.rock_word {
+  background-color: rgb(30, 0, 149);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.wood_word {
+  background-color: rgb(149, 99, 20);
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/*  Guild  */
+.guildstyle{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 20px ;
+  padding: 20px;
+  list-style: none;
 }

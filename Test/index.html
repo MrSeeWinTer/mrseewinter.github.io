@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parent Page</title>
+</head>
+<body>
+  <h1>Parent Page</h1>
+  <iframe id="my-iframe" src="https://gameinfo-sgp.albiononline.com/api/gameinfo/search?q=SeeWinTer"></iframe>
+  <script>
+  const iframe = document.getElementById('my-iframe');
+  iframe.addEventListener('load', () => {
+    var a = document.getElementById('my-iframe').contentWindow.document.body;
+    console.log(a);
+  });
+
+  </script>
+</body>
+</html>
