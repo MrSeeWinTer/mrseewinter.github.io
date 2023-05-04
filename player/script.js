@@ -24,6 +24,10 @@ function fetchData() {
     if (playerstyle) {
         document.body.removeChild(playerstyle);
     }
+    const guildstyle = document.getElementById('guildstyle');
+    if (guildstyle) {
+        document.body.removeChild(guildstyle);
+    }
     fetch(url1)
     .then(response => response.json())
     .then(data => {
