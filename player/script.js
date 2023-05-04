@@ -81,18 +81,20 @@ function fetchData() {
 
                     ////////////////////////AVATAR/////////////////////////////
                     const body = document.querySelector('body');
-                    const imageUrl1 = '../avatars/01.png';
-                    const imageUrl2 = '../avatars/ring/01.png';
-
                     const imageContainer = document.createElement('div');
                     imageContainer.classList.add('image-container');
                     body.appendChild(imageContainer);
+                    /*
+                    const imageUrl1 = '../avatars/01.png';
+                    const imageUrl2 = '../avatars/ring/01.png';
+
 
                     const image1 = document.createElement('img');
                     image1.src = imageUrl1;
                     image1.classList.add('image1');
                     image1.style.backgroundImage = `url(${imageUrl2})`;
                     imageContainer.appendChild(image1);
+                    */
                     ////////////////////////NAME/////////////////////////////
                     const player_name = document.createElement('div');
                     player_name.className ="player-info";
