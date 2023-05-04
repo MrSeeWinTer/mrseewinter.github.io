@@ -29,6 +29,10 @@ canvas{
     font-size: 24px;
     font-weight: bold;
   }
+
+  .news {
+    color: pink;
+  }
   
   .nav-links {
     list-style: none;
