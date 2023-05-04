@@ -278,6 +278,7 @@ function fetchData() {
                   const display_guilddata = `
                   <h2><p>公會名稱: ${data.Name}</p>
                   <p>創立者: ${data.FounderName}</p>
+                  <p>創立日: ${data.Founded}</p>
                   <p>成員數: ${data.MemberCount}</p></h2>
 
 
