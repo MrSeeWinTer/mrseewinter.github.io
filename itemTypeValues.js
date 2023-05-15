@@ -4,6 +4,7 @@ export const optionsByItemClasss={
   MAIN_WEAPON:["","斧頭","匕首","鎚子","戰爭手套","錘矛","鐵頭棍","長矛","劍","祕術法杖","詛咒法杖","火焰法杖","寒冰法杖","神聖法杖","自然法杖","弓","十字弓"],
   OFF_WEAPON:["","典籍","盾牌","火炬"],
   TOOL:["","十字鎬","鐮刀","剝皮刀","採石鎚","伐木斧","釣竿","破壞鎚"],
+  FURNITURE:["","獎杯"],
   ARTEFACT:["","符石","精魂","聖物","阿瓦隆碎片","精靈","晶化"],
   CONSUMABLE:["","熟食","藥水","釣餌","魚","地圖-煉獄之門","地圖-地下城地圖(單人)","地圖-地下城地圖(團隊)","地圖-地下城地圖(大型團隊)"],
   FARM:["","農耕種子","農耕產品","生肉/熟食","幼崽動物","成長動物","坐騎"],
@@ -11,7 +12,8 @@ export const optionsByItemClasss={
   FACTION:["","城市資源"],
   SKILLBOOK:["","洞察之書","採集典籍"],
   TREASURE:["","任意奢侈品","Bridgewatch奢侈品","Fort Sterling奢侈品","Lymhurst奢侈品","Martlock奢侈品","Thetford奢侈品","Caerleon奢侈品"],
-  TOKEN:["","密封皇家徽章","水晶聯賽徽章",
+  TOKEN:["","密封皇家徽章","披風徽章",
+    "--水晶聯賽徽章--","水晶聯賽徽章-致命","水晶聯賽徽章-非致命","水晶聯賽徽章-團隊",
     "--高級遠征代幣--","超渡亡靈","疑點重重的生意","採石場血案","瘋人濫伐",
     "地底遊魂","銷毀蘑菇","三姊妹","永恆之戰","一把銀幣","渡鴉爪間"],
   EVENT:["","春日祭典"],
@@ -19,6 +21,7 @@ export const optionsByItemClasss={
 };
 
 export const itemClassValues={
+  "test":"test",
   "原生資源": "RAW","加工資源": "MATERIAL","材料":"FRAG",
   "配件":"ACCESSORIES",
   "布質風帽":"HEAD_CLOTH","布質長袍":"ARMOR_CLOTH","布質便鞋":"SHOES_CLOTH",
@@ -39,14 +42,18 @@ export const itemClassValues={
   "城市資源":"HEART","洞察之書":"INSIGHT","採集典籍":"GATHER",
   "任意奢侈品":"A_TREASURE","Bridgewatch奢侈品":"B_TREASURE","Fort Sterling奢侈品":"F_TREASURE","Lymhurst奢侈品":"L_TREASURE",
   "Martlock奢侈品":"M_TREASURE","Thetford奢侈品":"T_TREASURE","Caerleon奢侈品":"C_TREASURE",
-  "密封皇家徽章":"ROYAL","水晶聯賽徽章":"CRYSTALLEAGUE",
+  "密封皇家徽章":"ROYAL","披風徽章":"CAPEITEM",
+  "水晶聯賽徽章-致命":"CRYSTALLEAGUE","水晶聯賽徽章-非致命":"CRYSTALLEAGUE_NON","水晶聯賽徽章-團隊":"CRYSTALLEAGUE_CITY",
   "超渡亡靈":"RECRUITMENT","疑點重重的生意":"FISHYBUSINESS","採石場血案":"STONEWARS","瘋人濫伐":"LUMBERCAMP","地底遊魂":"SEWERSCRYPT",
   "銷毀蘑菇":"MUSHROOM","三姊妹":"TRHEESISTERS","永恆之戰":"ETERNALBATTLE","一把銀幣":"FISTFULOFSILVER","渡鴉爪間":"TORTURER",
+  "獎杯":"TROPHY",
+  
   "春日祭典":"EASTER",
 
 };
 
 export const optionsByItemType = {
+  test:["test"],
   RAW: ["木材", "礦石", "纖維","獸皮", "石材"],
   MATERIAL: ["板材","金屬塊","布料","皮革","砌塊"],
   FRAG: ["黯淡精華","祕術精華","符石","精魂","聖物","阿瓦隆碎片"],
@@ -64,7 +71,7 @@ export const optionsByItemType = {
   HEAD_PLATE: ["士兵頭盔","騎士頭盔","守衛者頭盔","皇家頭盔","守墓者頭盔","惡魔頭盔","審判者頭盔","幽影編織者頭盔","英勇頭盔"],
   ARMOR_PLATE:["士兵護甲","騎士護甲","守衛者護甲","皇家護甲","守墓者護甲","惡魔護甲","審判者護甲","幽影編織者護甲","英勇護甲"],
   SHOES_PLATE:["士兵靴子","騎士靴子","守衛者靴子","皇家靴子","守墓者靴子","惡魔靴子","審判者靴子","幽影編織者靴子","英勇靴子"],
-  
+
   MAIN_AXE:["戰斧","大斧","斧槍","喚腐者","煉獄鐮刀","熊爪","破界者"],  
   MAIN_DAGGER:["匕首","雙匕首","鉤爪","血刃","惡魔之牙","賜死者","憤怒拳刃"],
   MAIN_HAMMER:["鎚子","長鎚","巨鎚","墓鎚","鍛造鎚","守林者","正義之手"],
@@ -191,7 +198,7 @@ export const optionsByItemType = {
   FAVOR:[
     "晶化靈魂","晶化恐懼","晶化魔法","晶化神性",
   ],
-
+  
   GENERAL:["通用戰利品日誌(空白)","通用戰利品日誌(已滿)"],
   CROPPER:["種植者契約","種植者日誌(空白)","種植者日誌(已滿)","種植者戰利品日誌(空白)","種植者戰利品日誌(已滿)"],
   FISHERMAN:["漁夫契約","漁夫日誌(空白)","漁夫日誌(已滿)","漁夫戰利品日誌(空白)","漁夫戰利品日誌(已滿)"],
@@ -254,8 +261,19 @@ export const optionsByItemType = {
 
   ROYAL:["密封皇家徽章"],
 
+  CAPEITEM:["Thetford披風徽章","Fort Sterling披風徽章","Lymhurst披風徽章","Bridgewatch披風徽章","Martlock披風徽章","Caerleon披風徽章",
+  "異端披風徽章","不死族披風徽章","摩根娜披風徽章","看守者披風徽章","惡魔披風徽章"],
+
   CRYSTALLEAGUE:[
-    "水晶聯賽LV1",
+    "水晶聯賽-致命-LV1","水晶聯賽-致命-LV2","水晶聯賽-致命-LV3","水晶聯賽-致命-LV4","水晶聯賽-致命-LV5","水晶聯賽-致命-LV6","水晶聯賽-致命-LV7","水晶聯賽-致命-LV8","水晶聯賽-致命-LV9",
+  ],
+
+  CRYSTALLEAGUE_NON:[
+    "水晶聯賽-非致命-LV1","水晶聯賽-非致命-LV2","水晶聯賽-非致命-LV3","水晶聯賽-非致命-LV4","水晶聯賽-非致命-LV5","水晶聯賽-非致命-LV6","水晶聯賽-非致命-LV7","水晶聯賽-非致命-LV8","水晶聯賽-非致命-LV9",
+  ],
+
+  CRYSTALLEAGUE_CITY:[
+    "水晶聯賽-團隊-LV1","水晶聯賽-團隊-LV2","水晶聯賽-團隊-LV3","水晶聯賽-團隊-LV4","水晶聯賽-團隊-LV5","水晶聯賽-團隊-LV6","水晶聯賽-團隊-LV7","水晶聯賽-團隊-LV8","水晶聯賽-團隊-LV9",
   ],
 
   RECRUITMENT:[
@@ -308,6 +326,7 @@ export const optionsByItemType = {
     "渡鴉爪間-LV.7","渡鴉爪間-LV.8","渡鴉爪間-LV.9","渡鴉爪間-LV.10","渡鴉爪間-LV.11","渡鴉爪間-LV.12",
     "渡鴉爪間-LV.13","渡鴉爪間-LV.14","渡鴉爪間-LV.15","渡鴉爪間-LV.16","渡鴉爪間-LV.17","渡鴉爪間-LV.18"],
     
+  TROPHY:["通用","木材","礦石","纖維","獸皮","石材","傭兵","魚","鯊魚"],
 
   EASTER:["獨特_驚喜蛋","獨特_巧克力","T8_活力春日棉尾蛋","T8_馴化春日棉尾","T8_春日棉尾","T8_Caerleon 棉尾兔蛋","T8_馴化Caerleon 棉尾兔","T8_Caerleon 棉尾兔"],
 };
@@ -315,6 +334,7 @@ export const optionsByItemType = {
 
 
 export const itemTypeValues = {
+  "test":"",
   "木材": "WOOD","礦石": "ORE","纖維": "FIBER","獸皮": "HIDE","石材": "ROCK",
   "板材": "PLANKS","金屬塊": "METALBAR","布料": "CLOTH","皮革": "LEATHER","砌塊": "STONEBLOCK",
   "黯淡精華":"ESSENCE","祕術精華":"ESSENCE_POTION","符石":"RUNE","精魂":"SOUL","聖物":"RELIC","阿瓦隆碎片":"SHARD_AVALONIAN",
@@ -322,7 +342,7 @@ export const itemTypeValues = {
   "Bridgewatch披風":"CAPEITEM_FW_BRIDGEWATCH","Fort Sterling披風":"CAPEITEM_FW_FORTSTERLING","Lymhurst披風":"CAPEITEM_FW_LYMHURST",
   "Martlock披風":"CAPEITEM_FW_MARTLOCK","Thetford披風":"CAPEITEM_FW_THETFORD","Caerleon披風":"CAPEITEM_FW_CAERLEON",
   "異端披風":"CAPEITEM_HERETIC","不死族披風":"CAPEITEM_UNDEAD","摩根娜披風":"CAPEITEM_MORGANA","看守者披風":"CAPEITEM_KEEPER","惡魔披風":"CAPEITEM_DEMON",
-
+  
   "學者風帽": "HEAD_CLOTH_SET1", "牧師風帽":"HEAD_CLOTH_SET2", "法師風帽":"HEAD_CLOTH_SET3",
   "皇家風帽": "HEAD_CLOTH_ROYAL","德魯伊風帽":"HEAD_CLOTH_KEEPER", "邪魔風帽": "HEAD_CLOTH_HELL", 
   "邪教徒風帽":"HEAD_CLOTH_MORGANA", "精靈鱗片風帽":"HEAD_CLOTH_FEY","純潔風帽":"HEAD_CLOTH_AVALON",
@@ -605,8 +625,22 @@ export const itemTypeValues = {
   "儀式蠟燭":"TREASURE_RITUAL_RARITY1","血聖杯":"TREASURE_RITUAL_RARITY2","獻祭匕首":"TREASURE_RITUAL_RARITY3",
 
   "密封皇家徽章":"T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
+  
+  "Thetford披風徽章":"CAPEITEM_FW_THETFORD_BP","Fort Sterling披風徽章":"CAPEITEM_FW_FORTSTERLING_BP","Lymhurst披風徽章":"CAPEITEM_FW_LYMHURST_BP",
+  "Bridgewatch披風徽章":"CAPEITEM_FW_BRIDGEWATCH_BP","Martlock披風徽章":"CAPEITEM_FW_MARTLOCK_BP","Caerleon披風徽章":"CAPEITEM_FW_CAERLEON_BP",
+  "異端披風徽章":"CAPEITEM_HERETIC_BP","不死族披風徽章":"CAPEITEM_UNDEAD_BP","摩根娜披風徽章":"CAPEITEM_MORGANA_BP","看守者披風徽章":"CAPEITEM_KEEPER_BP","惡魔披風徽章":"CAPEITEM_DEMON_BP",
 
-  "水晶聯賽LV1":"T4_TOKEN_CRYSTALLEAGUE_LVL_01_TEMPLATE",
+  "水晶聯賽-致命-LV1":"T4_TOKEN_CRYSTALLEAGUE_LVL_01_TEMPLATE","水晶聯賽-致命-LV2":"T4_TOKEN_CRYSTALLEAGUE_LVL_02_TEMPLATE","水晶聯賽-致命-LV3":"T4_TOKEN_CRYSTALLEAGUE_LVL_03_TEMPLATE",
+  "水晶聯賽-致命-LV4":"T4_TOKEN_CRYSTALLEAGUE_LVL_04_TEMPLATE","水晶聯賽-致命-LV5":"T4_TOKEN_CRYSTALLEAGUE_LVL_05_TEMPLATE","水晶聯賽-致命-LV6":"T4_TOKEN_CRYSTALLEAGUE_LVL_06_TEMPLATE",
+  "水晶聯賽-致命-LV7":"T4_TOKEN_CRYSTALLEAGUE_LVL_07_TEMPLATE","水晶聯賽-致命-LV8":"T4_TOKEN_CRYSTALLEAGUE_LVL_08_TEMPLATE","水晶聯賽-致命-LV9":"T4_TOKEN_CRYSTALLEAGUE_LVL_09_TEMPLATE",
+  
+  "水晶聯賽-非致命-LV1":"T4_TOKEN_CRYSTALLEAGUE_NONLETHAL_LVL_01_TEMPLATE","水晶聯賽-非致命-LV2":"T4_TOKEN_CRYSTALLEAGUE_NONLETHAL_LVL_02_TEMPLATE","水晶聯賽-非致命-LV3":"T4_TOKEN_CRYSTALLEAGUE_NONLETHAL_LVL_04_TEMPLATE",
+  "水晶聯賽-非致命-LV4":"T4_TOKEN_CRYSTALLEAGUE_NONLETHAL_LVL_04_TEMPLATE","水晶聯賽-非致命-LV5":"T4_TOKEN_CRYSTALLEAGUE_NONLETHAL_LVL_05_TEMPLATE","水晶聯賽-非致命-LV6":"T4_TOKEN_CRYSTALLEAGUE_NONLETHAL_LVL_06_TEMPLATE",
+  "水晶聯賽-非致命-LV7":"T4_TOKEN_CRYSTALLEAGUE_NONLETHAL_LVL_07_TEMPLATE","水晶聯賽-非致命-LV8":"T4_TOKEN_CRYSTALLEAGUE_NONLETHAL_LVL_08_TEMPLATE","水晶聯賽-非致命-LV9":"T4_TOKEN_CRYSTALLEAGUE_NONLETHAL_LVL_09_TEMPLATE",
+
+  "水晶聯賽-團隊-LV1":"T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_01_TEMPLATE","水晶聯賽-團隊-LV2":"T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02_TEMPLATE","水晶聯賽-團隊-LV3":"T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03_TEMPLATE",
+  "水晶聯賽-團隊-LV4":"T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04_TEMPLATE","水晶聯賽-團隊-LV5":"T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05_TEMPLATE","水晶聯賽-團隊-LV6":"T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06_TEMPLATE",
+  "水晶聯賽-團隊-LV7":"T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07_TEMPLATE","水晶聯賽-團隊-LV8":"T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_08_TEMPLATE","水晶聯賽-團隊-LV9":"T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_09_TEMPLATE",
 
   "超渡亡靈-LV.1":"QUESTITEM_EXP_TOKEN_D1_T6_EXP_HRD_UNDEAD_RECRUITMENT","超渡亡靈-LV.2":"QUESTITEM_EXP_TOKEN_D2_T6_EXP_HRD_UNDEAD_RECRUITMENT","超渡亡靈-LV.3":"QUESTITEM_EXP_TOKEN_D3_T6_EXP_HRD_UNDEAD_RECRUITMENT",
   "超渡亡靈-LV.4":"QUESTITEM_EXP_TOKEN_D4_T6_EXP_HRD_UNDEAD_RECRUITMENT","超渡亡靈-LV.5":"QUESTITEM_EXP_TOKEN_D5_T6_EXP_HRD_UNDEAD_RECRUITMENT","超渡亡靈-LV.6":"QUESTITEM_EXP_TOKEN_D6_T6_EXP_HRD_UNDEAD_RECRUITMENT",
@@ -677,6 +711,11 @@ export const itemTypeValues = {
   "渡鴉爪間-LV.10":"QUESTITEM_EXP_TOKEN_D10_T6_EXP_HRD_MORGANA_TORTURER","渡鴉爪間-LV.11":"QUESTITEM_EXP_TOKEN_D11_T6_EXP_HRD_MORGANA_TORTURER","渡鴉爪間-LV.12":"QUESTITEM_EXP_TOKEN_D12_T6_EXP_HRD_MORGANA_TORTURER",
   "渡鴉爪間-LV.13":"QUESTITEM_EXP_TOKEN_D13_T6_EXP_HRD_MORGANA_TORTURER","渡鴉爪間-LV.14":"QUESTITEM_EXP_TOKEN_D14_T6_EXP_HRD_MORGANA_TORTURER","渡鴉爪間-LV.15":"QUESTITEM_EXP_TOKEN_D15_T6_EXP_HRD_MORGANA_TORTURER",
   "渡鴉爪間-LV.16":"QUESTITEM_EXP_TOKEN_D16_T6_EXP_HRD_MORGANA_TORTURER","渡鴉爪間-LV.17":"QUESTITEM_EXP_TOKEN_D17_T6_EXP_HRD_MORGANA_TORTURER","渡鴉爪間-LV.18":"QUESTITEM_EXP_TOKEN_D18_T6_EXP_HRD_MORGANA_TORTURER",
+
+  "通用":"FURNITUREITEM_TROPHY_GENERAL","木材":"FURNITUREITEM_TROPHY_WOOD","礦石":"FURNITUREITEM_TROPHY_ORE","纖維":"FURNITUREITEM_TROPHY_FIBER",
+  "獸皮":"FURNITUREITEM_TROPHY_HIDE","石材":"FURNITUREITEM_TROPHY_ROCK","傭兵":"FURNITUREITEM_TROPHY_MERCENARY","魚":"FURNITUREITEM_TROPHY_FISH",
+  "鯊魚":"T8_FURNITUREITEM_TROPHY_FISHING_BOSS",
+
 
   "獨特_驚喜蛋":"UNIQUE_CONSUMABLE_EVENT_EASTER_2020_EGG","獨特_巧克力":"UNIQUE_CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE",
   "T8_活力春日棉尾蛋":"T8_FARM_RABBIT_EASTER_BABY","T8_馴化春日棉尾":"T8_FARM_RABBIT_EASTER_GROWN",
