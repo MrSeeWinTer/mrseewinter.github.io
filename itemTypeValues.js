@@ -4,7 +4,7 @@ export const optionsByItemClasss={
   MAIN_WEAPON:["","斧頭","匕首","鎚子","戰爭手套","錘矛","鐵頭棍","長矛","劍","祕術法杖","詛咒法杖","火焰法杖","寒冰法杖","神聖法杖","自然法杖","弓","十字弓"],
   OFF_WEAPON:["","典籍","盾牌","火炬"],
   TOOL:["","十字鎬","鐮刀","剝皮刀","採石鎚","伐木斧","釣竿","破壞鎚"],
-  FURNITURE:["","獎杯"],
+  FURNITURE:["","獎杯","一般家具"],
   ARTEFACT:["","符石","精魂","聖物","阿瓦隆碎片","精靈","晶化"],
   CONSUMABLE:["","熟食","藥水","釣餌","魚","地圖-煉獄之門","地圖-地下城地圖(單人)","地圖-地下城地圖(團隊)","地圖-地下城地圖(大型團隊)"],
   FARM:["","農耕種子","農耕產品","生肉/熟食","幼崽動物","成長動物","坐騎"],
@@ -46,7 +46,7 @@ export const itemClassValues={
   "水晶聯賽徽章-致命":"CRYSTALLEAGUE","水晶聯賽徽章-非致命":"CRYSTALLEAGUE_NON","水晶聯賽徽章-團隊":"CRYSTALLEAGUE_CITY",
   "超渡亡靈":"RECRUITMENT","疑點重重的生意":"FISHYBUSINESS","採石場血案":"STONEWARS","瘋人濫伐":"LUMBERCAMP","地底遊魂":"SEWERSCRYPT",
   "銷毀蘑菇":"MUSHROOM","三姊妹":"TRHEESISTERS","永恆之戰":"ETERNALBATTLE","一把銀幣":"FISTFULOFSILVER","渡鴉爪間":"TORTURER",
-  "獎杯":"TROPHY",
+  "獎杯":"TROPHY","一般家具":"FURNITUREITEM",
   
   "春日祭典":"EASTER",
 
@@ -327,6 +327,7 @@ export const optionsByItemType = {
     "渡鴉爪間-LV.13","渡鴉爪間-LV.14","渡鴉爪間-LV.15","渡鴉爪間-LV.16","渡鴉爪間-LV.17","渡鴉爪間-LV.18"],
     
   TROPHY:["通用","木材","礦石","纖維","獸皮","石材","傭兵","魚","鯊魚"],
+  FURNITUREITEM:["床鋪","寶箱","餐桌","維修工具組","公會戰旗","公會戰旗_盾"],
 
   EASTER:["獨特_驚喜蛋","獨特_巧克力","T8_活力春日棉尾蛋","T8_馴化春日棉尾","T8_春日棉尾","T8_Caerleon 棉尾兔蛋","T8_馴化Caerleon 棉尾兔","T8_Caerleon 棉尾兔"],
 };
@@ -716,6 +717,8 @@ export const itemTypeValues = {
   "獸皮":"FURNITUREITEM_TROPHY_HIDE","石材":"FURNITUREITEM_TROPHY_ROCK","傭兵":"FURNITUREITEM_TROPHY_MERCENARY","魚":"FURNITUREITEM_TROPHY_FISH",
   "鯊魚":"T8_FURNITUREITEM_TROPHY_FISHING_BOSS",
 
+  "床鋪":"FURNITUREITEM_BED","寶箱":"FURNITUREITEM_CHEST","餐桌":"FURNITUREITEM_TABLE",
+  "維修工具組":"FURNITUREITEM_REPAIRKIT","公會戰旗":"FURNITUREITEM_GUILDBANNER_FABRIC","公會戰旗_盾":"FURNITUREITEM_GUILDBANNER_SHIELD",
 
   "獨特_驚喜蛋":"UNIQUE_CONSUMABLE_EVENT_EASTER_2020_EGG","獨特_巧克力":"UNIQUE_CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE",
   "T8_活力春日棉尾蛋":"T8_FARM_RABBIT_EASTER_BABY","T8_馴化春日棉尾":"T8_FARM_RABBIT_EASTER_GROWN",
