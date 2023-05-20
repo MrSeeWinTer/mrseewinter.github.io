@@ -56,7 +56,7 @@ export const optionsByItemType = {
   test:["test"],
   RAW: ["木材", "礦石", "纖維","獸皮", "石材"],
   MATERIAL: ["板材","金屬塊","布料","皮革","砌塊"],
-  FRAG: ["黯淡精華","祕術精華","符石","精魂","聖物","阿瓦隆碎片","阿瓦隆能量","妖精之火"],
+  FRAG: ["黯淡精華","祕術精華","符石","精魂","聖物","阿瓦隆碎片","阿瓦隆能量"],
   ACCESSORIES: ["背包","洞察小背包","披風","Bridgewatch披風","Fort Sterling披風","Lymhurst披風","Martlock披風","Thetford披風","Caerleon披風",
   "異端披風","不死族披風","摩根娜披風","看守者披風","惡魔披風"],
 
@@ -339,7 +339,7 @@ export const itemTypeValues = {
   "木材": "WOOD","礦石": "ORE","纖維": "FIBER","獸皮": "HIDE","石材": "ROCK",
   "板材": "PLANKS","金屬塊": "METALBAR","布料": "CLOTH","皮革": "LEATHER","砌塊": "STONEBLOCK",
   "黯淡精華":"ESSENCE","祕術精華":"ESSENCE_POTION","符石":"RUNE","精魂":"SOUL","聖物":"RELIC","阿瓦隆碎片":"SHARD_AVALONIAN",
-  "阿瓦隆能量":"QUESTITEM_TOKEN_AVALON","妖精之火":"QUESTITEM_TOKEN_ARENA_CRYSTAL",
+  "阿瓦隆能量":"QUESTITEM_TOKEN_AVALON",
   "背包": "BAG","洞察小背包":"BAG_INSIGHT","披風": "CAPE",
   "Bridgewatch披風":"CAPEITEM_FW_BRIDGEWATCH","Fort Sterling披風":"CAPEITEM_FW_FORTSTERLING","Lymhurst披風":"CAPEITEM_FW_LYMHURST",
   "Martlock披風":"CAPEITEM_FW_MARTLOCK","Thetford披風":"CAPEITEM_FW_THETFORD","Caerleon披風":"CAPEITEM_FW_CAERLEON",
